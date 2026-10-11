@@ -78,6 +78,20 @@ export default function Cockpit({ demo }: { demo: boolean }) {
     [selection, setSelection] = useState<Selection>(null),
     [search, setSearch] = useState(""),
     [filter, setFilter] = useState("ALL");
+  const [decisionBusy, setDecisionBusy] = useState<string | null>(null);
+  const [decisionError, setDecisionError] = useState("");
+  const decideIdea = async (ideaId: string, title: string, decision: "APPROVED" | "REJECTED") => {
+    if (!window.confirm(`${decision === "APPROVED" ? "Approve production of" : "Reject"} "${title}"? Approval starts the existing automated design and Etsy draft pipeline, subject to its budgets and quality gates. This does not publish a listing.`)) return;
+    setDecisionBusy(ideaId);
+    setDecisionError("");
+    try {
+      const r = await fetch("/api/owner/idea", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ideaId, decision }) });
+      const response = await r.json();
+      if (!r.ok) throw new Error(response.error || "Decision failed");
+      await refresh();
+    } catch (e) { setDecisionError(e instanceof Error ? e.message : "Decision failed"); }
+    finally { setDecisionBusy(null); }
+  };
   const flight = useRef(false),
     controller = useRef<AbortController | null>(null);
   const refresh = useCallback(async () => {
@@ -621,6 +635,8 @@ export default function Cockpit({ demo }: { demo: boolean }) {
                           ))}
                         </select>
                       </div>
+                      {decisionError && <div className="notice error-notice" role="alert">{decisionError}</div>}
+                      {!demo && <p className="small muted">Approve an open proposal to hand it to the existing production pipeline. The agents handle design, checks and Etsy draft creation under current limits. Publishing still requires separate owner approval.</p>}
                       <div className="kanban">
                         {stages
                           .filter((s) => filter === "ALL" || filter === s)
@@ -665,11 +681,26 @@ export default function Cockpit({ demo }: { demo: boolean }) {
                                         : ""}
                                     </span>
                                     {p.blocked && <Badge text="BLOCKED" />}
+                                    {!demo && p.ideaId && p.ideaStatus === "IDEA" && !p.decision && (
+                                      <span className="small muted">Open proposal — select this card to review; approve below.</span>
+                                    )}
                                     <span className="small muted">
                                       Updated {date(p.updated)}
                                     </span>
                                   </button>
                                 ))}
+                              {!demo && stage === "RESEARCH" && data.products.filter(p => p.stage === stage && p.ideaId && p.ideaStatus === "IDEA" && !p.decision).map(p => (
+                                <div key={`decision-${p.ideaId}`} className="product-card" style={{display:"flex",flexDirection:"column",gap:8}}>
+                                  <strong>{p.title}</strong>
+                                  <span className="small muted">Owner decision required · production only, not publication</span>
+                                  <div style={{display:"flex",gap:8}}>
+                                    <button className="button" disabled={!!decisionBusy} onClick={() => void decideIdea(p.ideaId,p.title,"APPROVED")}>
+                                      {decisionBusy === p.ideaId ? "Saving…" : "Approve & produce draft"}
+                                    </button>
+                                    <button className="button subtle" disabled={!!decisionBusy} onClick={() => void decideIdea(p.ideaId,p.title,"REJECTED")}>Reject</button>
+                                  </div>
+                                </div>
+                              ))}
                               {!data.products.some(
                                 (p) =>
                                   p.stage === stage &&
