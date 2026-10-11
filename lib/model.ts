@@ -367,10 +367,23 @@ export function buildSnapshot(
     product:
       str(obj(t.payload).product_idea_id) || str(obj(t.payload).product_id),
     stalled:
-      activeTask(t) &&
+      t.status === "IN_PROGRESS" &&
       now - ms(t.updated_at) >
         (t.status === "IN_PROGRESS" ? 60 : 24 * 60) * 60 * 1000,
   }));
+  const ideaById = new Map(raw.ideas.map((i) => [str(i.id), i]));
+  const designEligibility = (t: Row): string => {
+    if (str(t.assigned_agent) !== "AXXIBOTS_03_DESIGN" || str(t.task_type) !== "production_spec" || t.status !== "PENDING") return "";
+    const idea = ideaById.get(str(obj(t.payload).product_idea_id));
+    if (!idea) return "No linked product idea in the HQ snapshot";
+    const status = str(idea.status);
+    if (!["RESEARCHED", "DESIGNING"].includes(status))
+      return `Idea is ${status || "unknown"}; the design workflow only accepts RESEARCHED or DESIGNING`;
+    if (idea.owner_decision !== "APPROVED" && obj(t.payload).ceo_early_start !== true)
+      return "Waiting for owner approval or authorized CEO early-start";
+    if (!idea.proposal) return "Missing research proposal";
+    return "Eligible by idea stage and approval; additional design budget/phase gates may apply";
+  };
   const f = finance(raw, now);
   const agents = [...allAgents.entries()].map(([id, a]) => {
     const tasks = raw.tasks.filter((t) => t.assigned_agent === id),
@@ -391,6 +404,9 @@ export function buildSnapshot(
       ...agentState(a, tasks, runs, now),
       completed: tasks.filter((t) => t.status === "DONE").length,
       workload: tasks.filter(activeTask).length,
+      pending: tasks.filter((t) => t.status === "PENDING").length,
+      pendingDesignBlocked: tasks.filter((t) => designEligibility(t) && !designEligibility(t).startsWith("Eligible")).length,
+      pendingDesignReasons: [...new Set(tasks.map(designEligibility).filter((r) => r && !r.startsWith("Eligible")))],
       success: known.length
         ? Math.round(
             (100 * known.filter((o) => o === "SUCCESS").length) / known.length,
@@ -483,6 +499,8 @@ export function buildSnapshot(
       blocked: taskViews.filter((t) => t.status === "BLOCKED").length,
       failed: runViews.filter((r) => r.business === "FAILED").length,
       stalled: taskViews.filter((t) => t.stalled).length,
+      pending: taskViews.filter((t) => t.status === "PENDING").length,
+      pendingDesignBlocked: raw.tasks.filter((t) => designEligibility(t) && !designEligibility(t).startsWith("Eligible")).length,
     },
     lastSuccess:
       runViews.find((r) => r.business === "SUCCESS")?.finished ?? null,
