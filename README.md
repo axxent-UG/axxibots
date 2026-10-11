@@ -12,7 +12,9 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Open http://localhost:3000. The example starts in **DEMO MODE**: all displayed records and financial amounts are synthetic. Production snapshots are never committed. A live connection failure never falls back to demo.
+Set `HQ_ACCESS_PASSWORD` in `.env.local` to a unique random password of at least 16 characters before starting. Never commit that file.
+
+Open http://localhost:3000. Enter username `alex` and your site password in the browser login prompt. The example starts in **DEMO MODE**: all displayed records and financial amounts are synthetic. Production snapshots are never committed. A live connection failure never falls back to demo.
 
 ```sh
 npm run typecheck
@@ -23,24 +25,26 @@ npm run build
 ## Deploy to Vercel
 
 1. Import `axxent-UG/axxibots` in Vercel. Framework: **Next.js**. Root directory: repository root. Install: `npm ci`. Build: `npm run build`. Node: 22 or 24.
-2. For a safe initial visual deployment, set `DEMO_MODE=true`. No database credentials are required. The demo banner remains visible everywhere.
+2. Set `HQ_ACCESS_USER=alex`, `HQ_ACCESS_PASSWORD` to your own unique random password of at least 16 characters, and `DEMO_MODE=true` for the initial demo. Set the site password in both Production and Preview environments. The browser asks for your username/password before loading any cockpit page or API. No database credentials are needed for demo mode.
 3. For private live data, set the server environment variables listed below in Vercel's project settings. Set `DEMO_MODE=false` and redeploy. Use Production scope; use separate test credentials or demo mode for Preview deployments.
 4. Use an existing Supabase Auth email/password user (or invite one in the Supabase dashboard). Put the exact user UUID in `HQ_ALLOWED_USER_IDS`. An authenticated but unlisted user cannot access HQ business data. There is no public signup route.
-5. Sign in on the deployed site. Verify LIVE MODE, inspect a known task, compare a cost entry, then check refreshing. If live setup is incomplete, the app fails closed and shows a configuration/connection error.
+5. Enter your site username/password in the browser prompt, then sign in with the allowed Supabase account for live mode. Verify LIVE MODE, inspect a known task, compare a cost entry, then check refreshing. If live setup is incomplete, the app fails closed and shows a configuration/connection error.
 6. For recovery, set `DEMO_MODE=true` and redeploy to show only synthetic data. Do not weaken authentication or certificate verification.
 
 Enter secrets **only in Vercel or a local untracked `.env.local`**, never in chat or the repository. The deployment is not performed automatically by this implementation.
 
 ### Environment variables
 
-| Variable                   | Required               | Purpose                                                                                                                                            |
-| -------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `DEMO_MODE`                | Recommended explicitly | `true` for synthetic demo; `false` for private live mode. If absent, demo is chosen only when both database URL and auth key are absent.           |
-| `SUPABASE_URL`             | Live                   | `https://xhztnnhrcqwuooezcbgh.supabase.co`                                                                                                         |
-| `SUPABASE_PUBLISHABLE_KEY` | Live                   | Publishable key for Supabase Auth; stored server-side. A legacy anon key also works. No service-role key is needed.                                |
-| `HQ_ALLOWED_USER_IDS`      | Live                   | Comma-separated Supabase Auth UUIDs. An empty list denies all users.                                                                               |
-| `DATABASE_URL`             | Live                   | Supabase **transaction pooler** connection string, normally port 6543, entered privately. Prefer an existing account with SELECT-only permissions. |
-| `DATABASE_CA_CERT`         | Only if needed         | PEM CA certificate for the pooler. TLS certificate verification is always enabled.                                                                 |
+| Variable                   | Required                       | Purpose                                                                                                                                            |
+| -------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `HQ_ACCESS_USER`           | All modes (defaults to `alex`) | Username for the browser password prompt.                                                                                                          |
+| `HQ_ACCESS_PASSWORD`       | All modes                      | Your unique random site password, at least 16 characters. Missing/short passwords keep the site locked.                                            |
+| `DEMO_MODE`                | Recommended explicitly         | `true` for synthetic demo; `false` for private live mode. If absent, demo is chosen only when both database URL and auth key are absent.           |
+| `SUPABASE_URL`             | Live                           | `https://xhztnnhrcqwuooezcbgh.supabase.co`                                                                                                         |
+| `SUPABASE_PUBLISHABLE_KEY` | Live                           | Publishable key for Supabase Auth; stored server-side. A legacy anon key also works. No service-role key is needed.                                |
+| `HQ_ALLOWED_USER_IDS`      | Live                           | Comma-separated Supabase Auth UUIDs. An empty list denies all users.                                                                               |
+| `DATABASE_URL`             | Live                           | Supabase **transaction pooler** connection string, normally port 6543, entered privately. Prefer an existing account with SELECT-only permissions. |
+| `DATABASE_CA_CERT`         | Only if needed                 | PEM CA certificate for the pooler. TLS certificate verification is always enabled.                                                                 |
 
 No `NEXT_PUBLIC_*` secrets. If the connection URL contains `sslmode=require`, the application removes that flag before configuring pg so it cannot silently disable certificate validation. No named/prepared statements are used with the transaction pooler.
 
@@ -55,6 +59,8 @@ No `NEXT_PUBLIC_*` secrets. If the connection URL contains `sslmode=require`, th
 - Agent completion counts, business success rate, known/unknown outcome counts, workload, recorded review pass rate, cost and recent activity.
 
 ## Security and operating model
+
+The entire website, including the demo, APIs and assets, is protected by a required site password using HTTP Basic authentication in `proxy.ts`. The browser provides the login dialog. No shared password reaches browser code or is stored in this repository. Passwords are compared server-side with fixed-length digest comparisons. Missing passwords, passwords shorter than 16 characters or invalid usernames keep the site locked with HTTP 503; no setting disables the gate. `/api/data` and `/api/auth` independently enforce the same protection as defense in depth. Password rejections use HTTP 401 and no-store responses. Use HTTPS (automatic on Vercel).
 
 Private business records are returned only by authenticated `/api/data` requests after Supabase `getUser` verification and a server-side UUID allowlist. Session cookies are HttpOnly, Secure in production, SameSite=Lax; sessions refresh server-side. Login uses existing Supabase password auth and its configured rate limits. Logout clears HQ cookies. Mutating auth requests enforce same origin. Responses are private and no-store. The page itself includes no private data in its initial HTML.
 
@@ -74,15 +80,17 @@ Supabase inspection was read-only on 11 Oct 2026. See [data semantics](docs/DATA
 | `app/api/data/route.ts`, `app/api/auth/route.ts`                                                             | Protected snapshot, sign-in/sign-out handlers                                  |
 | `lib/auth.ts`, `lib/config.ts`, `lib/data.ts`                                                                | Server-only authentication, environment policy and read-only SQL access        |
 | `lib/model.ts`, `lib/demo.ts`                                                                                | Data derivation and clearly synthetic fixtures                                 |
+| `proxy.ts`, `lib/access.ts`, `tests/access.test.ts`                                                          | Whole-site password gate and access regression checks                          |
 | `tests/model.test.ts`                                                                                        | Outcome, state, pipeline, accounting, calendar and redaction regression checks |
 | `.env.example`, `next.config.ts`, `postcss.config.mjs`, `tsconfig.json`, `package.json`, `package-lock.json` | Deployment and pinned dependencies                                             |
 | `.github/workflows/check.yml`                                                                                | Automated typecheck, tests and production build                                |
 
 ## Validation and known limitations
 
-- Typecheck passed; production build passed; 13 regression tests passed; production dependency audit found no vulnerabilities at implementation time.
+- Typecheck passed; production build passed; 19 regression tests passed; production dependency audit found no vulnerabilities at implementation time.
 - All nine SELECT projections were checked through the connected Supabase SQL tool against the actual schema, without changes. Sample source shapes and enum values were inspected. This validates schema compatibility, **not** the deployed connection/auth flow.
 - Office SVG was rendered and visually inspected; React render warnings were corrected. Browser interaction, mobile visual QA and live Vercel authentication/database integration could not be run in this environment. Validate them after private configuration.
+- The shared site password is a lightweight access gate, not individual account management. Browsers cache Basic credentials; use a private window and close it to end site access. The in-app Sign out button ends the Supabase session, not the browser password session. Change `HQ_ACCESS_PASSWORD` and redeploy to revoke the shared credential. There is no distributed brute-force limiter for the shared gate; use a high-entropy random password. Live data additionally requires an allowlisted Supabase user.
 - Polling is near real time, not a push connection. Status comes from recorded evidence, not a machine heartbeat. A one-hour stale-run heuristic can flag legitimate long jobs.
 - Data snapshots are limited to 10,000 rows per source table. If a source exceeds this, the endpoint errors instead of silently truncating totals. A paginated/aggregate read layer will be needed as the business grows.
 - Business outcomes can be UNKNOWN when completion evidence is absent or old task results have been overwritten. The source database has no assumed universal transition-history table.

@@ -92,7 +92,7 @@ export default function Cockpit({ demo }: { demo: boolean }) {
       });
       const body = await r.json();
       if (!r.ok) {
-        setLogin(r.status === 401);
+        setLogin(r.status === 401 && body.kind !== "SITE_ACCESS");
         if (r.status === 401) setData(null);
         throw new Error(body.error ?? "Refresh failed");
       }
