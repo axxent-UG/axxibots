@@ -981,8 +981,16 @@ export default function Cockpit({ demo }: { demo: boolean }) {
   );
 }
 function Login({ onSuccess }: { onSuccess: () => void }) {
-  const [error, setError] = useState(""),
-    [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const [sent, setSent] = useState(false);
+  const [busy, setBusy] = useState(false);
+  useEffect(() => {
+    const code = new URLSearchParams(window.location.search).get("auth_error");
+    if (code) {
+      setError(code === "not_authorized" ? "This account is not authorized for HQ or the sign-in link expired." : "The sign-in link could not be verified. Request a new one.");
+      window.history.replaceState(null, "", "/");
+    }
+  }, []);
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setBusy(true);
@@ -992,48 +1000,24 @@ function Login({ onSuccess }: { onSuccess: () => void }) {
       const r = await fetch("/api/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: fields.get("email"),
-          password: fields.get("password"),
-        }),
+        body: JSON.stringify({ action: "magic_link", email: fields.get("email") }),
       });
       const b = await r.json();
       if (!r.ok) throw new Error(b.error);
-      onSuccess();
+      setSent(true);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Sign-in failed");
-    } finally {
-      setBusy(false);
-    }
+      setError(e instanceof Error ? e.message : "Unable to send link");
+    } finally { setBusy(false); }
   }
   return (
     <form onSubmit={submit} className="panel login-panel">
-      <span className="eyebrow">PRIVATE WORKSPACE</span>
+      <span className="eyebrow">PRIVATE WORKSPACE · PASSWORDLESS</span>
       <h2>Welcome to headquarters.</h2>
-      <p className="muted">
-        Sign in with an existing, authorized Supabase account.
-      </p>
-      <label>
-        Email
-        <input name="email" type="email" required autoComplete="username" />
-      </label>
-      <label>
-        Password
-        <input
-          name="password"
-          type="password"
-          required
-          autoComplete="current-password"
-        />
-      </label>
-      {error && (
-        <p className="negative" role="alert">
-          {error}
-        </p>
-      )}
-      <button className="button primary" disabled={busy}>
-        {busy ? "Signing in…" : "Enter headquarters →"}
-      </button>
+      <p className="muted">Sign in with a secure email link sent to your existing authorized Supabase account. No password required.</p>
+      <label>Email<input name="email" type="email" required autoComplete="email" /></label>
+      {sent && <p role="status">Check your inbox for the secure sign-in link. Return here after opening it.</p>}
+      {error && <p className="negative" role="alert">{error}</p>}
+      <button className="button primary" disabled={busy}>{busy ? "Sending…" : sent ? "Send another sign-in link" : "Email me a sign-in link →"}</button>
     </form>
   );
 }
