@@ -179,6 +179,7 @@ export function pipelineStage(
   listing: string,
   hasSales: boolean,
 ): (typeof stages)[number] {
+  decision = decision.toLowerCase();
   if (["ARCHIVED", "REJECTED"].includes(status)) return "INACTIVE";
   if (hasSales) return "SALES";
   if (listing === "active" || status === "PUBLISHED") return "PUBLISHED";

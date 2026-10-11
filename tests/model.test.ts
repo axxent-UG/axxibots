@@ -122,6 +122,13 @@ test("materialized product and idea counted once, task history correctly joined"
   assert.equal(s.products[0].title, "Product");
   assert.equal(s.products[0].history.length, 1);
 });
+test("production uppercase owner decisions route approved ideas to design", () => {
+  for (const status of ["IDEA", "RESEARCHED"]) {
+    assert.equal(pipelineStage(status, "APPROVED", "", false), "DESIGN");
+    assert.equal(pipelineStage(status, "approved", "", false), "DESIGN");
+  }
+  assert.equal(pipelineStage("IDEA", "PENDING", "", false), "APPROVAL");
+});
 test("ledger/run estimate deduplication preserves actual vs estimated totals", () => {
   const r = empty();
   r.runs = [
