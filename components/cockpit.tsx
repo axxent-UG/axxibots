@@ -388,7 +388,7 @@ export default function Cockpit({ demo }: { demo: boolean }) {
                     data.counts.blocked +
                     data.tasks.filter((t) => t.status === "FAILED").length
                   }
-                  note={`${data.counts.stalled} potentially stalled tasks`}
+                  note={`${data.counts.stalled} in-progress stalls · ${data.counts.pending} queued · ${data.counts.pendingDesignBlocked} design briefs awaiting eligibility`}
                   tone="#edbd77"
                 />
               </div>
@@ -1237,8 +1237,11 @@ function Inspector({
             <dd>{a.department}</dd>
             <dt>Tasks completed</dt>
             <dd>{a.completed}</dd>
-            <dt>Current workload</dt>
+            <dt>Open tasks (not necessarily executable)</dt>
             <dd>{a.workload}</dd>
+            <dt>Queued tasks</dt>
+            <dd>{a.pending}</dd>
+            {a.pendingDesignBlocked > 0 && <><dt>Design briefs not currently eligible</dt><dd>{a.pendingDesignBlocked}</dd><dt>Reasons</dt><dd>{a.pendingDesignReasons.join("; ")}</dd></>}
             <dt>Business success</dt>
             <dd>{pct(a.success)}</dd>
             <dt>Known / unknown outcomes</dt>
