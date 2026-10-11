@@ -27,5 +27,5 @@ export async function authorizedRpc(functionName: "axx_hq_snapshot" | "axx_hq_ow
 
 export async function liveSnapshotViaRpc() {
   const raw = await authorizedRpc("axx_hq_snapshot") as Raw;
-  return buildSnapshot(raw);
+  return buildSnapshot(raw, "LIVE");
 }
