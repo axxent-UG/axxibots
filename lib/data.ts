@@ -39,7 +39,19 @@ export async function liveSnapshot() {
         : {}),
     },
   });
-  const client = await pool.connect();
+  let client;
+  try {
+    client = await pool.connect();
+  } catch (e) {
+    const err = e as { code?: string; message?: string };
+    const msg = String(err.message || "");
+    const category = /certificate|self.signed|unable to verify|tls|ssl/i.test(msg) ? "TLS_CERTIFICATE" :
+      /password authentication|28P01/i.test(msg) || err.code === "28P01" ? "DB_AUTH" :
+      /ENOTFOUND|EAI_AGAIN/i.test(msg) ? "DNS" :
+      /ETIMEDOUT|timeout|ECONNREFUSED|ENETUNREACH/i.test(msg) ? "NETWORK" : "DB_CONNECTION";
+    console.error("HQ_DB_DIAGNOSTIC", { phase: "connect", category, code: String(err.code || "").slice(0, 20) });
+    throw e;
+  }
   try {
     await client.query(
       "BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY",
@@ -69,7 +81,9 @@ export async function liveSnapshot() {
     await client.query("COMMIT");
     return buildSnapshot(raw, "LIVE");
   } catch (e) {
-    await client.query("ROLLBACK");
+    const err = e as { code?: string };
+    console.error("HQ_DB_DIAGNOSTIC", { phase: "query", category: "DB_QUERY", code: String(err.code || "").slice(0, 20) });
+    try { await client.query("ROLLBACK"); } catch { /* connection already closed */ }
     throw e;
   } finally {
     client.release();
