@@ -441,6 +441,9 @@ export function buildSnapshot(
       status,
       ideaStatus: str(idea.status),
       decision: str(idea.owner_decision),
+      concept: str(idea.concept).slice(0, 1200),
+      audience: str(idea.target_audience).slice(0, 500),
+      proposal: redact(idea.proposal).slice(0, 2200),
       stage: pipelineStage(
         status,
         str(idea.owner_decision),
