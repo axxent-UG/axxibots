@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Pool } from "pg";
-import { requireSiteAccess } from "@/lib/access";
 import { authorize } from "@/lib/auth";
 import { isDemo } from "@/lib/config";
 
@@ -12,8 +11,6 @@ let pool: Pool | undefined;
 /** Owner-only action. The existing SQL function enforces proposal state, idempotent
  * eligibility and records the owner's decision in the audit log. No publishing. */
 export async function POST(req: NextRequest) {
-  const denied = requireSiteAccess(req);
-  if (denied) return denied;
   if (isDemo()) return NextResponse.json({ error: "Actions are disabled in demo mode." }, { status: 403, headers });
   if (req.headers.get("origin") !== req.nextUrl.origin)
     return NextResponse.json({ error: "Invalid origin." }, { status: 403, headers });
