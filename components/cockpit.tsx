@@ -12,6 +12,7 @@ const views = [
   ["office", "⌘", "Headquarters"],
   ["operations", "◈", "Operations"],
   ["pipeline", "▥", "Product pipeline"],
+  ["approvals", "✓", "Approval center"],
   ["finance", "◷", "Finance"],
   ["agents", "♧", "Agent performance"],
 ] as const;
@@ -78,6 +79,7 @@ export default function Cockpit({ demo }: { demo: boolean }) {
     [selection, setSelection] = useState<Selection>(null),
     [search, setSearch] = useState(""),
     [filter, setFilter] = useState("ALL");
+  const [decisionNotes, setDecisionNotes] = useState<Record<string,string>>({});
   const [decisionBusy, setDecisionBusy] = useState<string | null>(null);
   const [decisionError, setDecisionError] = useState("");
   const decideIdea = async (ideaId: string, title: string, decision: "APPROVED" | "REJECTED") => {
@@ -85,7 +87,7 @@ export default function Cockpit({ demo }: { demo: boolean }) {
     setDecisionBusy(ideaId);
     setDecisionError("");
     try {
-      const r = await fetch("/api/owner/idea", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ideaId, decision }) });
+      const r = await fetch("/api/owner/idea", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ideaId, decision, note: decisionNotes[ideaId] || undefined }) });
       const response = await r.json();
       if (!r.ok) throw new Error(response.error || "Decision failed");
       await refresh();
@@ -614,6 +616,32 @@ export default function Cockpit({ demo }: { demo: boolean }) {
                         />
                       </section>
                     </>
+                  )}
+                  {view === "approvals" && (
+                    <section aria-label="Owner approval center">
+                      <div className="section-heading">
+                        <div><span className="eyebrow">OWNER CONTROL</span><h2>Decisions awaiting you</h2></div>
+                        <Badge text={`${data.products.filter(p => p.ideaId && p.ideaStatus === "IDEA" && !p.decision).length} OPEN`} />
+                      </div>
+                      <p className="small muted">Approving an eligible proposal records an owner decision and releases it to the existing scheduled production dispatcher, subject to all budgets and quality gates. No Etsy publication is authorized here.</p>
+                      {decisionError && <div className="notice error-notice" role="alert">{decisionError}</div>}
+                      {data.products.filter(p => p.ideaId && p.ideaStatus === "IDEA" && !p.decision).length === 0 && <p className="notice">No eligible open proposals currently await a decision. Existing drafts and completed decisions remain in Product pipeline.</p>}
+                      <div className="cards-grid" style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(min(100%,340px),1fr))",gap:16,marginTop:20}}>
+                        {data.products.filter(p => p.ideaId && p.ideaStatus === "IDEA" && !p.decision).map(p => (
+                          <article className="product-card" key={p.ideaId} style={{display:"flex",flexDirection:"column",gap:12,padding:22}}>
+                            <div><Badge text="AWAITING OWNER" /><h3>{p.title}</h3></div>
+                            {p.audience && <p className="small"><strong>Audience:</strong> {p.audience}</p>}
+                            {p.concept && <p className="small">{p.concept}</p>}
+                            {p.proposal && <details><summary className="small">Research proposal / evidence</summary><pre style={{whiteSpace:"pre-wrap",overflowWrap:"anywhere",maxHeight:240,overflowY:"auto",fontSize:12}}>{p.proposal}</pre></details>}
+                            <label className="small">Decision note (optional)<textarea aria-label={`Decision note for ${p.title}`} maxLength={2000} value={decisionNotes[p.ideaId] || ""} onChange={e=>setDecisionNotes(v=>({...v,[p.ideaId]:e.target.value}))} style={{width:"100%",minHeight:64,marginTop:8}} /></label>
+                            <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+                              <button className="button" disabled={!!decisionBusy} onClick={()=>void decideIdea(p.ideaId,p.title,"APPROVED")}>{decisionBusy === p.ideaId ? "Saving…" : "Approve → Produce draft"}</button>
+                              <button className="button subtle" disabled={!!decisionBusy} onClick={()=>void decideIdea(p.ideaId,p.title,"REJECTED")}>Reject</button>
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </section>
                   )}
                   {view === "pipeline" && (
                     <>
