@@ -1,12 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { requireSiteAccess } from "@/lib/access";
 import { authClient, saveSession, clearSession } from "@/lib/auth";
 import { allowedUser, isDemo } from "@/lib/config";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export async function POST(req: NextRequest) {
-  const denied = requireSiteAccess(req);
-  if (denied) return denied;
   if (req.headers.get("origin") !== req.nextUrl.origin)
     return NextResponse.json({ error: "Invalid origin" }, { status: 403 });
   try {
