@@ -1,5 +1,4 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { requireSiteAccess } from "@/lib/access";
 import { isDemo } from "@/lib/config";
 import { authorize } from "@/lib/auth";
 import { demoSnapshot } from "@/lib/demo";
@@ -11,8 +10,6 @@ const headers = {
   Vary: "Authorization, Cookie",
 };
 export async function GET(req: NextRequest) {
-  const denied = requireSiteAccess(req);
-  if (denied) return denied;
   if (isDemo()) return NextResponse.json(demoSnapshot(), { headers });
   try {
     if (!(await authorize()))
