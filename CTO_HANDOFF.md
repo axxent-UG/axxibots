@@ -119,3 +119,19 @@ have an error output to Log Finalization Failure.
 
 Measure eligible task completion and independently reviewed quality with explicit
 denominators. Do not substitute n8n transport success or invented scores for outcomes.
+
+
+## Live pipeline audit addendum — 2026-10-12
+
+Verified against live Supabase and published n8n graphs (not a paid production test):
+
+- Dispatcher is active, published, and its actual schedule trigger has `minutesInterval: 10` (the workflow name/description still say 30 minutes). Recent dispatcher executions succeeded; transport success is not proof of downstream business completion.
+- The Design workflow is active and its picker deliberately accepts only `RESEARCHED`/`DESIGNING` ideas with owner approval or authorized CEO early-start. `axx.design_pending_phase()` currently returns `nothing`.
+- Reconciled 15 obsolete `production_spec` tasks to DONE with explicit result provenance: all referenced `DESIGNED` ideas with a bundle plan, existing product, and exclusively QA-passed non-meta components. Two unapproved P09/P10 briefs remain PENDING; owner gates were not changed.
+- **Important correction:** NULL per-component `axx.designs.asset_storage_path` and `is_production_ready=false` do NOT by themselves prove a printable buyer download is absent. The canonical printable render manifest is `axx.product_ideas.design_output.files`; packaged buyer assets are tracked on `axx.products.package_path/package_bytes`. All eleven non-test products associated with DESIGNED ideas inspected had a non-null package path, positive package bytes and render manifest. Storage-object accessibility and Etsy-side attachment completeness remain unverified.
+- Seven non-test products have Supabase Etsy listing records with `etsy_state=draft` and Etsy listing IDs. Do not conflate these database records with independently verified live Etsy listings or complete downloads.
+- Two otherwise packaged products have no Etsy draft: **Christmas Scavenger Hunt Kit** (product DESIGNING, compliance FAIL because only 5 listing images, required >=6; compliance report suggests rerender) and **Secret Santa Gift Exchange Kit** (product DESIGNING, compliance FLAGGED with child-safety age-label and README description warnings). A duplicate Holiday Party bundle is REJECTED and must not be relisted.
+- No AI spending, publication, or approval changes were made during this audit. Before any repair, inspect existing rendering/packaging recovery, and ensure rerender is free and non-duplicating. Never mark compliance PASS merely by changing database status; verify the actual output and rerun existing checks.
+- HQ commits `836b50d` and `91dee3c` distinguish queued design briefs from truly stalled IN_PROGRESS work; Vercel deployment `dpl_Cfg9D47ht1daafWVeVxHBc7MvwFn` reached READY. An authenticated live browser check is still outstanding.
+- Highest-value next checks: inspect compliance retry/repair routing for the two products, verify private package storage objects, check Etsy drafts/files/images via authenticated Etsy API, audit each scheduled agent and end-to-end handoff, then improve evidence-backed opportunity selection without fabricating metrics.
+
