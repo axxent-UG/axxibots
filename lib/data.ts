@@ -11,7 +11,7 @@ export const queries: Record<keyof Raw, string> = {
   tasks:
     "select id,run_id,assigned_agent,task_type,title,status,attempts,max_attempts,created_at,updated_at,started_at,completed_at,last_error,review_status,review_feedback,jsonb_build_object('run_id',result->'run_id','status',result->'status','success',result->'success','output',jsonb_build_object('status',result->'output'->'status','success',result->'output'->'success')) as result,jsonb_build_object('product_id',payload->'product_id','product_idea_id',payload->'product_idea_id') as payload from axx.tasks",
   ideas:
-    "select id,title,status,owner_decision,created_at,updated_at from axx.product_ideas where is_test is not true",
+    "select id,title,status,owner_decision,concept,target_audience,category,proposal,created_at,updated_at from axx.product_ideas where is_test is not true",
   products:
     "select id,product_idea_id,title,status,compliance_status,created_at,updated_at from axx.products where is_test is not true",
   expenses:
