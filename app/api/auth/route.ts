@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { authClient, saveSession, clearSession } from "@/lib/auth";
-import { allowedUser, isDemo } from "@/lib/config";
+import { authClient, clearSession } from "@/lib/auth";
+import { isDemo } from "@/lib/config";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export async function POST(req: NextRequest) {
@@ -12,43 +12,17 @@ export async function POST(req: NextRequest) {
       await clearSession();
       return NextResponse.json({ ok: true });
     }
-    if (isDemo())
-      return NextResponse.json(
-        { error: "Demo mode uses sample data; login is disabled." },
-        { status: 400 },
-      );
-    if (
-      typeof body.email !== "string" ||
-      typeof body.password !== "string" ||
-      body.email.length > 254 ||
-      body.password.length > 1024
-    )
-      return NextResponse.json(
-        { error: "Invalid sign-in details" },
-        { status: 400 },
-      );
-    const { data, error } = await authClient().auth.signInWithPassword({
+    if (isDemo()) return NextResponse.json({ error: "Login unavailable in demo mode." }, { status: 400 });
+    if (body.action !== "magic_link" || typeof body.email !== "string" || body.email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(body.email))
+      return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
+    // shouldCreateUser:false prevents registration and preserves the existing allowlist.
+    const { error } = await authClient().auth.signInWithOtp({
       email: body.email,
-      password: body.password,
+      options: { shouldCreateUser: false, emailRedirectTo: req.nextUrl.origin + "/auth/callback" },
     });
-    if (error || !data.user || !data.session || !allowedUser(data.user.id))
-      return NextResponse.json(
-        { error: "Sign-in failed or this account is not authorized for HQ." },
-        { status: 401 },
-      );
-    await saveSession(
-      data.session.access_token,
-      data.session.refresh_token,
-      data.session.expires_in,
-    );
-    return NextResponse.json(
-      { ok: true },
-      { headers: { "Cache-Control": "no-store" } },
-    );
+    if (error) return NextResponse.json({ error: "Unable to send sign-in link. Check the authorized account and Supabase email configuration." }, { status: 400 });
+    return NextResponse.json({ ok: true, message: "If the account is registered, check your inbox for a sign-in link." }, { headers: { "Cache-Control": "no-store" } });
   } catch {
-    return NextResponse.json(
-      { error: "Authentication unavailable. Check server configuration." },
-      { status: 503 },
-    );
+    return NextResponse.json({ error: "Authentication service unavailable." }, { status: 503 });
   }
 }
