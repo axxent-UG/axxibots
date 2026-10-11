@@ -261,6 +261,7 @@ export default function Cockpit({ demo }: { demo: boolean }) {
                     office: "A company in motion.",
                     operations: "Every execution. Every outcome.",
                     pipeline: "From opportunity to market.",
+                    approvals: "Your decisions. Your company.",
                     finance: "The economics of autonomy.",
                     agents: "Your team, by the numbers.",
                   }[view]
@@ -275,6 +276,8 @@ export default function Cockpit({ demo }: { demo: boolean }) {
                       "Technical success is only half the story. Follow the business evidence.",
                     pipeline:
                       "A single product journey, mapped from the real production states.",
+                    approvals:
+                      "Review research, approve production, or reject proposals. Publication remains separate.",
                     finance:
                       "Recorded expenses, transparent estimates and honest unknowns.",
                     agents:
