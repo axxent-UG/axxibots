@@ -221,6 +221,57 @@ def cover(base, prod, assets, ldir):
     c.convert("RGB").save(os.path.join(ldir, "01_cover.jpg"), quality=92)
 
 
+def mood_background(W, H, seed=31):
+    """Dark wood, warm glow behind the subject, deep vignette and soft golden bokeh."""
+    c = bc.wood(W, H, seed=seed)
+    arr = np.asarray(c, np.float32)
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    d = np.sqrt(((xx - W * 0.5) / (W * 0.62)) ** 2 + ((yy - H * 0.42) / (H * 0.62)) ** 2)
+    light = 0.38 + 0.95 * np.clip(1 - d, 0, 1) ** 1.6
+    arr[..., :3] *= light[..., None]
+    glow = np.clip(1 - d * 1.4, 0, 1) ** 2
+    arr[..., 0] += 38 * glow
+    arr[..., 1] += 20 * glow
+    c = Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8), "RGBA")
+    bok = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    db = ImageDraw.Draw(bok)
+    rnd = random.Random(seed)
+    for _ in range(46):
+        x, y = rnd.randint(0, W), rnd.randint(0, int(H * 0.7))
+        r = rnd.randint(18, 70)
+        a = rnd.randint(40, 110)
+        db.ellipse((x - r, y - r, x + r, y + r), fill=(255, 196, 110, a))
+    bok = bok.filter(ImageFilter.GaussianBlur(10))
+    c.alpha_composite(bok)
+    return c
+
+
+def cover_mood(base, prod, assets, ldir):
+    W, H = bc.W, bc.H
+    c = mood_background(W, H)
+    pk = {p["front"]: p for p in prod["pockets"]}
+    order = prod["cover_cluster"]  # back to front: [front_key, x, y, h, angle, shade]
+    for key, x, y, h, a, shade in order:
+        im = assembled(assets, pk[key], h)
+        if shade < 1:
+            arr = np.asarray(im, np.float32)
+            arr[..., :3] *= shade
+            im = Image.fromarray(arr.astype(np.uint8), "RGBA")
+        im = im.rotate(a, resample=Image.BICUBIC, expand=True)
+        sh, pad = bk.drop_shadow(im, off=(22, 30), blur=28, alpha=200)
+        c.alpha_composite(sh, (int(x - im.width / 2 - pad), int(y - im.height / 2 - pad)))
+    for key, x, y, h, a in prod.get("cover_loose", []):
+        mo = bk.fit(load(assets, key), h, h).rotate(a, resample=Image.BICUBIC, expand=True)
+        sh, pad = bk.drop_shadow(mo, off=(14, 20), blur=18, alpha=190)
+        c.alpha_composite(sh, (int(x - mo.width / 2 - pad), int(y - mo.height / 2 - pad)))
+    bc.ribbon(c, "DIGITAL DOWNLOAD · YOU PRINT")
+    b = bc.badge(prod["badge_title"], prod["badge_sub"], w=1150, h=520)
+    bc.paste_rot(c, b, prod.get("badge_x", W // 2), prod.get("badge_y", 1880), 0)
+    bc.info_band(c, prod["cover_lines"])
+    os.makedirs(ldir, exist_ok=True)
+    c.convert("RGB").save(os.path.join(ldir, "01_cover.jpg"), quality=92)
+
+
 def main():
     cfg = json.load(open(sys.argv[1]))
     assets, out = sys.argv[2], sys.argv[3]
@@ -229,7 +280,7 @@ def main():
     for prod in cfg["products"]:
         pdir = build(base, prod, assets, out)
         ldir = os.path.join(out, prod["slug"], "listing")
-        cover(base, prod, assets, ldir)
+        (cover_mood if prod.get("cover_cluster") else cover)(base, prod, assets, ldir)
         bp.previews(prod, pdir, ldir)
         print(prod["slug"], "ok")
 
