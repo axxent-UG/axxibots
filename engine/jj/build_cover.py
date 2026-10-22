@@ -72,12 +72,18 @@ def badge(title, sub, w=1250, h=560):
     text_center(d, w // 2, 120, sub.upper(), f1, PINE + (255,))
     f2 = fit_font(d, title, F_ITAL, w - 160, 190)
     text_center(d, w // 2, h // 2 + 20, title, f2, CRAN + (255,))
-    # small holly ornament under the title
-    cy = h - 110
-    d.line((w // 2 - 260, cy, w // 2 - 40, cy), fill=GOLD + (255,), width=4)
-    d.line((w // 2 + 40, cy, w // 2 + 260, cy), fill=GOLD + (255,), width=4)
-    for dx in (-14, 14, 0):
-        d.ellipse((w // 2 + dx - 13, cy - 13 - (8 if dx == 0 else 0), w // 2 + dx + 13, cy + 13 - (8 if dx == 0 else 0)), fill=CRAN + (255,))
+    # brand line: small inkwell emblem + shop name (Inkwell Ephemera)
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("inkwell_brand", os.path.join(os.path.dirname(__file__), "..", "brand", "inkwell_brand.py"))
+    ib = importlib.util.module_from_spec(spec); spec.loader.exec_module(ib)
+    cy = h - 105
+    e = ib.emblem(86)
+    f3 = F_SC(46)
+    label = "INKWELL EPHEMERA"
+    tw = d.textbbox((0, 0), label, font=f3)[2]
+    x0 = (w - (e.width + 18 + tw)) // 2
+    b.alpha_composite(e, (x0, cy - 52))
+    d.text((x0 + e.width + 18, cy - 28), label, font=f3, fill=(30, 36, 54, 255))
     return b
 
 
