@@ -5,12 +5,19 @@ Motifs (transparent background) fail when:
   - edge:   the drawing touches the image border (cut off)
   - patch:  the outline of the shape is mostly flat light paper (a background patch instead of transparency)
   - empty:  almost nothing drawn, or no transparency at all
+  - colour: (warning) muted, faded or brownish palette; owner standard is rich, saturated colour
 Cards/papers fail when they are not fully opaque or look blank.
 Prints one JSON line per asset; exit code 0. Usage: qa_assets.py <assets_dir> [keys...]
 """
 import glob, json, os, sys
 import numpy as np
 from PIL import Image, ImageFilter
+
+
+# Colour standard (owner 22.10.2026): muted = mostly tan/brown hues and little true red/green accent.
+# Calibrated on the muted Christmas Post art (brown 0.46-0.98, accent 0.0-0.37).
+BROWN_MAX = 0.6
+ACCENT_MIN = 0.25
 
 
 def check_motif(im):
@@ -28,7 +35,14 @@ def check_motif(im):
     mx, mn = rgb.max(2), rgb.min(2)
     light_flat = (mx > 185) & ((mx - mn) < 60)
     patch = float(light_flat[ring].mean()) if ring.any() else 0.0
+    hsv = np.asarray(im.convert("RGB").convert("HSV"), np.float32) / 255
+    hue, sat, val = hsv[..., 0][solid] * 360, hsv[..., 1][solid], hsv[..., 2][solid]
+    col = sat > 0.25
+    brown = float((col & (hue >= 15) & (hue < 55)).mean()) if hue.size else 0.0
+    accent = float((col & (((hue < 12) | (hue > 335)) & (val > 0.35) & (sat > 0.45) | ((hue >= 75) & (hue < 180)))).mean()) if hue.size else 0.0
     reasons, warn = [], []
+    if brown > BROWN_MAX and accent < ACCENT_MIN:
+        warn.append("muted_colours")
     if cover < 0.04 or cover > 0.92:
         reasons.append("empty_or_no_transparency")
     if edge > 0.2:
@@ -37,7 +51,7 @@ def check_motif(im):
         warn.append("touches_edge")
     if patch > 0.45:
         reasons.append("background_patch")
-    return {"cover": round(float(cover), 3), "edge": round(float(edge), 3), "patch": round(patch, 3), "pass": not reasons, "reasons": reasons, "warn": warn}
+    return {"cover": round(float(cover), 3), "edge": round(float(edge), 3), "patch": round(patch, 3), "brown": round(brown, 3), "accent": round(accent, 3), "pass": not reasons, "reasons": reasons, "warn": warn}
 
 
 def check_full(im):
@@ -56,5 +70,6 @@ if __name__ == "__main__":
     keys = sys.argv[2:] or [os.path.basename(p)[:-4] for p in sorted(glob.glob(os.path.join(d, "*.png")))]
     for k in keys:
         im = Image.open(os.path.join(d, k + ".png")).convert("RGBA")
-        r = check_motif(im) if k.startswith("m") else check_full(im)
+        has_alpha = np.asarray(im.getchannel("A")).min() < 250
+        r = check_motif(im) if has_alpha else check_full(im)
         print(json.dumps(dict(key=k, **r)))
