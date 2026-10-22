@@ -1,0 +1,150 @@
+{
+  "collection": "kits/christmas-post-collection.json",
+  "products": [
+    {
+      "slug": "christmas-post-illusion-pockets",
+      "title": "Christmas Post Illusion Pockets",
+      "badge_title": "Christmas Post",
+      "badge_sub": "Illusion Pockets \u00b7 Printable",
+      "price_eur": 2.99,
+      "section": "Christmas Ephemera",
+      "pockets": [
+        {
+          "front": "pk_crate",
+          "cut": {
+            "line": [
+              [
+                0,
+                33.5
+              ],
+              [
+                100,
+                33.5
+              ]
+            ]
+          },
+          "inserts": [
+            "m01_teddy",
+            "m13_tree"
+          ]
+        },
+        {
+          "front": "pk_mug",
+          "cut": {
+            "ellipse": [
+              43,
+              18.5,
+              27,
+              4.5
+            ]
+          },
+          "inserts": [
+            "pk_candycanes"
+          ],
+          "depth": 0.15
+        },
+        {
+          "front": "pk_tin",
+          "cut": {
+            "ellipse": [
+              52.5,
+              27,
+              28,
+              4.5
+            ]
+          },
+          "inserts": [
+            "pk_gingerbread"
+          ],
+          "depth": 0.2
+        },
+        {
+          "front": "pk_stocking",
+          "cut": {
+            "ellipse": [
+              51.5,
+              12,
+              19.5,
+              3.5
+            ]
+          },
+          "inserts": [
+            "m12_nutcracker",
+            "m14_mistletoe"
+          ]
+        },
+        {
+          "front": "pk_envelope",
+          "cut": {
+            "line": [
+              [
+                0,
+                36
+              ],
+              [
+                14,
+                37
+              ],
+              [
+                49,
+                57
+              ],
+              [
+                87,
+                36
+              ],
+              [
+                100,
+                36
+              ]
+            ]
+          },
+          "inserts": [
+            "m03_robin"
+          ]
+        }
+      ],
+      "tuckins": [
+        "m01_teddy",
+        "m13_tree",
+        "pk_candycanes",
+        "pk_gingerbread",
+        "m12_nutcracker",
+        "m14_mistletoe",
+        "m03_robin",
+        "m17_poinsettia",
+        "m08_gifts",
+        "m04_ornaments",
+        "m11_rockinghorse",
+        "m16_bells",
+        "m09_candle",
+        "m06_sleigh",
+        "m15_skates",
+        "m18_deer",
+        "m10_pinecones",
+        "m07_fatherchristmas"
+      ],
+      "tags": [
+        "Merry & Bright",
+        "Noel",
+        "Joy to the World",
+        "Season's Greetings"
+      ],
+      "cover_lines": [
+        "5 illusion pockets",
+        "fronts + backs",
+        "18 tuck-ins + 4 tags",
+        "US Letter & A4"
+      ],
+      "inside_lines": [
+        "Pocket fronts & backs",
+        "18 tuck-ins",
+        "4 gift tags",
+        "Assembly guide"
+      ],
+      "facts": {},
+      "badge_x": 2230,
+      "badge_y": 1130
+    }
+  ]
+}
