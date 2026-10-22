@@ -4,7 +4,7 @@
 Usage: JJ_UPLOAD_KEY=<key> upload_kit.py <kit.json> <kit_out_dir> <listing_out_dir>
 The key is a short-lived upload key from axx.jj_upload_keys (bound to one kit, expires).
 """
-import glob, json, os, sys, urllib.parse, urllib.request
+import glob, io, json, os, sys, urllib.parse, urllib.request, zipfile
 
 BASE = os.environ.get("JJ_UPLOAD_URL", "https://xhztnnhrcqwuooezcbgh.supabase.co/functions/v1/jj-kit-upload")
 CAPTIONS = {
@@ -26,12 +26,30 @@ def put(path, name, kind, rank=None, caption=None):
         print(name, r.status, json.loads(r.read()).get("bytes"))
 
 
+def make_jpg_zip(cfg, kit_dir, out_path, quality=90):
+    """All US Letter pages as 300 dpi JPGs in one ZIP (buyers expect PDF + JPG; Etsy limit 20 MB per file)."""
+    from PIL import Image
+    pages = sorted(glob.glob(os.path.join(kit_dir, "%s_*_letter.jpg" % cfg["slug"])))
+    folder = cfg["title"].replace(" Kit", "").replace(" ", "_") + "_JPG/"
+    with zipfile.ZipFile(out_path, "w", zipfile.ZIP_STORED) as zf:
+        for p in pages:
+            b = io.BytesIO()
+            Image.open(p).save(b, "JPEG", quality=quality, dpi=(300, 300), optimize=True)
+            zf.writestr(folder + os.path.basename(p).replace(cfg["slug"] + "_", "").replace("_letter", ""), b.getvalue())
+    size = os.path.getsize(out_path)
+    if size > 19_500_000:
+        return make_jpg_zip(cfg, kit_dir, out_path, quality - 6)
+    return out_path
+
+
 def main():
     cfg = json.load(open(sys.argv[1]))
     kit_dir, listing_dir = sys.argv[2], sys.argv[3]
     title = cfg["title"].replace(" ", "_")
     for size in ("letter", "a4"):
         put(os.path.join(kit_dir, "%s_%s.pdf" % (cfg["slug"], size)), "%s_%s.pdf" % (title, "US_Letter" if size == "letter" else "A4"), "download")
+    z = make_jpg_zip(cfg, kit_dir, os.path.join(kit_dir, "%s_JPG_US_Letter.zip" % title))
+    put(z, os.path.basename(z), "download")
     for i, p in enumerate(sorted(glob.glob(os.path.join(listing_dir, "*.jpg")))[:10]):
         stem = os.path.basename(p)[:-4]
         cap = CAPTIONS.get(stem) or ("Preview: " + stem.split("_", 2)[-1].replace("_letter", "").replace("_", " "))
