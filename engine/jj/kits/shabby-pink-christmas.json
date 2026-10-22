@@ -1,0 +1,616 @@
+{
+ "slug": "shabby-pink-christmas",
+ "title": "Shabby Pink Christmas",
+ "badge_title": "Shabby Pink Christmas",
+ "motifs": [
+  "m01_ornaments",
+  "m02_teddy",
+  "m03_stocking",
+  "m04_gingerbread",
+  "m05_peppermints",
+  "m06_roses",
+  "m07_skates",
+  "m08_sleigh",
+  "m09_deer",
+  "m10_cocoa",
+  "m11_cupcake",
+  "m12_santa",
+  "m13_tree",
+  "m14_snowglobe",
+  "m15_gifts",
+  "m16_bells",
+  "m17_poinsettia",
+  "m18_bird"
+ ],
+ "cards": [
+  "c01_village",
+  "c02_parlor",
+  "c03_bakery",
+  "c04_stilllife"
+ ],
+ "papers": [
+  "pp1_damask",
+  "pp2_stripe",
+  "pp3_roses",
+  "pp4_snowflake",
+  "pp5_plaid",
+  "pp6_peppermint"
+ ],
+ "pattern_papers": [
+  "pp1_damask",
+  "pp2_stripe",
+  "pp3_roses",
+  "pp4_snowflake",
+  "pp5_plaid",
+  "pp6_peppermint"
+ ],
+ "words": [
+  "Merry & Bright",
+  "Sweet Christmas",
+  "Noel",
+  "Season's Greetings",
+  "Joy to the World",
+  "Peace on Earth"
+ ],
+ "card_words": [
+  "Pink Christmas",
+  null,
+  "Sweet Wishes",
+  null
+ ],
+ "journal_titles": [
+  "Dear Santa",
+  "Wish List",
+  "Christmas Memories",
+  "Holiday Notes",
+  "Gift List",
+  "Cookie List"
+ ],
+ "stamp_label": "PINK CHRISTMAS",
+ "stamp_values": [
+  "1d",
+  "2d",
+  "3d",
+  "½d",
+  "4d",
+  "6d"
+ ],
+ "stamp_tones": [
+  [
+   240,
+   222,
+   224
+  ],
+  [
+   232,
+   236,
+   226
+  ],
+  [
+   244,
+   232,
+   214
+  ],
+  [
+   236,
+   216,
+   222
+  ]
+ ],
+ "strip_tones": [
+  [
+   246,
+   238,
+   228
+  ],
+  [
+   240,
+   222,
+   226
+  ],
+  [
+   234,
+   226,
+   214
+  ]
+ ],
+ "palette": {
+  "accent": [
+   176,
+   82,
+   110
+  ],
+  "gold": [
+   190,
+   160,
+   140
+  ],
+  "ink": [
+   74,
+   58,
+   66
+  ]
+ },
+ "products": [
+  {
+   "slug": "shabby-pink-christmas-kit",
+   "title": "Shabby Pink Christmas Ephemera Kit",
+   "badge_sub": "Junk Journal Ephemera Kit",
+   "price_eur": 3.95,
+   "section": "Christmas Ephemera",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags"
+    },
+    {
+     "type": "cards",
+     "name": "picture_cards"
+    },
+    {
+     "type": "journal",
+     "off": 6,
+     "name": "journal_cards"
+    },
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps"
+    },
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts_1"
+    },
+    {
+     "type": "fussy",
+     "off": 9,
+     "name": "fussy_cuts_2"
+    },
+    {
+     "type": "advent",
+     "style": "medallion",
+     "name": "advent_numbers"
+    },
+    {
+     "type": "words",
+     "name": "word_strips",
+     "words": [
+      "Merry & Bright",
+      "Let It Snow",
+      "Comfort & Joy",
+      "Sleigh Rides",
+      "Warm Wishes",
+      "Peppermint Kisses",
+      "Under the Mistletoe",
+      "Sugar & Spice",
+      "Deck the Halls",
+      "Holly Jolly",
+      "Silent Night",
+      "Cozy Nights",
+      "Snow Day",
+      "Believe",
+      "Home for Christmas",
+      "Joy",
+      "Pink Christmas",
+      "Twinkle Twinkle",
+      "Noel",
+      "Sweet Treats"
+     ]
+    },
+    {
+     "type": "pattern",
+     "key": "pp1_damask",
+     "name": "paper_damask"
+    },
+    {
+     "type": "pattern",
+     "key": "pp3_roses",
+     "name": "paper_roses"
+    }
+   ],
+   "cover_lines": [
+    "10 printable pages",
+    "Tags · Cards · Stamps · Fussy Cuts · Numbers",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "6 tags · 4 picture cards · 6 journal cards · 20 stamps",
+    "18 fussy cuts · 25 advent numbers · 20 word strips · 2 papers",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "shabby chic pink vintage Christmas",
+    "collection": "Shabby Pink Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Ephemera Kit",
+    "section": "Christmas Ephemera",
+    "pages": 10,
+    "contents": {
+     "gift_tags": 6,
+     "picture_cards": 4,
+     "lined_journal_cards": 6,
+     "postage_stamps": 20,
+     "fussy_cuts": 18,
+     "advent_numbers_1_to_25": 25,
+     "word_strips": 20,
+     "pattern_papers": 2
+    },
+    "piece_size": "tags approx. 2.4 x 4.8 in, picture cards approx. 3.6 x 4.8 in, journal cards approx. 3.6 x 3.2 in, stamps approx. 1.8 x 1.9 in, advent numbers approx. 1.8 in round, word strips approx. 4.4 x 0.9 in (all on US Letter)"
+   }
+  },
+  {
+   "slug": "shabby-pink-christmas-fussy-cuts",
+   "title": "Shabby Pink Christmas Fussy Cuts",
+   "badge_sub": "Printable Fussy Cuts",
+   "price_eur": 2.49,
+   "section": "Fussy Cuts",
+   "pages": [
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts_1"
+    },
+    {
+     "type": "fussy",
+     "off": 9,
+     "name": "fussy_cuts_2"
+    }
+   ],
+   "cover_lines": [
+    "18 fussy cuts",
+    "White cutting border",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "2 sheets · 18 different pink Christmas motifs",
+    "Each up to approx. 2.5 x 3.2 in",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "shabby chic pink vintage Christmas",
+    "collection": "Shabby Pink Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Fussy Cuts",
+    "section": "Fussy Cuts",
+    "pages": 2,
+    "contents": {
+     "fussy_cuts": 18,
+     "different_motifs": 18
+    },
+    "piece_size": "each motif up to approx. 2.5 x 3.2 in on US Letter, with a white cutting border",
+    "motifs": "pink glass ornaments, teddy bear, pink stocking, gingerbread house, peppermints, pink roses, ice skates, pink sleigh, white reindeer, hot cocoa, cupcake, old-world Santa in pink, Christmas tree, snow globe, wrapped gifts, sleigh bells, pink poinsettia, white dove"
+   }
+  },
+  {
+   "slug": "shabby-pink-christmas-gift-tags",
+   "title": "Shabby Pink Christmas Gift Tags",
+   "badge_sub": "Printable Gift Tags",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags_1"
+    },
+    {
+     "type": "tags",
+     "off": 6,
+     "name": "tags_2",
+     "words": [
+      "Ho Ho Ho",
+      "Sweet Christmas",
+      "With Love",
+      "Merry Everything",
+      "Sugar & Spice",
+      "Be Merry"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "12 printable gift tags",
+    "12 different motifs",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "2 pages · 12 tags with greetings",
+    "Approx. 2.4 x 4.8 in each",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "shabby chic pink vintage Christmas",
+    "collection": "Shabby Pink Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Gift Tags",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "gift_tags": 12
+    },
+    "piece_size": "approx. 2.4 x 4.8 in each on US Letter",
+    "greetings": [
+     "Merry & Bright",
+     "Sweet Christmas",
+     "Noel",
+     "Season's Greetings",
+     "Joy to the World",
+     "Peace on Earth",
+     "Ho Ho Ho",
+     "Sweet Christmas",
+     "With Love",
+     "Merry Everything",
+     "Sugar & Spice",
+     "Be Merry"
+    ]
+   }
+  },
+  {
+   "slug": "shabby-pink-christmas-advent-numbers",
+   "title": "Shabby Pink Christmas Advent Numbers",
+   "badge_sub": "Advent Numbers 1-25",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "advent",
+     "style": "medallion",
+     "name": "advent_round"
+    },
+    {
+     "type": "advent",
+     "style": "card",
+     "name": "advent_cards"
+    }
+   ],
+   "cover_lines": [
+    "Numbers 1-25 in 2 styles",
+    "50 pieces",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "Page 1: 25 round number labels · Page 2: 25 number cards with motifs",
+    "Round approx. 1.8 in · cards approx. 1.8 x 2.4 in",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "shabby chic pink vintage Christmas",
+    "collection": "Shabby Pink Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Advent Numbers",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "round_number_labels_1_to_25": 25,
+     "number_cards_1_to_25": 25
+    },
+    "piece_size": "round labels approx. 1.8 in, number cards approx. 1.8 x 2.4 in on US Letter",
+    "use": "advent calendars, countdown journals, December daily journals, gift numbering"
+   }
+  },
+  {
+   "slug": "shabby-pink-christmas-word-strips",
+   "title": "Shabby Pink Christmas Word Strips",
+   "badge_sub": "Christmas Word Strips",
+   "price_eur": 1.99,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "words",
+     "name": "words_1",
+     "words": [
+      "Merry & Bright",
+      "Let It Snow",
+      "Comfort & Joy",
+      "Sleigh Rides",
+      "Warm Wishes",
+      "Peppermint Kisses",
+      "Under the Mistletoe",
+      "Sugar & Spice",
+      "Deck the Halls",
+      "Holly Jolly",
+      "Silent Night",
+      "Cozy Nights",
+      "Snow Day",
+      "Believe",
+      "Home for Christmas",
+      "Joy",
+      "Pink Christmas",
+      "Twinkle Twinkle",
+      "Noel",
+      "Sweet Treats"
+     ]
+    },
+    {
+     "type": "words",
+     "name": "words_2",
+     "words": [
+      "Hot Cocoa",
+      "Gingerbread",
+      "Candy Canes",
+      "Visions of Sugar Plums",
+      "Wrapped with Love",
+      "Season of Giving",
+      "Tidings of Joy",
+      "Glitter & Snow",
+      "Christmas Eve",
+      "Dear Santa",
+      "Make a Wish",
+      "Frosted",
+      "Peace & Love",
+      "Be Merry",
+      "Winter Rose",
+      "Fa La La",
+      "Oh Holy Night",
+      "Naughty or Nice",
+      "Cookie Baking",
+      "Merry Everything"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "40 word strips",
+    "Typewriter style",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "2 pages · 40 Christmas words and phrases",
+    "Approx. 4.4 x 0.9 in each",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "shabby chic pink vintage Christmas",
+    "collection": "Shabby Pink Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Word Strips",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "word_strips": 40
+    },
+    "piece_size": "approx. 4.4 x 0.9 in each on US Letter",
+    "phrases": [
+     "Merry & Bright",
+     "Let It Snow",
+     "Comfort & Joy",
+     "Sleigh Rides",
+     "Warm Wishes",
+     "Peppermint Kisses",
+     "Under the Mistletoe",
+     "Sugar & Spice",
+     "Deck the Halls",
+     "Holly Jolly",
+     "Silent Night",
+     "Cozy Nights",
+     "Snow Day",
+     "Believe",
+     "Home for Christmas",
+     "Joy",
+     "Pink Christmas",
+     "Twinkle Twinkle",
+     "Noel",
+     "Sweet Treats",
+     "Hot Cocoa",
+     "Gingerbread",
+     "Candy Canes",
+     "Visions of Sugar Plums",
+     "Wrapped with Love",
+     "Season of Giving",
+     "Tidings of Joy",
+     "Glitter & Snow",
+     "Christmas Eve",
+     "Dear Santa",
+     "Make a Wish",
+     "Frosted",
+     "Peace & Love",
+     "Be Merry",
+     "Winter Rose",
+     "Fa La La",
+     "Oh Holy Night",
+     "Naughty or Nice",
+     "Cookie Baking",
+     "Merry Everything"
+    ]
+   }
+  },
+  {
+   "slug": "shabby-pink-christmas-paper-pack",
+   "title": "Shabby Pink Christmas Paper Pack",
+   "badge_sub": "Printable Pattern Papers",
+   "price_eur": 1.49,
+   "section": "Papers & Journal Pages",
+   "pages": [
+    {
+     "type": "pattern",
+     "key": "pp1_damask",
+     "name": "paper_damask"
+    },
+    {
+     "type": "pattern",
+     "key": "pp2_stripe",
+     "name": "paper_stripe"
+    },
+    {
+     "type": "pattern",
+     "key": "pp3_roses",
+     "name": "paper_roses"
+    },
+    {
+     "type": "pattern",
+     "key": "pp4_snowflake",
+     "name": "paper_snowflake"
+    },
+    {
+     "type": "pattern",
+     "key": "pp5_plaid",
+     "name": "paper_plaid"
+    },
+    {
+     "type": "pattern",
+     "key": "pp6_peppermint",
+     "name": "paper_peppermint"
+    }
+   ],
+   "cover_lines": [
+    "6 pattern papers",
+    "Full page, edge to edge",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "6 full-page shabby pink Christmas papers",
+    "Damask, stripes, roses, snowflakes, plaid, peppermints",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "shabby chic pink vintage Christmas",
+    "collection": "Shabby Pink Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Pattern Paper Pack",
+    "section": "Papers & Journal Pages",
+    "pages": 6,
+    "contents": {
+     "pattern_papers": 6
+    },
+    "patterns": "pink damask, pink stripes with dots, small roses, snowflakes on dusty pink, pink and sage plaid, peppermint candies",
+    "note": "full-page backgrounds; most home printers leave a small white margin"
+   }
+  }
+ ]
+}

@@ -339,7 +339,7 @@ class Kit:
         cols, rows, mx, my, gap = 4, 5, 140, 150, 44
         sw = (W - 2 * mx - (cols - 1) * gap) // cols
         sh = (H - 2 * my - (rows - 1) * gap) // rows
-        tones = [(236, 222, 196), (222, 205, 205), (212, 222, 206), (230, 214, 186)]
+        tones = [tuple(t) for t in self.cfg.get("stamp_tones", [(236, 222, 196), (222, 205, 205), (212, 222, 206), (230, 214, 186)])]
         vals = self.cfg["stamp_values"]
         for i in range(cols * rows):
             r, c = divmod(i, cols)

@@ -24,12 +24,113 @@ def page_pattern(kit, W, H, key, seed):
     return bk.grain_overlay(big, seed, 0.03).convert("RGBA")
 
 
+def apply_palette(base):
+    """Collection colours for page chrome (frames, words, numbers). Module globals are read at call time."""
+    pal = base.get("palette") or {}
+    for mod in (bk, bc):
+        if "accent" in pal:
+            mod.CRAN = tuple(pal["accent"])
+        if "gold" in pal:
+            mod.GOLD = tuple(pal["gold"])
+        if "ink" in pal and hasattr(mod, "INK"):
+            mod.INK = tuple(pal["ink"])
+        if "green" in pal and hasattr(mod, "PINE"):
+            mod.PINE = tuple(pal["green"])
+
+
+def F_NUM(sz):
+    return bk.font("PlayfairDisplay[wght].ttf", sz)
+
+
+def F_TYPE(sz):
+    return bk.font("SpecialElite-Regular.ttf", sz)
+
+
+def page_advent(kit, W, H, style, seed):
+    """25 advent numbers 1-25: 'medallion' (round labels) or 'card' (small cards with a motif)."""
+    p = kit.blank(W, H, seed)
+    cols, rows, mx, my, gap = 5, 5, 130, 150, 34
+    cw = (W - 2 * mx - (cols - 1) * gap) // cols
+    ch = (H - 2 * my - (rows - 1) * gap) // rows
+    papers = [kit.img[k] for k in kit.cfg["pattern_papers"]] if kit.cfg.get("pattern_papers") else [kit.img[k] for k in kit.cfg["papers"]]
+    for i in range(25):
+        r, c = divmod(i, cols)
+        x, y = mx + c * (cw + gap), my + r * (ch + gap)
+        num = str(i + 1)
+        if style == "medallion":
+            dia = min(cw, ch) - 10
+            piece = Image.new("RGBA", (dia, dia), (0, 0, 0, 0))
+            mask = Image.new("L", (dia, dia), 0)
+            ImageDraw.Draw(mask).ellipse((0, 0, dia - 1, dia - 1), fill=255)
+            bgp = bk.cover_crop(papers[i % len(papers)], dia, dia).convert("RGBA")
+            piece.paste(bgp, (0, 0), mask)
+            d = ImageDraw.Draw(piece)
+            inset = int(dia * 0.13)
+            d.ellipse((inset, inset, dia - inset, dia - inset), fill=bk.CREAM + (255,), outline=bk.GOLD + (255,), width=5)
+            d.ellipse((inset + 12, inset + 12, dia - inset - 12, dia - inset - 12), outline=bk.CRAN + (255,), width=3)
+            bk.text_center(d, dia // 2, dia // 2 + 4, num, F_NUM(int(dia * 0.36)), bk.CRAN + (255,))
+            p.alpha_composite(piece, (x + (cw - dia) // 2, y + (ch - dia) // 2))
+            bk.cut_outline(p, mask, x + (cw - dia) // 2, y + (ch - dia) // 2)
+        else:
+            piece = Image.new("RGBA", (cw, ch))
+            piece.paste(bk.cover_crop(papers[(i + 2) % len(papers)], cw, ch), (0, 0))
+            m = int(cw * 0.08)
+            panel = bk.paper(cw - 2 * m, ch - 2 * m, bk.CREAM, seed + i).convert("RGBA")
+            piece.alpha_composite(panel, (m, m))
+            d = ImageDraw.Draw(piece)
+            d.rectangle((m + 8, m + 8, cw - m - 9, ch - m - 9), outline=bk.GOLD + (255,), width=3)
+            mo = bk.fit(bk.trim(kit.m(i)), int(cw * 0.55), int(ch * 0.40))
+            piece.alpha_composite(mo, ((cw - mo.width) // 2, m + 16))
+            bk.text_center(d, cw // 2, int(ch * 0.73), num, F_NUM(int(ch * 0.30)), bk.CRAN + (255,))
+            p.alpha_composite(piece, (x, y))
+            bk.cut_outline(p, Image.new("L", (cw, ch), 255), x, y)
+    kit.footer(p, W, H)
+    return p
+
+
+def torn_strip(w, h, tone, seed):
+    """Paper strip with softly torn short edges."""
+    import random as _r
+    rnd = _r.Random(seed)
+    strip = bk.paper(w, h, tone, seed, stains=False).convert("RGBA")
+    mask = Image.new("L", (w, h), 0)
+    pts = [(rnd.randint(0, 14), 0)]
+    for yy in range(0, h + 1, 8):
+        pts.append((rnd.randint(0, 16), yy))
+    pts.append((rnd.randint(0, 14), h))
+    right = [(w - rnd.randint(0, 16), yy) for yy in range(h, -1, -8)]
+    ImageDraw.Draw(mask).polygon(pts + right, fill=255)
+    strip.putalpha(mask)
+    return strip, mask
+
+
+def page_words(kit, W, H, words, seed):
+    """Word strips: 2 columns of typewriter phrases on torn paper strips."""
+    p = kit.blank(W, H, seed)
+    cols, mx, my, gapx, gapy = 2, 150, 160, 70, 36
+    rows = (len(words) + 1) // 2
+    sw = (W - 2 * mx - gapx) // cols
+    sh = min(230, (H - 2 * my - (rows - 1) * gapy) // rows)
+    tones = [tuple(t) for t in kit.cfg.get("strip_tones", [(244, 236, 218), (236, 222, 196), (232, 214, 214)])]
+    for i, wd in enumerate(words):
+        r, c = divmod(i, cols)
+        x, y = mx + c * (sw + gapx), my + r * (sh + gapy)
+        strip, mask = torn_strip(sw, sh, tones[i % len(tones)], seed + i)
+        d = ImageDraw.Draw(strip)
+        f = bk.fit_font(d, wd, F_TYPE, sw - 140, int(sh * 0.40))
+        bk.text_center(d, sw // 2, sh // 2, wd, f, bk.INK + (255,))
+        p.alpha_composite(strip, (x, y))
+        bk.cut_outline(p, mask, x, y, width=2)
+    kit.footer(p, W, H)
+    return p
+
+
 def render_page(kit, spec, W, H, n):
     kit.off = spec.get("off", 0)
     cfg = kit.cfg
-    if spec.get("words"):
+    if spec.get("words") and spec["type"] == "tags":
         cfg["words"] = spec["words"]
-    if spec.get("titles"):
+    if spec.get("titles") and spec["type"] == "journal":
         cfg["journal_titles"] = spec["titles"]
     t = spec["type"]
     if t == "tags":
@@ -44,13 +145,17 @@ def render_page(kit, spec, W, H, n):
         return kit.page_fussy(W, H, 0)
     if t == "pattern":
         return page_pattern(kit, W, H, spec["key"], 700 + n)
+    if t == "advent":
+        return page_advent(kit, W, H, spec.get("style", "medallion"), 800 + n)
+    if t == "words":
+        return page_words(kit, W, H, spec["words"], 900 + n)
     raise ValueError(t)
 
 
 def build_product(base, prod, assets, out):
     cfg = copy.deepcopy(base)
     keys = set(cfg["motifs"] + cfg["cards"] + cfg["papers"] + [p["key"] for p in prod["pages"] if p.get("key")])
-    cfg_load = dict(cfg, motifs=cfg["motifs"], cards=cfg["cards"], papers=sorted(set(cfg["papers"]) | {k for k in keys if k.startswith("pp")}))
+    cfg_load = dict(cfg, motifs=cfg["motifs"], cards=cfg["cards"], papers=sorted(set(cfg["papers"]) | set(cfg.get("pattern_papers", [])) | {k for k in keys if k.startswith("pp")}))
     kit = bk.Kit(cfg_load, assets)
     kit.cfg = cfg  # papers for tag backgrounds stay the collection papers
     kit.cfg["title"] = prod["title"]
@@ -138,6 +243,7 @@ def main():
     assets, out = sys.argv[2], sys.argv[3]
     only = sys.argv[4:] or None
     base = {k: v for k, v in col.items() if k != "products"}
+    apply_palette(base)
     for prod in col["products"]:
         if only and prod["slug"] not in only:
             continue
