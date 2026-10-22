@@ -1,0 +1,344 @@
+{
+ "slug": "christmas-post",
+ "title": "Christmas Post Ephemera Kit",
+ "subtitle": "Printable junk journal ephemera",
+ "words": [
+  "Christmas Post",
+  "Merry & Bright",
+  "Noel",
+  "Season's Greetings",
+  "Joy to the World",
+  "Peace on Earth"
+ ],
+ "card_words": [
+  "Christmas Post",
+  null,
+  "Winter Wishes",
+  null
+ ],
+ "journal_titles": [
+  "Dear Santa",
+  "Wish List",
+  "Christmas Memories",
+  "Holiday Notes",
+  "Gift List",
+  "Winter Days"
+ ],
+ "stamp_label": "CHRISTMAS POST",
+ "stamp_values": [
+  "1d",
+  "2d",
+  "3d",
+  "½d",
+  "4d",
+  "6d"
+ ],
+ "motifs": [
+  "m01_teddy",
+  "m02_stocking",
+  "m03_robin",
+  "m04_ornaments",
+  "m05_cottage",
+  "m06_sleigh",
+  "m07_fatherchristmas",
+  "m08_gifts",
+  "m09_candle",
+  "m10_pinecones",
+  "m11_rockinghorse",
+  "m12_nutcracker",
+  "m13_tree",
+  "m14_mistletoe",
+  "m15_skates",
+  "m16_bells",
+  "m17_poinsettia",
+  "m18_deer"
+ ],
+ "cards": [
+  "c01_village",
+  "c02_fireside",
+  "c03_forest",
+  "c04_stilllife"
+ ],
+ "papers": [
+  "p01_damask",
+  "p02_holly",
+  "p03_pine",
+  "p04_stripe"
+ ],
+ "cover_lines": [
+  "10 printable pages",
+  "Tags · Cards · Stamps · Fussy Cuts",
+  "US Letter & A4"
+ ],
+ "inside_lines": [
+  "6 tags · 4 picture cards · 6 journal cards",
+  "20 stamps · 18 fussy cuts · 4 journal pages",
+  "Instant download · PDF + JPG"
+ ],
+ "badge_title": "Christmas Post",
+ "badge_sub": "Junk Journal Ephemera Kit",
+ "products": [
+  {
+   "slug": "christmas-post-fussy-cuts",
+   "title": "Christmas Post Fussy Cuts",
+   "badge_sub": "Printable Fussy Cuts",
+   "price_eur": 2.49,
+   "section": "Fussy Cuts",
+   "pages": [
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts_1"
+    },
+    {
+     "type": "fussy",
+     "off": 9,
+     "name": "fussy_cuts_2"
+    }
+   ],
+   "cover_lines": [
+    "18 fussy cuts",
+    "White cutting border",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "2 sheets · 18 different vintage Christmas motifs",
+    "Each up to approx. 2.5 x 3.2 in",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "pages": 2,
+    "contents": {
+     "fussy_cuts": 18,
+     "different_motifs": 18
+    },
+    "piece_size": "each motif up to approx. 2.5 x 3.2 in on US Letter, with a white cutting border",
+    "motifs": "teddy bear, stocking, robin, glass ornaments, snowy cottage, sleigh, Father Christmas, wrapped gifts, candle, pinecones, rocking horse, nutcracker, Christmas tree, mistletoe, ice skates, sleigh bells, poinsettia, reindeer"
+   }
+  },
+  {
+   "slug": "christmas-post-stamps",
+   "title": "Christmas Post Postage Stamps",
+   "badge_sub": "Vintage Postage Stamps",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps_1"
+    },
+    {
+     "type": "stamps",
+     "off": 10,
+     "name": "stamps_2"
+    }
+   ],
+   "cover_lines": [
+    "40 printable stamps",
+    "18 vintage motifs",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "2 pages · 40 faux postage stamps",
+    "Approx. 1.8 x 1.9 in each, perforated look",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "pages": 2,
+    "contents": {
+     "postage_stamps": 40,
+     "different_motifs": 18
+    },
+    "piece_size": "approx. 1.8 x 1.9 in each on US Letter",
+    "note": "decorative faux stamps for crafting, not real postage"
+   }
+  },
+  {
+   "slug": "christmas-post-gift-tags",
+   "title": "Christmas Post Gift Tags",
+   "badge_sub": "Printable Gift Tags",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags_1"
+    },
+    {
+     "type": "tags",
+     "off": 6,
+     "name": "tags_2",
+     "words": [
+      "Let It Snow",
+      "Ho Ho Ho",
+      "Warm Wishes",
+      "Deck the Halls",
+      "Comfort & Joy",
+      "Jingle Bells"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "12 printable gift tags",
+    "12 different motifs",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "2 pages · 12 tags with greetings",
+    "Approx. 2.4 x 4.8 in each",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "pages": 2,
+    "contents": {
+     "gift_tags": 12
+    },
+    "piece_size": "approx. 2.4 x 4.8 in each on US Letter",
+    "greetings": [
+     "Christmas Post",
+     "Merry & Bright",
+     "Noel",
+     "Season's Greetings",
+     "Joy to the World",
+     "Peace on Earth",
+     "Let It Snow",
+     "Ho Ho Ho",
+     "Warm Wishes",
+     "Deck the Halls",
+     "Comfort & Joy",
+     "Jingle Bells"
+    ]
+   }
+  },
+  {
+   "slug": "christmas-post-journal-cards",
+   "title": "Christmas Post Journal Cards",
+   "badge_sub": "Journal & Picture Cards",
+   "price_eur": 2.29,
+   "section": "Papers & Journal Pages",
+   "pages": [
+    {
+     "type": "journal",
+     "off": 0,
+     "name": "journal_cards_1"
+    },
+    {
+     "type": "journal",
+     "off": 6,
+     "name": "journal_cards_2",
+     "titles": [
+      "To Do",
+      "Notes",
+      "Recipes",
+      "Christmas Eve",
+      "Cookie List",
+      "Thankful For"
+     ]
+    },
+    {
+     "type": "cards",
+     "name": "picture_cards"
+    }
+   ],
+   "cover_lines": [
+    "16 journaling cards",
+    "Lined & picture cards",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "3 pages · 12 lined journal cards + 4 picture cards",
+    "Approx. 3.6 x 3.2 in and 3.6 x 4.8 in",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "pages": 3,
+    "contents": {
+     "lined_journal_cards": 12,
+     "picture_cards": 4
+    },
+    "piece_size": "lined cards approx. 3.6 x 3.2 in, picture cards approx. 3.6 x 4.8 in on US Letter",
+    "card_titles": [
+     "Dear Santa",
+     "Wish List",
+     "Christmas Memories",
+     "Holiday Notes",
+     "Gift List",
+     "Winter Days",
+     "To Do",
+     "Notes",
+     "Recipes",
+     "Christmas Eve",
+     "Cookie List",
+     "Thankful For"
+    ]
+   }
+  },
+  {
+   "slug": "christmas-post-paper-pack",
+   "title": "Christmas Post Paper Pack",
+   "badge_sub": "Printable Pattern Papers",
+   "price_eur": 1.49,
+   "section": "Papers & Journal Pages",
+   "pages": [
+    {
+     "type": "pattern",
+     "key": "pp1_damask",
+     "name": "paper_damask"
+    },
+    {
+     "type": "pattern",
+     "key": "pp2_tartan",
+     "name": "paper_tartan"
+    },
+    {
+     "type": "pattern",
+     "key": "pp3_snowflake",
+     "name": "paper_snowflake"
+    },
+    {
+     "type": "pattern",
+     "key": "pp4_holly",
+     "name": "paper_holly"
+    },
+    {
+     "type": "pattern",
+     "key": "pp5_stars",
+     "name": "paper_stars"
+    },
+    {
+     "type": "pattern",
+     "key": "pp6_stripe",
+     "name": "paper_stripe"
+    }
+   ],
+   "cover_lines": [
+    "6 pattern papers",
+    "Full page, edge to edge",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "6 full-page vintage Christmas papers",
+    "Damask, tartan, snowflakes, holly, stars, stripes",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "pages": 6,
+    "contents": {
+     "pattern_papers": 6
+    },
+    "patterns": "cranberry damask, green tartan, snowflakes on frost blue, holly sprigs, gold stars on ink blue, candy stripes",
+    "note": "full-page backgrounds; most home printers leave a small white margin"
+   },
+   "cover_order": [
+    4,
+    5,
+    0,
+    3,
+    2,
+    1
+   ]
+  }
+ ]
+}

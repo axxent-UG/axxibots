@@ -8,7 +8,9 @@ import {
 } from "react";
 import { departments, stages, type Snapshot } from "@/lib/model";
 import Office from "./office";
+import StudioView from "./studio";
 const views = [
+  ["studio", "✎", "Studio · collections"],
   ["office", "⌘", "Headquarters"],
   ["operations", "◈", "Operations"],
   ["pipeline", "▥", "Product pipeline"],
@@ -71,7 +73,7 @@ function Empty({ text = "No records in this snapshot." }: { text?: string }) {
   return <div className="empty">{text}</div>;
 }
 export default function Cockpit({ demo }: { demo: boolean }) {
-  const [view, setView] = useState<View>("office"),
+  const [view, setView] = useState<View>("studio"),
     [data, setData] = useState<Snapshot | null>(null),
     [error, setError] = useState(""),
     [login, setLogin] = useState(false),
@@ -165,11 +167,11 @@ export default function Cockpit({ demo }: { demo: boolean }) {
           </span>
           <div>
             AXXIBOTS <b>HQ</b>
-            <small>THE AUTONOMOUS COMPANY</small>
+            <small>INKWELL EPHEMERA · ETSY STUDIO</small>
           </div>
         </a>
         <div className="workspace-label">
-          <span className="workspace-dot" /> Axxent workspace <span>⌄</span>
+          <span className="workspace-dot" /> Inkwell Ephemera <span>⌄</span>
         </div>
         <p className="eyebrow nav-label">CONTROL ROOM</p>
         <nav>
@@ -204,7 +206,7 @@ export default function Cockpit({ demo }: { demo: boolean }) {
             <p>Targets, not measured scores.</p>
           </div>
           <div className="small muted">
-            <span className="lock">◇</span> Read-only access
+            <span className="lock">◇</span> Owner actions: release · archive
             <br />
             <span className="lock">◷</span> Refresh every 20 seconds
           </div>
@@ -258,6 +260,7 @@ export default function Cockpit({ demo }: { demo: boolean }) {
               <h1>
                 {
                   {
+                    studio: "Collections, from sketch to Etsy draft.",
                     office: "A company in motion.",
                     operations: "Every execution. Every outcome.",
                     pipeline: "From opportunity to market.",
@@ -270,6 +273,8 @@ export default function Cockpit({ demo }: { demo: boolean }) {
               <p className="muted">
                 {
                   {
+                    studio:
+                      "Every printable ephemera product, its status, files and Etsy draft. You release and you publish.",
                     office:
                       "One headquarters for the people, processes and products behind your AI business.",
                     operations:
@@ -327,6 +332,8 @@ export default function Cockpit({ demo }: { demo: boolean }) {
           )}
           {login ? (
             <Login onSuccess={() => void refresh()} />
+          ) : view === "studio" ? (
+            <StudioView demo={demo} />
           ) : !data ? (
             <div className="panel connection">
               <span className="eyebrow">
