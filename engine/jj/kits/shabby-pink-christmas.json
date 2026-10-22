@@ -243,7 +243,7 @@
      "word_strips": 20,
      "pattern_papers": 2
     },
-    "piece_size": "tags approx. 2.4 x 4.8 in, picture cards approx. 3.6 x 4.8 in, journal cards approx. 3.6 x 3.2 in, stamps approx. 1.8 x 1.9 in, advent numbers approx. 1.8 in round, word strips approx. 4.4 x 0.9 in (all on US Letter)"
+    "piece_size": "tags approx. 2.4 x 4.8 in, picture cards approx. 3.6 x 4.8 in, journal cards approx. 3.6 x 3.2 in, stamps approx. 1.8 x 1.9 in, advent numbers approx. 1.4 in round, word strips approx. 3.6 x 0.8 in (all on US Letter)"
    }
   },
   {
@@ -389,7 +389,7 @@
    ],
    "inside_lines": [
     "Page 1: 25 round number labels · Page 2: 25 number cards with motifs",
-    "Round approx. 1.8 in · cards approx. 1.8 x 2.4 in",
+    "Round approx. 1.4 in · cards approx. 1.4 x 1.9 in",
     "PDF (US Letter & A4) + JPG"
    ],
    "facts": {
@@ -409,7 +409,7 @@
      "round_number_labels_1_to_25": 25,
      "number_cards_1_to_25": 25
     },
-    "piece_size": "round labels approx. 1.8 in, number cards approx. 1.8 x 2.4 in on US Letter",
+    "piece_size": "round labels approx. 1.4 in, number cards approx. 1.4 x 1.9 in on US Letter",
     "use": "advent calendars, countdown journals, December daily journals, gift numbering"
    }
   },
@@ -480,7 +480,7 @@
    ],
    "inside_lines": [
     "2 pages · 40 Christmas words and phrases",
-    "Approx. 4.4 x 0.9 in each",
+    "Approx. 3.6 x 0.8 in each",
     "PDF (US Letter & A4) + JPG"
    ],
    "facts": {
@@ -499,7 +499,7 @@
     "contents": {
      "word_strips": 40
     },
-    "piece_size": "approx. 4.4 x 0.9 in each on US Letter",
+    "piece_size": "approx. 3.6 x 0.8 in each on US Letter",
     "phrases": [
      "Merry & Bright",
      "Let It Snow",
