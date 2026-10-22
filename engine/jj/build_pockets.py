@@ -186,14 +186,20 @@ def build(base, prod, assets, out):
             back_pieces.append(sticker_fixed(ba.resize(sz, Image.LANCZOS)))
         tucks = [bk.sticker(scaled(load(assets, t), int(620 * k), int(700 * k)), border=14) for t in prod["tuckins"]]
         tags = []
-        bgs = [kit.img[x] for x in base["papers"]]
+        if prod.get("tag_colors"):  # solid rich paper colours instead of the collection papers
+            bgs = [bk.paper(600, 1100, tuple(c), 70 + j, stains=False).convert("RGBA") for j, c in enumerate(prod["tag_colors"])]
+        else:
+            bgs = [kit.img[x] for x in base["papers"]]
+        tag_motifs = [load(assets, m) for m in prod.get("tag_motifs", [])]
         for i, w in enumerate(prod["tags"]):
-            tag, mask = bk.make_tag(int(480 * k), int(900 * k), bgs[i % len(bgs)], kit.m(i + 3), w, 300 + i)
+            mo = tag_motifs[i % len(tag_motifs)] if tag_motifs else kit.m(i + 3)
+            tag, mask = bk.make_tag(int(480 * k), int(900 * k), bgs[i % len(bgs)], mo, w, 300 + i)
             tags.append(tag)
         pages = []
         pairs_flat = [x for fb in zip(front_pieces, back_pieces) for x in fb]
-        pages += piece_pages(kit, W, H, pairs_flat + tags, "Pocket Fronts & Backs", "front left · back right · glue sides and bottom, leave the top open", 1)
-        pages += piece_pages(kit, W, H, tucks, "Tuck-ins", "slide them into the pockets so they peek out", 9)
+        tags_with_pairs = prod.get("tags_with_pockets", len(pairs_flat) % 4 != 0)
+        pages += piece_pages(kit, W, H, pairs_flat + (tags if tags_with_pairs else []), "Pocket Fronts & Backs", "front left · back right · glue sides and bottom, leave the top open", 1)
+        pages += piece_pages(kit, W, H, tucks + ([] if tags_with_pairs else tags), "Tuck-ins" if tags_with_pairs else "Tuck-ins & Tags", "slide them into the pockets so they peek out", 9)
         pages.append(guide_page(kit, W, H, prod, assets, 13))
         names = []
         rgb = []
