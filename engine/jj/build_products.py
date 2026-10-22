@@ -36,6 +36,10 @@ def apply_palette(base):
             mod.INK = tuple(pal["ink"])
         if "green" in pal and hasattr(mod, "PINE"):
             mod.PINE = tuple(pal["green"])
+    if "band" in pal:
+        bc.BAND = tuple(pal["band"])
+    if "ribbon" in pal:
+        bc.RIBBON = tuple(pal["ribbon"])
 
 
 def F_NUM(sz):

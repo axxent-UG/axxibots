@@ -11,7 +11,9 @@ sys.path.insert(0, os.path.dirname(__file__))
 from build_kit import (F_ITAL, F_ROMAN, F_SC, CRAN, CREAM, GOLD, INK, PINE, drop_shadow, fit, fit_font,
                        noise, paper, sticker, text_center, trim)
 
-W, H = 3000, 2400  # Etsy recommends 2000px+ on the short side; 5:4
+W, H = 3000, 2400
+BAND = (32, 52, 40)   # info band colour (collection palette may override)
+RIBBON = (122, 30, 34)  # corner ribbon colour  # Etsy recommends 2000px+ on the short side; 5:4
 
 
 def wood(w, h, seed=7):
@@ -91,7 +93,7 @@ def ribbon(canvas, text):
     size = 800
     rib = Image.new("RGBA", (size * 2, 150), (0, 0, 0, 0))
     d = ImageDraw.Draw(rib)
-    d.rectangle((0, 0, size * 2, 150), fill=(122, 30, 34, 255))
+    d.rectangle((0, 0, size * 2, 150), fill=RIBBON + (255,))
     d.line((0, 14, size * 2, 14), fill=GOLD + (255,), width=4)
     d.line((0, 136, size * 2, 136), fill=GOLD + (255,), width=4)
     f = F_SC(58)
@@ -103,7 +105,7 @@ def ribbon(canvas, text):
 
 def info_band(canvas, lines):
     bh = 250
-    band = Image.new("RGBA", (W, bh), (32, 52, 40, 238))
+    band = Image.new("RGBA", (W, bh), BAND + (238,))
     d = ImageDraw.Draw(band)
     d.line((0, 10, W, 10), fill=GOLD + (255,), width=4)
     n = len(lines)

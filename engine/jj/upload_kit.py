@@ -4,7 +4,7 @@
 Usage: JJ_UPLOAD_KEY=<key> upload_kit.py <kit.json> <kit_out_dir> <listing_out_dir>
 The key is a short-lived upload key from axx.jj_upload_keys (bound to one kit, expires).
 """
-import glob, io, json, os, sys, urllib.parse, urllib.request, zipfile
+import glob, io, json, os, sys, urllib.error, urllib.parse, urllib.request, zipfile
 
 BASE = os.environ.get("JJ_UPLOAD_URL", "https://xhztnnhrcqwuooezcbgh.supabase.co/functions/v1/jj-kit-upload")
 CAPTIONS = {
@@ -22,8 +22,16 @@ def put(path, name, kind, rank=None, caption=None):
     data = open(path, "rb").read()
     req = urllib.request.Request(BASE + "?" + urllib.parse.urlencode(q), data=data, method="PUT",
                                  headers={"x-upload-key": os.environ["JJ_UPLOAD_KEY"], "content-type": "application/octet-stream"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        print(name, r.status, json.loads(r.read()).get("bytes"))
+    import time
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                print(name, r.status, json.loads(r.read()).get("bytes"))
+                return
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or attempt == 3:
+                raise
+            time.sleep(3 * (attempt + 1))
 
 
 def make_jpg_zip(cfg, kit_dir, out_path, quality=90):
