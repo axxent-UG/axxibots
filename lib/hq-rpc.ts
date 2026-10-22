@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { authorize } from "./auth";
 import { buildSnapshot, type Raw } from "./model";
 
-export async function authorizedRpc(functionName: "axx_hq_snapshot" | "axx_hq_owner_decision", payload: Record<string, unknown> = {}) {
+export async function authorizedRpc(functionName: "axx_hq_snapshot" | "axx_hq_owner_decision" | "axx_hq_studio" | "axx_hq_release_products" | "axx_hq_archive_legacy", payload: Record<string, unknown> = {}) {
   if (!(await authorize())) throw new Error("HQ_UNAUTHORIZED");
   const token = (await cookies()).get("hq-access")?.value;
   if (!token) throw new Error("HQ_SESSION_MISSING");
