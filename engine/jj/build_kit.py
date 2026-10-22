@@ -273,9 +273,11 @@ class Kit:
         for k in cfg["motifs"] + cfg["cards"] + cfg["papers"]:
             self.img[k] = Image.open(os.path.join(assets, k + ".png")).convert("RGBA")
 
+    off = 0  # motif offset, so a second page of the same type shows other motifs
+
     def m(self, i):
         ks = self.cfg["motifs"]
-        return self.img[ks[i % len(ks)]]
+        return self.img[ks[(i + self.off) % len(ks)]]
 
     def blank(self, W, H, seed):
         return paper(W, H, (250, 247, 240), seed, stains=False).convert("RGBA")
