@@ -18,6 +18,9 @@ from PIL import Image, ImageFilter
 # Calibrated on the muted Christmas Post art (brown 0.46-0.98, accent 0.0-0.37).
 BROWN_MAX = 0.6
 ACCENT_MIN = 0.25
+# A motif must be an isolated object: a silhouette that fills most of its bounding box is a square
+# vignette/wreath (calibrated 23.10.2026 on the rejected Witching Hour batch).
+BOX_FILL_MAX = 0.88  # only extreme cases; vignettes overlap with good motifs below this -> vision QA
 
 
 def check_motif(im):
@@ -35,11 +38,17 @@ def check_motif(im):
     mx, mn = rgb.max(2), rgb.min(2)
     light_flat = (mx > 185) & ((mx - mn) < 60)
     patch = float(light_flat[ring].mean()) if ring.any() else 0.0
+    dark_flat = (mx < 70) & ((mx - mn) < 40)
+    dark_patch = float(dark_flat[ring].mean()) if ring.any() else 0.0
+    ys, xs = np.nonzero(solid)
+    box_fill = float(solid.sum() / ((ys.max() - ys.min() + 1) * (xs.max() - xs.min() + 1))) if ys.size else 0.0
     hsv = np.asarray(im.convert("RGB").convert("HSV"), np.float32) / 255
     hue, sat, val = hsv[..., 0][solid] * 360, hsv[..., 1][solid], hsv[..., 2][solid]
     col = sat > 0.25
-    brown = float((col & (hue >= 15) & (hue < 55)).mean()) if hue.size else 0.0
-    accent = float((col & (((hue < 12) | (hue > 335)) & (val > 0.35) & (sat > 0.45) | ((hue >= 75) & (hue < 180)))).mean()) if hue.size else 0.0
+    # brown = dull tan/ochre: orange-yellow hues that are NOT bright, saturated pumpkin orange or gold
+    brown = float((col & (hue >= 15) & (hue < 55) & ((val < 0.62) | (sat < 0.6))).mean()) if hue.size else 0.0
+    vivid_orange = (hue >= 15) & (hue < 45) & (val >= 0.62) & (sat >= 0.6)
+    accent = float((col & ((((hue < 12) | (hue > 335)) & (val > 0.35) & (sat > 0.45)) | ((hue >= 75) & (hue < 300)) | vivid_orange)).mean()) if hue.size else 0.0
     reasons, warn = [], []
     if brown > BROWN_MAX and accent < ACCENT_MIN:
         warn.append("muted_colours")
@@ -51,7 +60,11 @@ def check_motif(im):
         warn.append("touches_edge")
     if patch > 0.45:
         reasons.append("background_patch")
-    return {"cover": round(float(cover), 3), "edge": round(float(edge), 3), "patch": round(patch, 3), "brown": round(brown, 3), "accent": round(accent, 3), "pass": not reasons, "reasons": reasons, "warn": warn}
+    if dark_patch > 0.45:
+        reasons.append("dark_background_patch")
+    if box_fill > BOX_FILL_MAX:
+        reasons.append("vignette_not_isolated")
+    return {"cover": round(float(cover), 3), "edge": round(float(edge), 3), "patch": round(patch, 3), "brown": round(brown, 3), "accent": round(accent, 3), "dark_patch": round(dark_patch, 3), "box_fill": round(box_fill, 3), "pass": not reasons, "reasons": reasons, "warn": warn}
 
 
 def check_full(im):
