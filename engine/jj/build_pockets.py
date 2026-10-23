@@ -127,7 +127,8 @@ def assembled(assets, pk, h):
     ins = pk["inserts"]
     for j, k in enumerate(ins):
         im = bk.fit(load(assets, k), int(size[0] * (0.62 if len(ins) > 1 else 0.8)), int(h * 0.66))
-        cx = fx + int(size[0] * ((j + 1) / (len(ins) + 1)))
+        xs = pk.get("insert_x")  # optional horizontal centre of each tuck-in, as a share of the pocket width
+        cx = fx + int(size[0] * (xs[j] if xs and j < len(xs) else (j + 1) / (len(ins) + 1)))
         bottom = fy + int(size[1] * (opening + (1 - opening) * pk.get("depth", 0.4)))
         canvas.alpha_composite(im, (cx - im.width // 2, max(0, bottom - im.height)))
     canvas.alpha_composite(front, (fx, fy))

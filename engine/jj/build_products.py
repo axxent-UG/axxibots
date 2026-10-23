@@ -178,7 +178,11 @@ def build_product(base, prod, assets, out):
 
 def cover(base, prod, pdir, assets, ldir):
     W, H = bc.W, bc.H
-    c = bc.wood(W, H, seed=hash(prod["slug"]) % 97)
+    if base.get("cover_style") == "mood":  # dark warm glow + bokeh (owner standard 22.10.2026)
+        import build_pockets
+        c = build_pockets.mood_background(W, H, seed=sum(map(ord, prod["slug"])) % 97)
+    else:
+        c = bc.wood(W, H, seed=hash(prod["slug"]) % 97)
     pages = sorted(glob.glob(os.path.join(pdir, "*_letter.jpg")))
     if prod.get("cover_order"):
         pages = [pages[i] for i in prod["cover_order"]]

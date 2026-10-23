@@ -1,0 +1,263 @@
+{
+  "collection": "kits/witching-hour.json",
+  "products": [
+    {
+      "slug": "witching-hour-illusion-pockets",
+      "title": "Witching Hour Halloween Illusion Pockets",
+      "badge_title": "Witching Hour",
+      "badge_sub": "Illusion Pockets · Printable",
+      "price_eur": 2.99,
+      "section": "Halloween Ephemera",
+      "pockets": [
+        {
+          "front": "pk_cauldron",
+          "cut": {
+            "ellipse": [
+              50,
+              18,
+              37,
+              3.5
+            ]
+          },
+          "inserts": [
+            "m05_potions"
+          ],
+          "depth": 0.3
+        },
+        {
+          "front": "pk_pumpkinpail",
+          "cut": {
+            "ellipse": [
+              50,
+              27,
+              25,
+              3
+            ]
+          },
+          "inserts": [
+            "m09_candy"
+          ],
+          "depth": 0.25
+        },
+        {
+          "front": "pk_jar",
+          "cut": {
+            "ellipse": [
+              50,
+              6,
+              17,
+              2.5
+            ]
+          },
+          "inserts": [
+            "m17_ghost"
+          ],
+          "depth": 0.12
+        },
+        {
+          "front": "pk_treatbag",
+          "cut": {
+            "line": [
+              [
+                0,
+                18
+              ],
+              [
+                100,
+                18
+              ]
+            ]
+          },
+          "inserts": [
+            "m02_jackolantern",
+            "m15_leaves"
+          ],
+          "depth": 0.3
+        },
+        {
+          "front": "pk_boot",
+          "cut": {
+            "line": [
+              [
+                0,
+                9
+              ],
+              [
+                100,
+                9
+              ]
+            ]
+          },
+          "inserts": [
+            "m01_cat"
+          ],
+          "depth": 0.12,
+          "insert_x": [
+            0.72
+          ]
+        },
+        {
+          "front": "pk_envelope",
+          "cut": {
+            "line": [
+              [
+                0,
+                30
+              ],
+              [
+                10,
+                31
+              ],
+              [
+                50,
+                56
+              ],
+              [
+                90,
+                31
+              ],
+              [
+                100,
+                30
+              ]
+            ]
+          },
+          "inserts": [
+            "m04_raven"
+          ]
+        }
+      ],
+      "tuckins": [
+        "m01_cat",
+        "m02_jackolantern",
+        "m03_witchhat",
+        "m04_raven",
+        "m05_potions",
+        "m06_spellbook",
+        "m07_owl",
+        "m08_bats",
+        "m09_candy",
+        "m10_scarecrow",
+        "m11_broom",
+        "m13_crystalball",
+        "m14_candelabra",
+        "m17_ghost",
+        "m18_pumpkins"
+      ],
+      "tags": [
+        "Happy Halloween",
+        "Trick or Treat",
+        "Witching Hour",
+        "Spellbound"
+      ],
+      "tag_colors": [
+        [
+          196,
+          84,
+          20
+        ],
+        [
+          34,
+          26,
+          34
+        ],
+        [
+          78,
+          36,
+          88
+        ],
+        [
+          240,
+          226,
+          200
+        ]
+      ],
+      "tag_motifs": [
+        "m03_witchhat",
+        "m13_crystalball",
+        "m12_house",
+        "m08_bats"
+      ],
+      "cover_lines": [
+        "6 illusion pockets",
+        "fronts + backs",
+        "15 tuck-ins + 4 tags",
+        "US Letter & A4"
+      ],
+      "inside_lines": [
+        "Pocket fronts & backs",
+        "15 tuck-ins",
+        "4 gift tags",
+        "Assembly guide"
+      ],
+      "badge_y": 1880,
+      "cover_cluster": [
+        [
+          "pk_envelope",
+          1900,
+          560,
+          980,
+          -8,
+          0.85
+        ],
+        [
+          "pk_cauldron",
+          640,
+          700,
+          1150,
+          5,
+          0.85
+        ],
+        [
+          "pk_treatbag",
+          2560,
+          1150,
+          1150,
+          5,
+          0.92
+        ],
+        [
+          "pk_boot",
+          420,
+          1380,
+          1150,
+          6,
+          1.0
+        ],
+        [
+          "pk_pumpkinpail",
+          1960,
+          1300,
+          1100,
+          -4,
+          1.0
+        ],
+        [
+          "pk_jar",
+          1200,
+          1080,
+          1300,
+          -1,
+          1.0
+        ]
+      ],
+      "cover_loose": [
+        [
+          "m06_spellbook",
+          830,
+          1780,
+          360,
+          -12
+        ],
+        [
+          "m13_crystalball",
+          2340,
+          1820,
+          320,
+          10
+        ]
+      ],
+      "facts": {}
+    }
+  ]
+}
