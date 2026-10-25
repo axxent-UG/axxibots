@@ -1,587 +1,780 @@
 {
-  "slug": "witching-hour",
-  "title": "Witching Hour",
-  "badge_title": "Witching Hour",
-  "motifs": [
-    "m01_cat",
-    "m02_jackolantern",
-    "m03_witchhat",
-    "m04_raven",
-    "m05_potions",
-    "m06_spellbook",
-    "m07_owl",
-    "m08_bats",
-    "m09_candy",
-    "m10_scarecrow",
-    "m11_broom",
-    "m12_house",
-    "m13_crystalball",
-    "m14_candelabra",
-    "m15_leaves",
-    "m16_spider",
-    "m17_ghost",
-    "m18_pumpkins"
+ "slug": "witching-hour",
+ "title": "Witching Hour",
+ "badge_title": "Witching Hour",
+ "motifs": [
+  "m01_cat",
+  "m02_jackolantern",
+  "m03_witchhat",
+  "m04_raven",
+  "m05_potions",
+  "m06_spellbook",
+  "m07_owl",
+  "m08_bats",
+  "m09_candy",
+  "m10_scarecrow",
+  "m11_broom",
+  "m12_house",
+  "m13_crystalball",
+  "m14_candelabra",
+  "m15_leaves",
+  "m16_spider",
+  "m17_ghost",
+  "m18_pumpkins"
+ ],
+ "cards": [
+  "c01_manor",
+  "c02_apothecary",
+  "c03_patch",
+  "c04_window"
+ ],
+ "papers": [
+  "pp1_damask",
+  "pp2_stripe",
+  "pp3_bats",
+  "pp4_web",
+  "pp5_plaid",
+  "pp6_leaves"
+ ],
+ "pattern_papers": [
+  "pp1_damask",
+  "pp2_stripe",
+  "pp3_bats",
+  "pp4_web",
+  "pp5_plaid",
+  "pp6_leaves"
+ ],
+ "words": [
+  "Happy Halloween",
+  "Trick or Treat",
+  "Witching Hour",
+  "Spellbound",
+  "Boo!",
+  "Hocus Pocus"
+ ],
+ "card_words": [
+  "Witching Hour",
+  null,
+  "Pumpkin Patch",
+  null
+ ],
+ "journal_titles": [
+  "Spell Notes",
+  "Potion List",
+  "Halloween Memories",
+  "Autumn Notes",
+  "Costume Ideas",
+  "Treat List"
+ ],
+ "stamp_label": "WITCHING HOUR",
+ "stamp_values": [
+  "1d",
+  "2d",
+  "3d",
+  "½d",
+  "4d",
+  "6d"
+ ],
+ "stamp_tones": [
+  [
+   248,
+   226,
+   196
   ],
-  "cards": [
-    "c01_manor",
-    "c02_apothecary",
-    "c03_patch",
-    "c04_window"
+  [
+   232,
+   222,
+   236
   ],
-  "papers": [
-    "pp1_damask",
-    "pp2_stripe",
-    "pp3_bats",
-    "pp4_web",
-    "pp5_plaid",
-    "pp6_leaves"
+  [
+   226,
+   232,
+   214
   ],
-  "pattern_papers": [
-    "pp1_damask",
-    "pp2_stripe",
-    "pp3_bats",
-    "pp4_web",
-    "pp5_plaid",
-    "pp6_leaves"
-  ],
-  "words": [
-    "Happy Halloween",
-    "Trick or Treat",
-    "Witching Hour",
-    "Spellbound",
-    "Boo!",
-    "Hocus Pocus"
-  ],
-  "card_words": [
-    "Witching Hour",
-    null,
-    "Pumpkin Patch",
-    null
-  ],
-  "journal_titles": [
-    "Spell Notes",
-    "Potion List",
-    "Halloween Memories",
-    "Autumn Notes",
-    "Costume Ideas",
-    "Treat List"
-  ],
-  "stamp_label": "WITCHING HOUR",
-  "stamp_values": [
-    "1d",
-    "2d",
-    "3d",
-    "½d",
-    "4d",
-    "6d"
-  ],
-  "stamp_tones": [
-    [
-      248,
-      226,
-      196
-    ],
-    [
-      232,
-      222,
-      236
-    ],
-    [
-      226,
-      232,
-      214
-    ],
-    [
-      244,
-      232,
-      214
-    ]
-  ],
-  "strip_tones": [
-    [
-      246,
-      226,
-      200
-    ],
-    [
-      236,
-      226,
-      240
-    ],
-    [
-      232,
-      236,
-      220
-    ]
-  ],
-  "palette": {
-    "accent": [
-      196,
-      84,
-      20
-    ],
-    "gold": [
-      190,
-      150,
-      70
-    ],
-    "ink": [
-      40,
-      28,
-      40
-    ],
-    "band": [
-      34,
-      22,
-      36
-    ],
-    "ribbon": [
-      196,
-      84,
-      20
-    ],
-    "green": [
-      78,
-      96,
-      58
-    ]
-  },
-  "cover_style": "mood",
-  "products": [
-    {
-      "slug": "witching-hour-kit",
-      "title": "Witching Hour Halloween Ephemera Kit",
-      "badge_sub": "Junk Journal Ephemera Kit",
-      "price_eur": 3.95,
-      "section": "Halloween Ephemera",
-      "pages": [
-        {
-          "type": "tags",
-          "off": 0,
-          "name": "tags"
-        },
-        {
-          "type": "cards",
-          "name": "picture_cards"
-        },
-        {
-          "type": "journal",
-          "off": 6,
-          "name": "journal_cards"
-        },
-        {
-          "type": "stamps",
-          "off": 0,
-          "name": "stamps"
-        },
-        {
-          "type": "fussy",
-          "off": 0,
-          "name": "fussy_cuts_1"
-        },
-        {
-          "type": "fussy",
-          "off": 9,
-          "name": "fussy_cuts_2"
-        },
-        {
-          "type": "words",
-          "name": "word_strips",
-          "words": [
-            "Happy Halloween",
-            "Trick or Treat",
-            "Witching Hour",
-            "Spellbound",
-            "Boo!",
-            "Hocus Pocus",
-            "Something Wicked",
-            "Black Magic",
-            "Full Moon",
-            "Pumpkin Patch",
-            "Spooky Season",
-            "Potions & Spells",
-            "Midnight Hour",
-            "Haunted",
-            "Toil & Trouble",
-            "Creepy & Cute",
-            "Autumn Nights",
-            "Candy Corn",
-            "Bewitched",
-            "All Hallows' Eve"
-          ]
-        },
-        {
-          "type": "pattern",
-          "key": "pp1_damask",
-          "name": "paper_damask"
-        },
-        {
-          "type": "pattern",
-          "key": "pp3_bats",
-          "name": "paper_bats"
-        }
-      ],
-      "cover_lines": [
-        "9 printable pages",
-        "Tags · Cards · Stamps · Fussy Cuts · Words",
-        "US Letter & A4"
-      ],
-      "inside_lines": [
-        "6 tags · 4 picture cards · 6 journal cards · 20 stamps",
-        "18 fussy cuts · 20 word strips · 2 papers",
-        "PDF (US Letter & A4) + JPG"
-      ],
-      "facts": {
-        "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
-        "collection": "Witching Hour",
-        "sizes": [
-          "US Letter 8.5x11 in",
-          "A4"
-        ],
-        "resolution_dpi": 300,
-        "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
-        "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
-        "product_type": "Ephemera Kit",
-        "section": "Halloween Ephemera",
-        "pages": 9,
-        "contents": {
-          "gift_tags": 6,
-          "picture_cards": 4,
-          "lined_journal_cards": 6,
-          "postage_stamps": 20,
-          "fussy_cuts": 18,
-          "word_strips": 20,
-          "pattern_papers": 2
-        },
-        "piece_size": "tags approx. 2.4 x 4.8 in, picture cards approx. 3.6 x 4.8 in, journal cards approx. 3.6 x 3.2 in, stamps approx. 1.8 x 1.9 in, word strips approx. 3.6 x 0.8 in (all on US Letter)",
-        "motifs": "black cat, jack-o'-lantern, witch hat, raven, potion bottles, spell book, owl and moon, bats, candy bag, scarecrow, broomstick, haunted house, crystal ball, candelabra, autumn leaves, spider web, friendly ghost, pumpkin stack"
-      }
-    },
-    {
-      "slug": "witching-hour-fussy-cuts",
-      "title": "Witching Hour Halloween Fussy Cuts",
-      "badge_sub": "Fussy Cuts · Printable",
-      "price_eur": 2.49,
-      "section": "Fussy Cuts",
-      "pages": [
-        {
-          "type": "fussy",
-          "off": 0,
-          "name": "fussy_cuts_1"
-        },
-        {
-          "type": "fussy",
-          "off": 9,
-          "name": "fussy_cuts_2"
-        }
-      ],
-      "cover_lines": [
-        "18 fussy cut motifs",
-        "2 printable pages",
-        "US Letter & A4"
-      ],
-      "inside_lines": [
-        "18 different Halloween motifs",
-        "with white cutting border",
-        "PDF + JPG"
-      ],
-      "facts": {
-        "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
-        "collection": "Witching Hour",
-        "sizes": [
-          "US Letter 8.5x11 in",
-          "A4"
-        ],
-        "resolution_dpi": 300,
-        "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
-        "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
-        "product_type": "Fussy Cuts",
-        "section": "Halloween Ephemera",
-        "pages": 2,
-        "contents": {
-          "fussy_cuts": 18,
-          "different_motifs": 18
-        },
-        "piece_size": "each motif up to approx. 2.5 x 3.2 in on US Letter, with a white cutting border",
-        "motifs": "black cat, jack-o'-lantern, witch hat, raven, potion bottles, spell book, owl and moon, bats, candy bag, scarecrow, broomstick, haunted house, crystal ball, candelabra, autumn leaves, spider web, friendly ghost, pumpkin stack"
-      }
-    },
-    {
-      "slug": "witching-hour-gift-tags",
-      "title": "Witching Hour Halloween Gift Tags",
-      "badge_sub": "Gift Tags · Printable",
-      "price_eur": 2.19,
-      "section": "Tags & Labels",
-      "pages": [
-        {
-          "type": "tags",
-          "off": 0,
-          "name": "tags_1",
-          "words": [
-            "Happy Halloween",
-            "Trick or Treat",
-            "Witching Hour",
-            "Spellbound",
-            "Boo!",
-            "Hocus Pocus"
-          ]
-        },
-        {
-          "type": "tags",
-          "off": 6,
-          "name": "tags_2",
-          "words": [
-            "Something Wicked",
-            "Toil & Trouble",
-            "Bewitched",
-            "Full Moon",
-            "Sweet Treats",
-            "Pumpkin Patch"
-          ]
-        }
-      ],
-      "cover_lines": [
-        "12 gift tags",
-        "2 printable pages",
-        "US Letter & A4"
-      ],
-      "inside_lines": [
-        "12 tags with Halloween greetings",
-        "approx. 2.4 x 4.8 in",
-        "PDF + JPG"
-      ],
-      "facts": {
-        "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
-        "collection": "Witching Hour",
-        "sizes": [
-          "US Letter 8.5x11 in",
-          "A4"
-        ],
-        "resolution_dpi": 300,
-        "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
-        "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
-        "product_type": "Gift Tags",
-        "section": "Halloween Ephemera",
-        "pages": 2,
-        "contents": {
-          "gift_tags": 12
-        },
-        "piece_size": "approx. 2.4 x 4.8 in each on US Letter",
-        "greetings": [
-          "Happy Halloween",
-          "Trick or Treat",
-          "Witching Hour",
-          "Spellbound",
-          "Boo!",
-          "Hocus Pocus",
-          "Something Wicked",
-          "Toil & Trouble",
-          "Bewitched",
-          "Full Moon",
-          "Sweet Treats",
-          "Pumpkin Patch"
-        ]
-      }
-    },
-    {
-      "slug": "witching-hour-word-strips",
-      "title": "Witching Hour Halloween Word Strips",
-      "badge_sub": "Word Strips · Printable",
-      "price_eur": 1.99,
-      "section": "Tags & Labels",
-      "pages": [
-        {
-          "type": "words",
-          "name": "words_1",
-          "words": [
-            "Happy Halloween",
-            "Trick or Treat",
-            "Witching Hour",
-            "Spellbound",
-            "Boo!",
-            "Hocus Pocus",
-            "Something Wicked",
-            "Black Magic",
-            "Full Moon",
-            "Pumpkin Patch",
-            "Spooky Season",
-            "Potions & Spells",
-            "Midnight Hour",
-            "Haunted",
-            "Toil & Trouble",
-            "Creepy & Cute",
-            "Autumn Nights",
-            "Candy Corn",
-            "Bewitched",
-            "All Hallows' Eve"
-          ]
-        },
-        {
-          "type": "words",
-          "name": "words_2",
-          "words": [
-            "Moonlight",
-            "Witchy Vibes",
-            "Ghostly",
-            "Bats & Cats",
-            "Crystal Ball",
-            "Spell Book",
-            "Cauldron",
-            "Raven",
-            "October",
-            "Jack-o'-Lantern",
-            "Sweet Treats",
-            "Fright Night",
-            "Magic Hour",
-            "Brew",
-            "Moon Child",
-            "Pumpkin Spice",
-            "Shadows",
-            "Enchanted",
-            "Mischief",
-            "Good Witch"
-          ]
-        }
-      ],
-      "cover_lines": [
-        "40 word strips",
-        "2 printable pages",
-        "US Letter & A4"
-      ],
-      "inside_lines": [
-        "40 Halloween words & phrases",
-        "approx. 3.6 x 0.8 in",
-        "PDF + JPG"
-      ],
-      "facts": {
-        "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
-        "collection": "Witching Hour",
-        "sizes": [
-          "US Letter 8.5x11 in",
-          "A4"
-        ],
-        "resolution_dpi": 300,
-        "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
-        "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
-        "product_type": "Word Strips",
-        "section": "Halloween Ephemera",
-        "pages": 2,
-        "contents": {
-          "word_strips": 40
-        },
-        "piece_size": "approx. 3.6 x 0.8 in each on US Letter",
-        "phrases": [
-          "Happy Halloween",
-          "Trick or Treat",
-          "Witching Hour",
-          "Spellbound",
-          "Boo!",
-          "Hocus Pocus",
-          "Something Wicked",
-          "Black Magic",
-          "Full Moon",
-          "Pumpkin Patch",
-          "Spooky Season",
-          "Potions & Spells",
-          "Midnight Hour",
-          "Haunted",
-          "Toil & Trouble",
-          "Creepy & Cute",
-          "Autumn Nights",
-          "Candy Corn",
-          "Bewitched",
-          "All Hallows' Eve",
-          "Moonlight",
-          "Witchy Vibes",
-          "Ghostly",
-          "Bats & Cats",
-          "Crystal Ball",
-          "Spell Book",
-          "Cauldron",
-          "Raven",
-          "October",
-          "Jack-o'-Lantern",
-          "Sweet Treats",
-          "Fright Night",
-          "Magic Hour",
-          "Brew",
-          "Moon Child",
-          "Pumpkin Spice",
-          "Shadows",
-          "Enchanted",
-          "Mischief",
-          "Good Witch"
-        ]
-      }
-    },
-    {
-      "slug": "witching-hour-paper-pack",
-      "title": "Witching Hour Halloween Paper Pack",
-      "badge_sub": "Pattern Papers · Printable",
-      "price_eur": 1.49,
-      "section": "Papers & Journal Pages",
-      "pages": [
-        {
-          "type": "pattern",
-          "key": "pp1_damask",
-          "name": "paper_damask"
-        },
-        {
-          "type": "pattern",
-          "key": "pp2_stripe",
-          "name": "paper_stripe"
-        },
-        {
-          "type": "pattern",
-          "key": "pp3_bats",
-          "name": "paper_bats"
-        },
-        {
-          "type": "pattern",
-          "key": "pp4_web",
-          "name": "paper_web"
-        },
-        {
-          "type": "pattern",
-          "key": "pp5_plaid",
-          "name": "paper_plaid"
-        },
-        {
-          "type": "pattern",
-          "key": "pp6_leaves",
-          "name": "paper_leaves"
-        }
-      ],
-      "cover_lines": [
-        "6 pattern papers",
-        "full-page backgrounds",
-        "US Letter & A4"
-      ],
-      "inside_lines": [
-        "damask · stripes · bats · spider web · plaid · leaves",
-        "full page",
-        "PDF + JPG"
-      ],
-      "facts": {
-        "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
-        "collection": "Witching Hour",
-        "sizes": [
-          "US Letter 8.5x11 in",
-          "A4"
-        ],
-        "resolution_dpi": 300,
-        "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
-        "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
-        "product_type": "Pattern Paper Pack",
-        "section": "Halloween Ephemera",
-        "pages": 6,
-        "contents": {
-          "pattern_papers": 6
-        },
-        "piece_size": "full page, US Letter 8.5 x 11 in and A4",
-        "patterns": "black and orange damask, orange and black stripes with stars, bats and moons on aubergine, spider web on moss green, orange-black-aubergine plaid, autumn leaves on cream",
-        "note": "full-page backgrounds; most home printers leave a small white margin"
-      }
-    }
+  [
+   244,
+   232,
+   214
   ]
+ ],
+ "strip_tones": [
+  [
+   246,
+   226,
+   200
+  ],
+  [
+   236,
+   226,
+   240
+  ],
+  [
+   232,
+   236,
+   220
+  ]
+ ],
+ "palette": {
+  "accent": [
+   196,
+   84,
+   20
+  ],
+  "gold": [
+   190,
+   150,
+   70
+  ],
+  "ink": [
+   40,
+   28,
+   40
+  ],
+  "band": [
+   34,
+   22,
+   36
+  ],
+  "ribbon": [
+   196,
+   84,
+   20
+  ],
+  "green": [
+   78,
+   96,
+   58
+  ]
+ },
+ "cover_style": "mood",
+ "products": [
+  {
+   "slug": "witching-hour-kit",
+   "title": "Witching Hour Halloween Ephemera Kit",
+   "badge_sub": "Junk Journal Ephemera Kit",
+   "price_eur": 3.95,
+   "section": "Halloween Ephemera",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags"
+    },
+    {
+     "type": "cards",
+     "name": "picture_cards"
+    },
+    {
+     "type": "journal",
+     "off": 6,
+     "name": "journal_cards"
+    },
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps"
+    },
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts_1"
+    },
+    {
+     "type": "fussy",
+     "off": 9,
+     "name": "fussy_cuts_2"
+    },
+    {
+     "type": "words",
+     "name": "word_strips",
+     "words": [
+      "Happy Halloween",
+      "Trick or Treat",
+      "Witching Hour",
+      "Spellbound",
+      "Boo!",
+      "Hocus Pocus",
+      "Something Wicked",
+      "Black Magic",
+      "Full Moon",
+      "Pumpkin Patch",
+      "Spooky Season",
+      "Potions & Spells",
+      "Midnight Hour",
+      "Haunted",
+      "Toil & Trouble",
+      "Creepy & Cute",
+      "Autumn Nights",
+      "Candy Corn",
+      "Bewitched",
+      "All Hallows' Eve"
+     ]
+    },
+    {
+     "type": "pattern",
+     "key": "pp1_damask",
+     "name": "paper_damask"
+    },
+    {
+     "type": "pattern",
+     "key": "pp3_bats",
+     "name": "paper_bats"
+    }
+   ],
+   "cover_lines": [
+    "9 printable pages",
+    "Tags · Cards · Stamps · Fussy Cuts · Words",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "6 tags · 4 picture cards · 6 journal cards · 20 stamps",
+    "18 fussy cuts · 20 word strips · 2 papers",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
+    "collection": "Witching Hour",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Ephemera Kit",
+    "section": "Halloween Ephemera",
+    "pages": 9,
+    "contents": {
+     "gift_tags": 6,
+     "picture_cards": 4,
+     "lined_journal_cards": 6,
+     "postage_stamps": 20,
+     "fussy_cuts": 18,
+     "word_strips": 20,
+     "pattern_papers": 2
+    },
+    "piece_size": "tags approx. 2.4 x 4.8 in, picture cards approx. 3.6 x 4.8 in, journal cards approx. 3.6 x 3.2 in, stamps approx. 1.8 x 1.9 in, word strips approx. 3.6 x 0.8 in (all on US Letter)",
+    "motifs": "black cat, jack-o'-lantern, witch hat, raven, potion bottles, spell book, owl and moon, bats, candy bag, scarecrow, broomstick, haunted house, crystal ball, candelabra, autumn leaves, spider web, friendly ghost, pumpkin stack"
+   }
+  },
+  {
+   "slug": "witching-hour-fussy-cuts",
+   "title": "Witching Hour Halloween Fussy Cuts",
+   "badge_sub": "Fussy Cuts · Printable",
+   "price_eur": 2.49,
+   "section": "Fussy Cuts",
+   "pages": [
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts_1"
+    },
+    {
+     "type": "fussy",
+     "off": 9,
+     "name": "fussy_cuts_2"
+    }
+   ],
+   "cover_lines": [
+    "18 fussy cut motifs",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "18 different Halloween motifs",
+    "with white cutting border",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
+    "collection": "Witching Hour",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Fussy Cuts",
+    "section": "Halloween Ephemera",
+    "pages": 2,
+    "contents": {
+     "fussy_cuts": 18,
+     "different_motifs": 18
+    },
+    "piece_size": "each motif up to approx. 2.5 x 3.2 in on US Letter, with a white cutting border",
+    "motifs": "black cat, jack-o'-lantern, witch hat, raven, potion bottles, spell book, owl and moon, bats, candy bag, scarecrow, broomstick, haunted house, crystal ball, candelabra, autumn leaves, spider web, friendly ghost, pumpkin stack"
+   }
+  },
+  {
+   "slug": "witching-hour-gift-tags",
+   "title": "Witching Hour Halloween Gift Tags",
+   "badge_sub": "Gift Tags · Printable",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags_1",
+     "words": [
+      "Happy Halloween",
+      "Trick or Treat",
+      "Witching Hour",
+      "Spellbound",
+      "Boo!",
+      "Hocus Pocus"
+     ]
+    },
+    {
+     "type": "tags",
+     "off": 6,
+     "name": "tags_2",
+     "words": [
+      "Something Wicked",
+      "Toil & Trouble",
+      "Bewitched",
+      "Full Moon",
+      "Sweet Treats",
+      "Pumpkin Patch"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "12 gift tags",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "12 tags with Halloween greetings",
+    "approx. 2.4 x 4.8 in",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
+    "collection": "Witching Hour",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Gift Tags",
+    "section": "Halloween Ephemera",
+    "pages": 2,
+    "contents": {
+     "gift_tags": 12
+    },
+    "piece_size": "approx. 2.4 x 4.8 in each on US Letter",
+    "greetings": [
+     "Happy Halloween",
+     "Trick or Treat",
+     "Witching Hour",
+     "Spellbound",
+     "Boo!",
+     "Hocus Pocus",
+     "Something Wicked",
+     "Toil & Trouble",
+     "Bewitched",
+     "Full Moon",
+     "Sweet Treats",
+     "Pumpkin Patch"
+    ]
+   }
+  },
+  {
+   "slug": "witching-hour-word-strips",
+   "title": "Witching Hour Halloween Word Strips",
+   "badge_sub": "Word Strips · Printable",
+   "price_eur": 1.99,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "words",
+     "name": "words_1",
+     "words": [
+      "Happy Halloween",
+      "Trick or Treat",
+      "Witching Hour",
+      "Spellbound",
+      "Boo!",
+      "Hocus Pocus",
+      "Something Wicked",
+      "Black Magic",
+      "Full Moon",
+      "Pumpkin Patch",
+      "Spooky Season",
+      "Potions & Spells",
+      "Midnight Hour",
+      "Haunted",
+      "Toil & Trouble",
+      "Creepy & Cute",
+      "Autumn Nights",
+      "Candy Corn",
+      "Bewitched",
+      "All Hallows' Eve"
+     ]
+    },
+    {
+     "type": "words",
+     "name": "words_2",
+     "words": [
+      "Moonlight",
+      "Witchy Vibes",
+      "Ghostly",
+      "Bats & Cats",
+      "Crystal Ball",
+      "Spell Book",
+      "Cauldron",
+      "Raven",
+      "October",
+      "Jack-o'-Lantern",
+      "Sweet Treats",
+      "Fright Night",
+      "Magic Hour",
+      "Brew",
+      "Moon Child",
+      "Pumpkin Spice",
+      "Shadows",
+      "Enchanted",
+      "Mischief",
+      "Good Witch"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "40 word strips",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "40 Halloween words & phrases",
+    "approx. 3.6 x 0.8 in",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
+    "collection": "Witching Hour",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Word Strips",
+    "section": "Halloween Ephemera",
+    "pages": 2,
+    "contents": {
+     "word_strips": 40
+    },
+    "piece_size": "approx. 3.6 x 0.8 in each on US Letter",
+    "phrases": [
+     "Happy Halloween",
+     "Trick or Treat",
+     "Witching Hour",
+     "Spellbound",
+     "Boo!",
+     "Hocus Pocus",
+     "Something Wicked",
+     "Black Magic",
+     "Full Moon",
+     "Pumpkin Patch",
+     "Spooky Season",
+     "Potions & Spells",
+     "Midnight Hour",
+     "Haunted",
+     "Toil & Trouble",
+     "Creepy & Cute",
+     "Autumn Nights",
+     "Candy Corn",
+     "Bewitched",
+     "All Hallows' Eve",
+     "Moonlight",
+     "Witchy Vibes",
+     "Ghostly",
+     "Bats & Cats",
+     "Crystal Ball",
+     "Spell Book",
+     "Cauldron",
+     "Raven",
+     "October",
+     "Jack-o'-Lantern",
+     "Sweet Treats",
+     "Fright Night",
+     "Magic Hour",
+     "Brew",
+     "Moon Child",
+     "Pumpkin Spice",
+     "Shadows",
+     "Enchanted",
+     "Mischief",
+     "Good Witch"
+    ]
+   }
+  },
+  {
+   "slug": "witching-hour-paper-pack",
+   "title": "Witching Hour Halloween Paper Pack",
+   "badge_sub": "Pattern Papers · Printable",
+   "price_eur": 1.49,
+   "section": "Papers & Journal Pages",
+   "pages": [
+    {
+     "type": "pattern",
+     "key": "pp1_damask",
+     "name": "paper_damask"
+    },
+    {
+     "type": "pattern",
+     "key": "pp2_stripe",
+     "name": "paper_stripe"
+    },
+    {
+     "type": "pattern",
+     "key": "pp3_bats",
+     "name": "paper_bats"
+    },
+    {
+     "type": "pattern",
+     "key": "pp4_web",
+     "name": "paper_web"
+    },
+    {
+     "type": "pattern",
+     "key": "pp5_plaid",
+     "name": "paper_plaid"
+    },
+    {
+     "type": "pattern",
+     "key": "pp6_leaves",
+     "name": "paper_leaves"
+    }
+   ],
+   "cover_lines": [
+    "6 pattern papers",
+    "full-page backgrounds",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "damask · stripes · bats · spider web · plaid · leaves",
+    "full page",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
+    "collection": "Witching Hour",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Pattern Paper Pack",
+    "section": "Halloween Ephemera",
+    "pages": 6,
+    "contents": {
+     "pattern_papers": 6
+    },
+    "piece_size": "full page, US Letter 8.5 x 11 in and A4",
+    "patterns": "black and orange damask, orange and black stripes with stars, bats and moons on aubergine, spider web on moss green, orange-black-aubergine plaid, autumn leaves on cream",
+    "note": "full-page backgrounds; most home printers leave a small white margin"
+   }
+  },
+  {
+   "slug": "witching-hour-stamps",
+   "title": "Witching Hour Halloween Postage Stamps",
+   "badge_sub": "Postage Stamps · Printable",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps_1"
+    },
+    {
+     "type": "stamps",
+     "off": 9,
+     "name": "stamps_2"
+    }
+   ],
+   "cover_lines": [
+    "40 postage stamps",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "40 postage stamps",
+    "Witching Hour collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
+    "collection": "Witching Hour",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Postage Stamps",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "postage_stamps": 40
+    },
+    "piece_size": "approx. 1.8 x 1.9 in each on US Letter, perforated edge",
+    "generated_by": "expand_collection",
+    "motifs": "black cat, jack-o'-lantern, witch hat, raven, potion bottles, spell book, owl and moon, bats, candy bag, scarecrow, broomstick, haunted house, crystal ball, candelabra, autumn leaves, spider web, friendly ghost, pumpkin stack"
+   }
+  },
+  {
+   "slug": "witching-hour-journal-cards",
+   "title": "Witching Hour Halloween Journal Cards",
+   "badge_sub": "Journal Cards · Printable",
+   "price_eur": 2.29,
+   "section": "Papers & Journal Pages",
+   "pages": [
+    {
+     "type": "journal",
+     "off": 0,
+     "name": "journal_cards_1"
+    },
+    {
+     "type": "journal",
+     "off": 6,
+     "name": "journal_cards_2"
+    },
+    {
+     "type": "cards",
+     "name": "picture_cards"
+    }
+   ],
+   "cover_lines": [
+    "12 journal cards · 4 picture cards",
+    "3 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "12 journal cards · 4 picture cards",
+    "Witching Hour collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
+    "collection": "Witching Hour",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Journal Cards",
+    "section": "Papers & Journal Pages",
+    "pages": 3,
+    "contents": {
+     "lined_journal_cards": 12,
+     "picture_cards": 4
+    },
+    "piece_size": "journal cards approx. 3.6 x 3.2 in, picture cards approx. 3.6 x 4.8 in (US Letter)",
+    "generated_by": "expand_collection"
+   }
+  },
+  {
+   "slug": "witching-hour-mini-kit",
+   "title": "Witching Hour Halloween Mini Ephemera Kit",
+   "badge_sub": "Mini Kit · 4 Pages",
+   "price_eur": 2.79,
+   "section": "Halloween Ephemera",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags",
+     "words": [
+      "Happy Halloween",
+      "Trick or Treat",
+      "Witching Hour",
+      "Spellbound",
+      "Boo!",
+      "Hocus Pocus"
+     ]
+    },
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps"
+    },
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts"
+    },
+    {
+     "type": "words",
+     "name": "word_strips",
+     "words": [
+      "Happy Halloween",
+      "Trick or Treat",
+      "Witching Hour",
+      "Spellbound",
+      "Boo!",
+      "Hocus Pocus",
+      "Something Wicked",
+      "Black Magic",
+      "Full Moon",
+      "Pumpkin Patch",
+      "Spooky Season",
+      "Potions & Spells",
+      "Midnight Hour",
+      "Haunted",
+      "Toil & Trouble",
+      "Creepy & Cute",
+      "Autumn Nights",
+      "Candy Corn",
+      "Bewitched",
+      "All Hallows' Eve"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "6 gift tags · 20 postage stamps",
+    "4 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "6 gift tags · 20 postage stamps · 9 fussy cuts · 20 word strips",
+    "Witching Hour collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich vintage Victorian Halloween in pumpkin orange, black, aubergine, moss green and gold",
+    "collection": "Witching Hour",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Mini Ephemera Kit",
+    "section": "Halloween Ephemera",
+    "pages": 4,
+    "contents": {
+     "gift_tags": 6,
+     "postage_stamps": 20,
+     "fussy_cuts": 9,
+     "word_strips": 20
+    },
+    "piece_size": "tags approx. 2.4 x 4.8 in, stamps approx. 1.8 x 1.9 in, word strips approx. 3.6 x 0.8 in (US Letter)",
+    "generated_by": "expand_collection",
+    "motifs": "black cat, jack-o'-lantern, witch hat, raven, potion bottles, spell book, owl and moon, bats, candy bag, scarecrow, broomstick, haunted house, crystal ball, candelabra, autumn leaves, spider web, friendly ghost, pumpkin stack"
+   }
+  }
+ ]
 }

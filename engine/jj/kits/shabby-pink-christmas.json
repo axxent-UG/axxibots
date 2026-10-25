@@ -626,6 +626,199 @@
     "patterns": "pink damask, pink stripes with dots, small roses, snowflakes on dusty pink, pink and sage plaid, peppermint candies",
     "note": "full-page backgrounds; most home printers leave a small white margin"
    }
+  },
+  {
+   "slug": "shabby-pink-christmas-stamps",
+   "title": "Shabby Pink Christmas Postage Stamps",
+   "badge_sub": "Postage Stamps · Printable",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps_1"
+    },
+    {
+     "type": "stamps",
+     "off": 9,
+     "name": "stamps_2"
+    }
+   ],
+   "cover_lines": [
+    "40 postage stamps",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "40 postage stamps",
+    "Shabby Pink Christmas collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "shabby chic pink vintage Christmas",
+    "collection": "Shabby Pink Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Postage Stamps",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "postage_stamps": 40
+    },
+    "piece_size": "approx. 1.8 x 1.9 in each on US Letter, perforated edge",
+    "generated_by": "expand_collection",
+    "motifs": "pink glass ornaments, teddy bear, pink stocking, gingerbread house, peppermints, pink roses, ice skates, pink sleigh, white reindeer, hot cocoa, cupcake, old-world Santa in pink, Christmas tree, snow globe, wrapped gifts, sleigh bells, pink poinsettia, white dove"
+   }
+  },
+  {
+   "slug": "shabby-pink-christmas-journal-cards",
+   "title": "Shabby Pink Christmas Journal Cards",
+   "badge_sub": "Journal Cards · Printable",
+   "price_eur": 2.29,
+   "section": "Papers & Journal Pages",
+   "pages": [
+    {
+     "type": "journal",
+     "off": 0,
+     "name": "journal_cards_1"
+    },
+    {
+     "type": "journal",
+     "off": 6,
+     "name": "journal_cards_2"
+    },
+    {
+     "type": "cards",
+     "name": "picture_cards"
+    }
+   ],
+   "cover_lines": [
+    "12 journal cards · 4 picture cards",
+    "3 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "12 journal cards · 4 picture cards",
+    "Shabby Pink Christmas collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "shabby chic pink vintage Christmas",
+    "collection": "Shabby Pink Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Journal Cards",
+    "section": "Papers & Journal Pages",
+    "pages": 3,
+    "contents": {
+     "lined_journal_cards": 12,
+     "picture_cards": 4
+    },
+    "piece_size": "journal cards approx. 3.6 x 3.2 in, picture cards approx. 3.6 x 4.8 in (US Letter)",
+    "generated_by": "expand_collection"
+   }
+  },
+  {
+   "slug": "shabby-pink-christmas-mini-kit",
+   "title": "Shabby Pink Christmas Mini Ephemera Kit",
+   "badge_sub": "Mini Kit · 4 Pages",
+   "price_eur": 2.79,
+   "section": "Christmas Ephemera",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags",
+     "words": [
+      "Merry & Bright",
+      "Sweet Christmas",
+      "Noel",
+      "Season's Greetings",
+      "Joy to the World",
+      "Peace on Earth"
+     ]
+    },
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps"
+    },
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts"
+    },
+    {
+     "type": "words",
+     "name": "word_strips",
+     "words": [
+      "Merry & Bright",
+      "Sweet Christmas",
+      "Noel",
+      "Season's Greetings",
+      "Joy to the World",
+      "Peace on Earth",
+      "Let It Snow",
+      "Comfort & Joy",
+      "Sleigh Rides",
+      "Warm Wishes",
+      "Peppermint Kisses",
+      "Under the Mistletoe",
+      "Sugar & Spice",
+      "Deck the Halls",
+      "Holly Jolly",
+      "Silent Night",
+      "Cozy Nights",
+      "Snow Day",
+      "Believe",
+      "Home for Christmas"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "6 gift tags · 20 postage stamps",
+    "4 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "6 gift tags · 20 postage stamps · 9 fussy cuts · 20 word strips",
+    "Shabby Pink Christmas collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "shabby chic pink vintage Christmas",
+    "collection": "Shabby Pink Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Mini Ephemera Kit",
+    "section": "Christmas Ephemera",
+    "pages": 4,
+    "contents": {
+     "gift_tags": 6,
+     "postage_stamps": 20,
+     "fussy_cuts": 9,
+     "word_strips": 20
+    },
+    "piece_size": "tags approx. 2.4 x 4.8 in, stamps approx. 1.8 x 1.9 in, word strips approx. 3.6 x 0.8 in (US Letter)",
+    "generated_by": "expand_collection",
+    "motifs": "pink glass ornaments, teddy bear, pink stocking, gingerbread house, peppermints, pink roses, ice skates, pink sleigh, white reindeer, hot cocoa, cupcake, old-world Santa in pink, Christmas tree, snow globe, wrapped gifts, sleigh bells, pink poinsettia, white dove"
+   }
   }
  ]
 }
