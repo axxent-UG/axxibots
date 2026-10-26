@@ -1,0 +1,56 @@
+{
+ "slug": "christmas-gift-tags-bundle",
+ "title": "Christmas Gift Tags Bundle",
+ "badge_title": "Christmas Gift Tags",
+ "badge_sub": "Bundle · 36 Tags",
+ "price_eur": 4.29,
+ "components": [
+  {
+   "title": "Christmas Post",
+   "dir": "/tmp/claude-0/m16/jj2/products/christmas-post-gift-tags"
+  },
+  {
+   "title": "Shabby Pink Christmas",
+   "dir": "/tmp/claude-0/m16/jj2/pink_products/shabby-pink-christmas-gift-tags"
+  },
+  {
+   "title": "Holly Berry Christmas",
+   "dir": "/tmp/claude-0/m16/jj2/hb_products/holly-berry-christmas-gift-tags"
+  }
+ ],
+ "cover_lines": [
+  "36 printable gift tags",
+  "3 Christmas collections",
+  "US Letter & A4"
+ ],
+ "inside_lines": [
+  "Christmas Post · Shabby Pink Christmas · Holly Berry Christmas",
+  "save over 30% vs. buying separately",
+  "PDF (US Letter & A4) + JPG"
+ ],
+ "facts": {
+  "theme": "three vintage Christmas looks in one set: classic Christmas Post, soft Shabby Pink Christmas and rich Holly Berry Christmas",
+  "collection": "Christmas Bundles",
+  "product_type": "Gift Tags Bundle",
+  "section": "Bundles",
+  "sizes": [
+   "US Letter 8.5x11 in",
+   "A4"
+  ],
+  "resolution_dpi": 300,
+  "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+  "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+  "pages": 6,
+  "includes": [
+   "Christmas Post Gift Tags (12)",
+   "Shabby Pink Christmas Gift Tags (12)",
+   "Holly Berry Christmas Gift Tags (12)"
+  ],
+  "contents": {
+   "gift_tags": 36,
+   "collections": 3
+  },
+  "savings": "bundle price 4.29 EUR vs 6.57 EUR when bought separately",
+  "piece_size": "approx. 2.4 x 4.8 in each on US Letter"
+ }
+}

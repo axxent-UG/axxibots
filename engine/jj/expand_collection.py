@@ -22,9 +22,9 @@ def _words(c, n):
 
 TYPES = {
     "fussy-cuts": dict(product_type="Fussy Cuts", price=2.49, section="Fussy Cuts", badge="Fussy Cuts · Printable",
-                       need=lambda c: len(c["motifs"]) >= 18,
+                       need=lambda c: len(c["motifs"]) >= 16,
                        pages=lambda c: [{"type": "fussy", "off": 0, "name": "fussy_cuts_1"}, {"type": "fussy", "off": 9, "name": "fussy_cuts_2"}],
-                       contents=lambda c: {"fussy_cuts": 18, "different_motifs": 18},
+                       contents=lambda c: {"fussy_cuts": 18, "different_motifs": min(18, len(c["motifs"]))},
                        size="each motif up to approx. 2.5 x 3.2 in on US Letter, with a white cutting border"),
     "gift-tags": dict(product_type="Gift Tags", price=2.19, section="Tags & Labels", badge="Gift Tags · Printable",
                       need=lambda c: len(c["motifs"]) >= 12 and len(c.get("words") or []) >= 12,
@@ -32,7 +32,7 @@ TYPES = {
                                        {"type": "tags", "off": 6, "name": "tags_2", "words": c["words"][6:12]}],
                       contents=lambda c: {"gift_tags": 12}, size="approx. 2.4 x 4.8 in each on US Letter"),
     "stamps": dict(product_type="Postage Stamps", price=2.19, section="Tags & Labels", badge="Postage Stamps · Printable",
-                   need=lambda c: len(c["motifs"]) >= 18,
+                   need=lambda c: len(c["motifs"]) >= 16,
                    pages=lambda c: [{"type": "stamps", "off": 0, "name": "stamps_1"}, {"type": "stamps", "off": 9, "name": "stamps_2"}],
                    contents=lambda c: {"postage_stamps": 40}, size="approx. 1.8 x 1.9 in each on US Letter, perforated edge"),
     "journal-cards": dict(product_type="Journal Cards", price=2.29, section="Papers & Journal Pages", badge="Journal Cards · Printable",

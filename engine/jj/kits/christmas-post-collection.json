@@ -8,7 +8,43 @@
   "Noel",
   "Season's Greetings",
   "Joy to the World",
-  "Peace on Earth"
+  "Peace on Earth",
+  "Special Delivery",
+  "Par Avion",
+  "Via North Pole",
+  "Merry Christmas",
+  "Joyeux Noel",
+  "Peace & Goodwill",
+  "Tidings of Joy",
+  "Wish You Were Here",
+  "Sealed with Love",
+  "First Class Christmas",
+  "Christmas Eve",
+  "Silent Night",
+  "O Holy Night",
+  "Deck the Halls",
+  "Jingle All the Way",
+  "Snowy Village",
+  "By the Fireside",
+  "Christmas Memories",
+  "Dear Santa",
+  "Letters to Santa",
+  "With Love at Christmas",
+  "Home for Christmas",
+  "Evergreen",
+  "Yuletide",
+  "Glad Tidings",
+  "Good Cheer",
+  "Winter Post",
+  "Old Fashioned Christmas",
+  "Victorian Christmas",
+  "Mistletoe",
+  "Candlelight",
+  "Joy",
+  "Believe",
+  "Twelve Days",
+  "Christmas Wishes",
+  "Return to Sender"
  ],
  "card_words": [
   "Christmas Post",
@@ -113,7 +149,17 @@
      "different_motifs": 18
     },
     "piece_size": "each motif up to approx. 2.5 x 3.2 in on US Letter, with a white cutting border",
-    "motifs": "teddy bear, stocking, robin, glass ornaments, snowy cottage, sleigh, Father Christmas, wrapped gifts, candle, pinecones, rocking horse, nutcracker, Christmas tree, mistletoe, ice skates, sleigh bells, poinsettia, reindeer"
+    "motifs": "teddy bear, stocking, robin, glass ornaments, snowy cottage, sleigh, Father Christmas, wrapped gifts, candle, pinecones, rocking horse, nutcracker, Christmas tree, mistletoe, ice skates, sleigh bells, poinsettia, reindeer",
+    "theme": "vintage Victorian Christmas",
+    "collection": "Christmas Post",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Fussy Cuts"
    }
   },
   {
@@ -151,7 +197,17 @@
      "different_motifs": 18
     },
     "piece_size": "approx. 1.8 x 1.9 in each on US Letter",
-    "note": "decorative faux stamps for crafting, not real postage"
+    "note": "decorative faux stamps for crafting, not real postage",
+    "theme": "vintage Victorian Christmas",
+    "collection": "Christmas Post",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Postage Stamps"
    }
   },
   {
@@ -209,7 +265,17 @@
      "Deck the Halls",
      "Comfort & Joy",
      "Jingle Bells"
-    ]
+    ],
+    "theme": "vintage Victorian Christmas",
+    "collection": "Christmas Post",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Gift Tags"
    }
   },
   {
@@ -272,7 +338,17 @@
      "Christmas Eve",
      "Cookie List",
      "Thankful For"
-    ]
+    ],
+    "theme": "vintage Victorian Christmas",
+    "collection": "Christmas Post",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Journal Cards"
    }
   },
   {
@@ -329,7 +405,17 @@
      "pattern_papers": 6
     },
     "patterns": "cranberry damask, green tartan, snowflakes on frost blue, holly sprigs, gold stars on ink blue, candy stripes",
-    "note": "full-page backgrounds; most home printers leave a small white margin"
+    "note": "full-page backgrounds; most home printers leave a small white margin",
+    "theme": "vintage Victorian Christmas",
+    "collection": "Christmas Post",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Pattern Paper Pack"
    },
    "cover_order": [
     4,
@@ -339,6 +425,236 @@
     2,
     1
    ]
+  },
+  {
+   "slug": "christmas-post-word-strips",
+   "title": "Christmas Post Word Strips",
+   "badge_sub": "Word Strips · Printable",
+   "price_eur": 1.99,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "words",
+     "name": "word_strips_1",
+     "words": [
+      "Christmas Post",
+      "Merry & Bright",
+      "Noel",
+      "Season's Greetings",
+      "Joy to the World",
+      "Peace on Earth",
+      "Special Delivery",
+      "Par Avion",
+      "Via North Pole",
+      "Merry Christmas",
+      "Joyeux Noel",
+      "Peace & Goodwill",
+      "Tidings of Joy",
+      "Wish You Were Here",
+      "Sealed with Love",
+      "First Class Christmas",
+      "Christmas Eve",
+      "Silent Night",
+      "O Holy Night",
+      "Deck the Halls"
+     ]
+    },
+    {
+     "type": "words",
+     "name": "word_strips_2",
+     "words": [
+      "Jingle All the Way",
+      "Snowy Village",
+      "By the Fireside",
+      "Christmas Memories",
+      "Dear Santa",
+      "Letters to Santa",
+      "With Love at Christmas",
+      "Home for Christmas",
+      "Evergreen",
+      "Yuletide",
+      "Glad Tidings",
+      "Good Cheer",
+      "Winter Post",
+      "Old Fashioned Christmas",
+      "Victorian Christmas",
+      "Mistletoe",
+      "Candlelight",
+      "Joy",
+      "Believe",
+      "Twelve Days"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "40 word strips",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "40 word strips",
+    "Christmas Post collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "vintage Victorian Christmas",
+    "collection": "Christmas Post",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Word Strips",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "word_strips": 40
+    },
+    "piece_size": "approx. 3.6 x 0.8 in each on US Letter",
+    "generated_by": "expand_collection"
+   }
+  },
+  {
+   "slug": "christmas-post-advent-numbers",
+   "title": "Christmas Post Advent Numbers",
+   "badge_sub": "Advent Numbers 1-25",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "advent",
+     "style": "medallion",
+     "name": "advent_round"
+    },
+    {
+     "type": "advent",
+     "style": "card",
+     "name": "advent_cards"
+    }
+   ],
+   "cover_lines": [
+    "50 advent numbers",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "50 advent numbers",
+    "Christmas Post collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "vintage Victorian Christmas",
+    "collection": "Christmas Post",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Advent Numbers",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "advent_numbers_1_to_25": 50,
+     "styles": 2
+    },
+    "piece_size": "round labels approx. 1.4 in, number cards approx. 1.4 x 1.7 in (US Letter)",
+    "generated_by": "expand_collection"
+   }
+  },
+  {
+   "slug": "christmas-post-mini-kit",
+   "title": "Christmas Post Mini Ephemera Kit",
+   "badge_sub": "Mini Kit · 4 Pages",
+   "price_eur": 2.79,
+   "section": "Christmas Ephemera",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags",
+     "words": [
+      "Christmas Post",
+      "Merry & Bright",
+      "Noel",
+      "Season's Greetings",
+      "Joy to the World",
+      "Peace on Earth"
+     ]
+    },
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps"
+    },
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts"
+    },
+    {
+     "type": "words",
+     "name": "word_strips",
+     "words": [
+      "Christmas Post",
+      "Merry & Bright",
+      "Noel",
+      "Season's Greetings",
+      "Joy to the World",
+      "Peace on Earth",
+      "Special Delivery",
+      "Par Avion",
+      "Via North Pole",
+      "Merry Christmas",
+      "Joyeux Noel",
+      "Peace & Goodwill",
+      "Tidings of Joy",
+      "Wish You Were Here",
+      "Sealed with Love",
+      "First Class Christmas",
+      "Christmas Eve",
+      "Silent Night",
+      "O Holy Night",
+      "Deck the Halls"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "6 gift tags · 20 postage stamps",
+    "4 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "6 gift tags · 20 postage stamps · 9 fussy cuts · 20 word strips",
+    "Christmas Post collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "vintage Victorian Christmas",
+    "collection": "Christmas Post",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Mini Ephemera Kit",
+    "section": "Christmas Ephemera",
+    "pages": 4,
+    "contents": {
+     "gift_tags": 6,
+     "postage_stamps": 20,
+     "fussy_cuts": 9,
+     "word_strips": 20
+    },
+    "piece_size": "tags approx. 2.4 x 4.8 in, stamps approx. 1.8 x 1.9 in, word strips approx. 3.6 x 0.8 in (US Letter)",
+    "generated_by": "expand_collection",
+    "motifs": "teddy bear, stocking, robin, glass ornaments, snowy cottage, sleigh, Father Christmas, wrapped gifts, candle, pinecones, rocking horse, nutcracker, Christmas tree, mistletoe, ice skates, sleigh bells, poinsettia, reindeer"
+   }
   }
  ]
 }

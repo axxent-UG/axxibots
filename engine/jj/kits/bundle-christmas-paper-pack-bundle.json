@@ -1,0 +1,52 @@
+{
+ "slug": "christmas-paper-pack-bundle",
+ "title": "Christmas Pattern Paper Bundle",
+ "badge_title": "Christmas Papers",
+ "badge_sub": "Bundle · 12 Pattern Papers",
+ "price_eur": 2.49,
+ "components": [
+  {
+   "title": "Christmas Post",
+   "dir": "/tmp/claude-0/m16/jj2/products/christmas-post-paper-pack"
+  },
+  {
+   "title": "Shabby Pink Christmas",
+   "dir": "/tmp/claude-0/m16/jj2/pink_products/shabby-pink-christmas-paper-pack"
+  }
+ ],
+ "cover_lines": [
+  "12 pattern papers",
+  "2 Christmas collections",
+  "US Letter & A4"
+ ],
+ "inside_lines": [
+  "Christmas Post · Shabby Pink Christmas",
+  "full-page backgrounds for journals and cards",
+  "PDF (US Letter & A4) + JPG"
+ ],
+ "facts": {
+  "theme": "two vintage Christmas looks: classic Christmas Post and soft Shabby Pink Christmas",
+  "collection": "Christmas Bundles",
+  "product_type": "Pattern Paper Bundle",
+  "section": "Bundles",
+  "sizes": [
+   "US Letter 8.5x11 in",
+   "A4"
+  ],
+  "resolution_dpi": 300,
+  "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+  "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+  "pages": 12,
+  "includes": [
+   "Christmas Post Paper Pack (6 papers)",
+   "Shabby Pink Christmas Paper Pack (6 papers)"
+  ],
+  "contents": {
+   "pattern_papers": 12,
+   "collections": 2
+  },
+  "savings": "bundle price 2.49 EUR vs 2.98 EUR when bought separately",
+  "piece_size": "full page, US Letter 8.5 x 11 in and A4",
+  "note": "full-page backgrounds; most home printers leave a small white margin"
+ }
+}

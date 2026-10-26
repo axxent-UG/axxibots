@@ -1,0 +1,658 @@
+{
+ "slug": "holly-berry-christmas",
+ "title": "Holly Berry Christmas",
+ "badge_title": "Holly Berry Christmas",
+ "motifs": [
+  "rk_robin",
+  "rk_stocking",
+  "rk_teddy",
+  "rk_ornaments",
+  "rk_gingerbread",
+  "rk_nutcracker",
+  "rk_tree",
+  "rk_poinsettia",
+  "rk_bells",
+  "rk_candycane",
+  "rk_cocoa",
+  "rk_gifts",
+  "rk_chest",
+  "rk_mug",
+  "rk_tin",
+  "rk_bag",
+  "rk_envelope"
+ ],
+ "cards": [],
+ "papers": [
+  "pp4_holly",
+  "pp2_tartan",
+  "pp1_damask",
+  "pp5_stars"
+ ],
+ "words": [
+  "Merry Christmas",
+  "Holly Jolly",
+  "Deck the Halls",
+  "Joy to the World",
+  "Season's Greetings",
+  "Warm Wishes",
+  "Peace on Earth",
+  "Noel",
+  "Believe",
+  "Ho Ho Ho",
+  "Let It Snow",
+  "Comfort & Joy",
+  "Merry & Bright",
+  "Christmas Morning",
+  "Home for the Holidays",
+  "Silent Night",
+  "Jingle Bells",
+  "Under the Tree",
+  "Sleigh Rides",
+  "Gingerbread Lane",
+  "Candy Cane Wishes",
+  "Hot Cocoa Season",
+  "Tis the Season",
+  "Glad Tidings",
+  "Holly Berry",
+  "Mistletoe Kisses",
+  "Christmas Eve",
+  "Twinkle Lights",
+  "Wrapped with Love",
+  "Dear Santa",
+  "North Pole Post",
+  "Cozy Christmas",
+  "Evergreen",
+  "Winter Wonderland",
+  "Yuletide",
+  "Fa La La",
+  "Good Cheer",
+  "Christmas Magic",
+  "Sugar Plums",
+  "Festive Greetings"
+ ],
+ "card_words": [],
+ "journal_titles": [],
+ "stamp_label": "HOLLY BERRY POST",
+ "stamp_values": [
+  "1d",
+  "2d",
+  "3d",
+  "½d",
+  "4d",
+  "6d"
+ ],
+ "stamp_tones": [
+  [
+   244,
+   232,
+   212
+  ],
+  [
+   236,
+   222,
+   204
+  ],
+  [
+   226,
+   232,
+   214
+  ],
+  [
+   240,
+   226,
+   214
+  ]
+ ],
+ "strip_tones": [
+  [
+   246,
+   238,
+   222
+  ],
+  [
+   238,
+   226,
+   206
+  ],
+  [
+   232,
+   224,
+   210
+  ]
+ ],
+ "palette": {
+  "accent": [
+   150,
+   28,
+   36
+  ],
+  "gold": [
+   190,
+   150,
+   62
+  ],
+  "ink": [
+   52,
+   36,
+   30
+  ],
+  "band": [
+   36,
+   60,
+   42
+  ],
+  "ribbon": [
+   150,
+   28,
+   36
+  ],
+  "green": [
+   34,
+   84,
+   52
+  ]
+ },
+ "cover_style": "mood",
+ "products": [
+  {
+   "slug": "holly-berry-christmas-kit",
+   "title": "Holly Berry Christmas Ephemera Kit",
+   "badge_sub": "Junk Journal Ephemera Kit",
+   "price_eur": 3.49,
+   "section": "Christmas Ephemera",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags",
+     "words": [
+      "Merry Christmas",
+      "Holly Jolly",
+      "Deck the Halls",
+      "Joy to the World",
+      "Season's Greetings",
+      "Warm Wishes"
+     ]
+    },
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps"
+    },
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts_1"
+    },
+    {
+     "type": "fussy",
+     "off": 9,
+     "name": "fussy_cuts_2"
+    },
+    {
+     "type": "words",
+     "name": "word_strips",
+     "words": [
+      "Merry Christmas",
+      "Holly Jolly",
+      "Deck the Halls",
+      "Joy to the World",
+      "Season's Greetings",
+      "Warm Wishes",
+      "Peace on Earth",
+      "Noel",
+      "Believe",
+      "Ho Ho Ho",
+      "Let It Snow",
+      "Comfort & Joy",
+      "Merry & Bright",
+      "Christmas Morning",
+      "Home for the Holidays",
+      "Silent Night",
+      "Jingle Bells",
+      "Under the Tree",
+      "Sleigh Rides",
+      "Gingerbread Lane"
+     ]
+    },
+    {
+     "type": "pattern",
+     "key": "pp4_holly",
+     "name": "paper_holly"
+    },
+    {
+     "type": "pattern",
+     "key": "pp2_tartan",
+     "name": "paper_tartan"
+    }
+   ],
+   "cover_lines": [
+    "7 printable pages",
+    "Tags · Stamps · Fussy Cuts · Word Strips · Papers",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "6 tags · 20 stamps · 18 fussy cuts",
+    "20 word strips · 2 pattern papers",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich classic Victorian Christmas in deep crimson, evergreen, cream and polished gold",
+    "collection": "Holly Berry Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Ephemera Kit",
+    "section": "Christmas Ephemera",
+    "pages": 7,
+    "contents": {
+     "gift_tags": 6,
+     "postage_stamps": 20,
+     "fussy_cuts": 18,
+     "word_strips": 20,
+     "pattern_papers": 2
+    },
+    "piece_size": "tags approx. 2.4 x 4.8 in, stamps approx. 1.8 x 1.9 in, fussy cuts up to approx. 2.5 x 3.2 in, word strips approx. 3.6 x 0.8 in (all on US Letter)",
+    "motifs": "robin, Christmas stocking, teddy bear, glass ornaments, gingerbread man, nutcracker, Christmas tree, poinsettia, sleigh bells, candy canes, hot cocoa, wrapped gifts, holly treasure chest, Christmas mug, cookie tin, gift bag, sealed Christmas envelope",
+    "note": "17 different motifs; one motif appears twice on the fussy cut pages"
+   }
+  },
+  {
+   "slug": "holly-berry-christmas-gift-tags",
+   "title": "Holly Berry Christmas Gift Tags",
+   "badge_sub": "Gift Tags · Printable",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags_1",
+     "words": [
+      "Merry Christmas",
+      "Holly Jolly",
+      "Deck the Halls",
+      "Joy to the World",
+      "Season's Greetings",
+      "Warm Wishes"
+     ]
+    },
+    {
+     "type": "tags",
+     "off": 6,
+     "name": "tags_2",
+     "words": [
+      "Peace on Earth",
+      "Noel",
+      "Believe",
+      "Ho Ho Ho",
+      "Let It Snow",
+      "Comfort & Joy"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "12 gift tags",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "12 gift tags",
+    "Holly Berry Christmas collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich classic Victorian Christmas in deep crimson, evergreen, cream and polished gold",
+    "collection": "Holly Berry Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Gift Tags",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "gift_tags": 12
+    },
+    "piece_size": "approx. 2.4 x 4.8 in each on US Letter",
+    "generated_by": "expand_collection"
+   }
+  },
+  {
+   "slug": "holly-berry-christmas-word-strips",
+   "title": "Holly Berry Christmas Word Strips",
+   "badge_sub": "Word Strips · Printable",
+   "price_eur": 1.99,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "words",
+     "name": "word_strips_1",
+     "words": [
+      "Merry Christmas",
+      "Holly Jolly",
+      "Deck the Halls",
+      "Joy to the World",
+      "Season's Greetings",
+      "Warm Wishes",
+      "Peace on Earth",
+      "Noel",
+      "Believe",
+      "Ho Ho Ho",
+      "Let It Snow",
+      "Comfort & Joy",
+      "Merry & Bright",
+      "Christmas Morning",
+      "Home for the Holidays",
+      "Silent Night",
+      "Jingle Bells",
+      "Under the Tree",
+      "Sleigh Rides",
+      "Gingerbread Lane"
+     ]
+    },
+    {
+     "type": "words",
+     "name": "word_strips_2",
+     "words": [
+      "Candy Cane Wishes",
+      "Hot Cocoa Season",
+      "Tis the Season",
+      "Glad Tidings",
+      "Holly Berry",
+      "Mistletoe Kisses",
+      "Christmas Eve",
+      "Twinkle Lights",
+      "Wrapped with Love",
+      "Dear Santa",
+      "North Pole Post",
+      "Cozy Christmas",
+      "Evergreen",
+      "Winter Wonderland",
+      "Yuletide",
+      "Fa La La",
+      "Good Cheer",
+      "Christmas Magic",
+      "Sugar Plums",
+      "Festive Greetings"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "40 word strips",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "40 word strips",
+    "Holly Berry Christmas collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich classic Victorian Christmas in deep crimson, evergreen, cream and polished gold",
+    "collection": "Holly Berry Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Word Strips",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "word_strips": 40
+    },
+    "piece_size": "approx. 3.6 x 0.8 in each on US Letter",
+    "generated_by": "expand_collection"
+   }
+  },
+  {
+   "slug": "holly-berry-christmas-advent-numbers",
+   "title": "Holly Berry Christmas Advent Numbers",
+   "badge_sub": "Advent Numbers 1-25",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "advent",
+     "style": "medallion",
+     "name": "advent_round"
+    },
+    {
+     "type": "advent",
+     "style": "card",
+     "name": "advent_cards"
+    }
+   ],
+   "cover_lines": [
+    "50 advent numbers",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "50 advent numbers",
+    "Holly Berry Christmas collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich classic Victorian Christmas in deep crimson, evergreen, cream and polished gold",
+    "collection": "Holly Berry Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Advent Numbers",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "advent_numbers_1_to_25": 50,
+     "styles": 2
+    },
+    "piece_size": "round labels approx. 1.4 in, number cards approx. 1.4 x 1.7 in (US Letter)",
+    "generated_by": "expand_collection"
+   }
+  },
+  {
+   "slug": "holly-berry-christmas-mini-kit",
+   "title": "Holly Berry Christmas Mini Ephemera Kit",
+   "badge_sub": "Mini Kit · 4 Pages",
+   "price_eur": 2.79,
+   "section": "Christmas Ephemera",
+   "pages": [
+    {
+     "type": "tags",
+     "off": 0,
+     "name": "tags",
+     "words": [
+      "Merry Christmas",
+      "Holly Jolly",
+      "Deck the Halls",
+      "Joy to the World",
+      "Season's Greetings",
+      "Warm Wishes"
+     ]
+    },
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps"
+    },
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts"
+    },
+    {
+     "type": "words",
+     "name": "word_strips",
+     "words": [
+      "Merry Christmas",
+      "Holly Jolly",
+      "Deck the Halls",
+      "Joy to the World",
+      "Season's Greetings",
+      "Warm Wishes",
+      "Peace on Earth",
+      "Noel",
+      "Believe",
+      "Ho Ho Ho",
+      "Let It Snow",
+      "Comfort & Joy",
+      "Merry & Bright",
+      "Christmas Morning",
+      "Home for the Holidays",
+      "Silent Night",
+      "Jingle Bells",
+      "Under the Tree",
+      "Sleigh Rides",
+      "Gingerbread Lane"
+     ]
+    }
+   ],
+   "cover_lines": [
+    "6 gift tags · 20 postage stamps",
+    "4 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "6 gift tags · 20 postage stamps · 9 fussy cuts · 20 word strips",
+    "Holly Berry Christmas collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich classic Victorian Christmas in deep crimson, evergreen, cream and polished gold",
+    "collection": "Holly Berry Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Mini Ephemera Kit",
+    "section": "Christmas Ephemera",
+    "pages": 4,
+    "contents": {
+     "gift_tags": 6,
+     "postage_stamps": 20,
+     "fussy_cuts": 9,
+     "word_strips": 20
+    },
+    "piece_size": "tags approx. 2.4 x 4.8 in, stamps approx. 1.8 x 1.9 in, word strips approx. 3.6 x 0.8 in (US Letter)",
+    "generated_by": "expand_collection",
+    "motifs": "robin, Christmas stocking, teddy bear, glass ornaments, gingerbread man, nutcracker, Christmas tree, poinsettia, sleigh bells, candy canes, hot cocoa, wrapped gifts, holly treasure chest, Christmas mug, cookie tin, gift bag, sealed Christmas envelope"
+   }
+  },
+  {
+   "slug": "holly-berry-christmas-fussy-cuts",
+   "title": "Holly Berry Christmas Fussy Cuts",
+   "badge_sub": "Fussy Cuts · Printable",
+   "price_eur": 2.49,
+   "section": "Fussy Cuts",
+   "pages": [
+    {
+     "type": "fussy",
+     "off": 0,
+     "name": "fussy_cuts_1"
+    },
+    {
+     "type": "fussy",
+     "off": 9,
+     "name": "fussy_cuts_2"
+    }
+   ],
+   "cover_lines": [
+    "18 fussy cuts",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "18 fussy cuts",
+    "Holly Berry Christmas collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich classic Victorian Christmas in deep crimson, evergreen, cream and polished gold",
+    "collection": "Holly Berry Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Fussy Cuts",
+    "section": "Fussy Cuts",
+    "pages": 2,
+    "contents": {
+     "fussy_cuts": 18,
+     "different_motifs": 17
+    },
+    "piece_size": "each motif up to approx. 2.5 x 3.2 in on US Letter, with a white cutting border",
+    "generated_by": "expand_collection",
+    "motifs": "robin, Christmas stocking, teddy bear, glass ornaments, gingerbread man, nutcracker, Christmas tree, poinsettia, sleigh bells, candy canes, hot cocoa, wrapped gifts, holly treasure chest, Christmas mug, cookie tin, gift bag, sealed Christmas envelope"
+   }
+  },
+  {
+   "slug": "holly-berry-christmas-stamps",
+   "title": "Holly Berry Christmas Postage Stamps",
+   "badge_sub": "Postage Stamps · Printable",
+   "price_eur": 2.19,
+   "section": "Tags & Labels",
+   "pages": [
+    {
+     "type": "stamps",
+     "off": 0,
+     "name": "stamps_1"
+    },
+    {
+     "type": "stamps",
+     "off": 9,
+     "name": "stamps_2"
+    }
+   ],
+   "cover_lines": [
+    "40 postage stamps",
+    "2 printable pages",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "40 postage stamps",
+    "Holly Berry Christmas collection",
+    "PDF (US Letter & A4) + JPG"
+   ],
+   "facts": {
+    "theme": "rich classic Victorian Christmas in deep crimson, evergreen, cream and polished gold",
+    "collection": "Holly Berry Christmas",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "resolution_dpi": 300,
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+    "product_type": "Postage Stamps",
+    "section": "Tags & Labels",
+    "pages": 2,
+    "contents": {
+     "postage_stamps": 40
+    },
+    "piece_size": "approx. 1.8 x 1.9 in each on US Letter, perforated edge",
+    "generated_by": "expand_collection",
+    "motifs": "robin, Christmas stocking, teddy bear, glass ornaments, gingerbread man, nutcracker, Christmas tree, poinsettia, sleigh bells, candy canes, hot cocoa, wrapped gifts, holly treasure chest, Christmas mug, cookie tin, gift bag, sealed Christmas envelope"
+   }
+  }
+ ]
+}

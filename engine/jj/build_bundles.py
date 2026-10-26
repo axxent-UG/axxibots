@@ -148,7 +148,11 @@ def upload(spec, out_dir):
         size, _, part = tail.partition("_")
         label = ("US_Letter" if size == "letter" else "A4") + ("_" + part.replace("part", "Part_") if part else "")
         uk.put(p, "%s_%s.pdf" % (name, label), "download")
-    caps = {"01_cover": "Cover: the Christmas bundle", "02_whats_inside": "What's inside: all products in the bundle"}
+    pdfs = glob.glob(os.path.join(out, "pages", "*.pdf"))
+    if len(pdfs) <= 4:  # Etsy allows 5 files: add the JPG ZIP when there is room
+        z = uk.make_jpg_zip({"slug": spec["slug"], "title": spec["title"]}, os.path.join(out, "pages"), os.path.join(out, "pages", name + "_JPG_US_Letter.zip"))
+        uk.put(z, os.path.basename(z), "download")
+    caps = {"01_cover": "Cover: everything in the bundle", "02_whats_inside": "What's inside: all products in the bundle"}
     for i, p in enumerate(sorted(glob.glob(os.path.join(out, "listing", "*.jpg")))[:10]):
         stem = os.path.basename(p)[:-4]
         uk.put(p, os.path.basename(p), "image", rank=i + 1, caption=caps.get(stem, "Preview page"))

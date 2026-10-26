@@ -1,0 +1,56 @@
+{
+ "slug": "christmas-fussy-cuts-bundle",
+ "title": "Christmas Fussy Cuts Bundle",
+ "badge_title": "Christmas Fussy Cuts",
+ "badge_sub": "Bundle · 54 Motifs",
+ "price_eur": 4.49,
+ "components": [
+  {
+   "title": "Christmas Post",
+   "dir": "/tmp/claude-0/m16/jj2/products/christmas-post-fussy-cuts"
+  },
+  {
+   "title": "Shabby Pink Christmas",
+   "dir": "/tmp/claude-0/m16/jj2/pink_products/shabby-pink-christmas-fussy-cuts"
+  },
+  {
+   "title": "Holly Berry Christmas",
+   "dir": "/tmp/claude-0/m16/jj2/hb_products/holly-berry-christmas-fussy-cuts"
+  }
+ ],
+ "cover_lines": [
+  "54 fussy cut motifs",
+  "3 Christmas collections",
+  "US Letter & A4"
+ ],
+ "inside_lines": [
+  "Christmas Post · Shabby Pink Christmas · Holly Berry Christmas",
+  "save over 35% vs. buying separately",
+  "PDF (US Letter & A4) + JPG"
+ ],
+ "facts": {
+  "theme": "three vintage Christmas looks in one set: classic Christmas Post, soft Shabby Pink Christmas and rich Holly Berry Christmas",
+  "collection": "Christmas Bundles",
+  "product_type": "Fussy Cuts Bundle",
+  "section": "Bundles",
+  "sizes": [
+   "US Letter 8.5x11 in",
+   "A4"
+  ],
+  "resolution_dpi": 300,
+  "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+  "licence": "personal use; finished handmade items may be given or sold in small quantities, the digital files may not be shared or resold",
+  "pages": 6,
+  "includes": [
+   "Christmas Post Fussy Cuts (18 motifs)",
+   "Shabby Pink Christmas Fussy Cuts (18 motifs)",
+   "Holly Berry Christmas Fussy Cuts (18 cuts, 17 different motifs)"
+  ],
+  "contents": {
+   "fussy_cuts": 54,
+   "collections": 3
+  },
+  "savings": "bundle price 4.49 EUR vs 7.47 EUR when bought separately",
+  "piece_size": "each motif up to approx. 2.5 x 3.2 in on US Letter, with a white cutting border"
+ }
+}
