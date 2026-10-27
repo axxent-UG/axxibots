@@ -1,0 +1,606 @@
+{
+ "slug": "dino-party",
+ "title": "Dino Party",
+ "headline": "ROAR!",
+ "subline": "Let's Party!",
+ "invite_line": "Join us for a ROAR-SOME birthday!",
+ "sign_title": "DINO PARTY",
+ "bingo_title": "DINO BINGO",
+ "scene": "c01_jungle",
+ "papers": [
+  "pp1_dinos",
+  "pp2_leaves",
+  "pp3_dots"
+ ],
+ "motifs": [
+  "m01_trex",
+  "m02_triceratops",
+  "m03_stegosaurus",
+  "m04_longneck",
+  "m05_pterodactyl",
+  "m06_hatchling",
+  "m07_eggs",
+  "m08_volcano",
+  "m09_palm",
+  "m10_ankylosaurus",
+  "m11_cake",
+  "m12_balloons",
+  "m13_partyhat",
+  "m14_footprints",
+  "m15_ferns",
+  "m16_gift"
+ ],
+ "motif_names": {
+  "m01_trex": "T-Rex",
+  "m02_triceratops": "Triceratops",
+  "m03_stegosaurus": "Stegosaurus",
+  "m04_longneck": "Long Neck",
+  "m05_pterodactyl": "Pterodactyl",
+  "m06_hatchling": "Baby Dino",
+  "m07_eggs": "Dino Eggs",
+  "m08_volcano": "Volcano",
+  "m09_palm": "Palm Tree",
+  "m10_ankylosaurus": "Ankylosaurus",
+  "m11_cake": "Birthday Cake",
+  "m12_balloons": "Balloons",
+  "m13_partyhat": "Party Hat",
+  "m14_footprints": "Footprints",
+  "m15_ferns": "Ferns",
+  "m16_gift": "Present"
+ },
+ "palette": {
+  "green": [
+   58,
+   150,
+   72
+  ],
+  "teal": [
+   22,
+   150,
+   150
+  ],
+  "yellow": [
+   255,
+   204,
+   40
+  ],
+  "orange": [
+   246,
+   128,
+   32
+  ],
+  "coral": [
+   240,
+   96,
+   96
+  ],
+  "purple": [
+   140,
+   90,
+   190
+  ],
+  "ink": [
+   46,
+   64,
+   52
+  ],
+  "cream": [
+   255,
+   251,
+   240
+  ]
+ },
+ "food_labels": [
+  "Dino Eggs",
+  "Lava Punch",
+  "Fossil Bones",
+  "Volcano Bites",
+  "Swamp Juice",
+  "T-Rex Treats",
+  "Dino Chow",
+  "Prehistoric Pops"
+ ],
+ "tag_texts": [
+  "Thanks for stomping by!",
+  "Roar-some thanks!",
+  "You're dino-mite!"
+ ],
+ "wyr": [
+  [
+   "ride a T-Rex",
+   "fly on a pterodactyl"
+  ],
+  [
+   "have a dino as a pet",
+   "be a dino for a day"
+  ],
+  [
+   "roar like a T-Rex",
+   "stomp like a long neck"
+  ],
+  [
+   "find a dino egg",
+   "find a dino footprint"
+  ],
+  [
+   "eat lava cake",
+   "drink swamp juice"
+  ],
+  [
+   "live in a volcano",
+   "live in a jungle"
+  ],
+  [
+   "have a long neck",
+   "have spikes on your back"
+  ],
+  [
+   "be as big as a dinosaur",
+   "be as small as a baby dino"
+  ],
+  [
+   "swim with sea dinos",
+   "fly with flying dinos"
+  ],
+  [
+   "dig up a fossil",
+   "discover a new dinosaur"
+  ],
+  [
+   "have a dino tail",
+   "have dino claws"
+  ],
+  [
+   "eat only plants",
+   "eat only dino nuggets"
+  ],
+  [
+   "hatch from an egg",
+   "sleep in a giant nest"
+  ],
+  [
+   "race a raptor",
+   "hide from a T-Rex"
+  ],
+  [
+   "have three horns",
+   "have a club tail"
+  ],
+  [
+   "visit dino times",
+   "bring a dino home"
+  ],
+  [
+   "name a dinosaur",
+   "draw a dinosaur"
+  ],
+  [
+   "dance like a dino",
+   "sing like a dino"
+  ],
+  [
+   "have a dino birthday every year",
+   "have a dino sleepover"
+  ],
+  [
+   "wear dino pajamas",
+   "wear a dino costume"
+  ],
+  [
+   "climb a palm tree",
+   "jump in a mud puddle"
+  ],
+  [
+   "roar at breakfast",
+   "roar at bedtime"
+  ],
+  [
+   "be a dino explorer",
+   "be a dino doctor"
+  ],
+  [
+   "ride a stegosaurus",
+   "ride a triceratops"
+  ]
+ ],
+ "products": [
+  {
+   "slug": "dino-party-invitation",
+   "kind": "invitation",
+   "title": "Dino Party Editable Birthday Invitation",
+   "badge_title": "Dino Party Invitation",
+   "badge_sub": "Editable · 5x7 in",
+   "price_eur": 3.49,
+   "ribbon": "EDITABLE · DIGITAL DOWNLOAD",
+   "cover_lines": [
+    "Editable PDF · type your details",
+    "5x7 in · US Letter · A4",
+    "Any age"
+   ],
+   "inside_title": "Editable 5x7 invitation",
+   "inside_lines": [
+    "Type name, age, date, time, place and RSVP",
+    "in the free Adobe Acrobat Reader",
+    "print at home or at a print shop"
+   ],
+   "facts": {
+    "theme": "bright, friendly cartoon dinosaurs in leaf green, teal, sunny yellow, tangerine orange and coral (kids birthday party)",
+    "collection": "Dino Party",
+    "resolution_dpi": 300,
+    "licence": "personal use for your own party; you may not share, resell or redistribute the files",
+    "audience": "kids birthday parties, any age",
+    "product_type": "Editable Birthday Invitation",
+    "pages": 1,
+    "contents": {
+     "invitation_designs": 1,
+     "editable_fields": 5
+    },
+    "sizes": [
+     "5x7 in",
+     "US Letter 8.5x11 in (5x7 with crop marks)",
+     "A4 (5x7 with crop marks)"
+    ],
+    "files": "3 editable PDFs (5x7 in, US Letter, A4) and a JPG sample",
+    "editable_fields": "child's name and age, date, time, place, RSVP",
+    "how_to_edit": "Editable fields: open the PDF in the free Adobe Acrobat Reader (computer, tablet or phone), click the text and type your own details, then print or send to a print shop. The editable text uses a clean bold sans-serif font; the headline artwork is fixed.",
+    "fixed_text": "ROAR! Let's Party! Join us for a ROAR-SOME birthday!",
+    "section": "Kids Party"
+   },
+   "section": "Kids Party"
+  },
+  {
+   "slug": "dino-party-welcome-sign",
+   "kind": "sign",
+   "title": "Dino Party Editable Welcome Sign",
+   "badge_title": "Dino Party Welcome Sign",
+   "badge_sub": "Editable · 8x10 & 16x20",
+   "price_eur": 2.99,
+   "ribbon": "EDITABLE · DIGITAL DOWNLOAD",
+   "cover_lines": [
+    "Editable name and age line",
+    "8x10 in · 16x20 in · US Letter",
+    "print at home or at a print shop"
+   ],
+   "inside_title": "Editable welcome sign",
+   "inside_lines": [
+    "Type the child's name and the birthday line",
+    "8x10 in, 16x20 in and US Letter PDFs",
+    "free Adobe Acrobat Reader"
+   ],
+   "facts": {
+    "theme": "bright, friendly cartoon dinosaurs in leaf green, teal, sunny yellow, tangerine orange and coral (kids birthday party)",
+    "collection": "Dino Party",
+    "resolution_dpi": 300,
+    "licence": "personal use for your own party; you may not share, resell or redistribute the files",
+    "audience": "kids birthday parties, any age",
+    "product_type": "Editable Welcome Sign",
+    "pages": 1,
+    "contents": {
+     "sign_designs": 1,
+     "editable_fields": 2
+    },
+    "sizes": [
+     "8x10 in",
+     "16x20 in",
+     "US Letter 8.5x11 in (8x10 with crop marks)"
+    ],
+    "files": "3 editable PDFs (8x10 in, 16x20 in, US Letter)",
+    "editable_fields": "child's name, birthday line (e.g. ROAR-SOME 5TH BIRTHDAY)",
+    "how_to_edit": "Editable fields: open the PDF in the free Adobe Acrobat Reader (computer, tablet or phone), click the text and type your own details, then print or send to a print shop. The editable text uses a clean bold sans-serif font; the headline artwork is fixed.",
+    "fixed_text": "WELCOME TO ... DINO PARTY",
+    "note": "the 16x20 in file is made for printing at a print shop",
+    "section": "Kids Party"
+   },
+   "section": "Kids Party"
+  },
+  {
+   "slug": "dino-party-banner",
+   "kind": "banner",
+   "title": "Dino Party Happy Birthday Banner",
+   "badge_title": "Dino Happy Birthday Banner",
+   "badge_sub": "Printable · Numbers 1-9",
+   "price_eur": 2.79,
+   "cover_lines": [
+    "HAPPY BIRTHDAY + dino flags",
+    "age numbers 1-9 · 2 blank flags",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "27 pennant flags, 2 per page",
+    "letters, numbers 1-9, dinos and blanks",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "bright, friendly cartoon dinosaurs in leaf green, teal, sunny yellow, tangerine orange and coral (kids birthday party)",
+    "collection": "Dino Party",
+    "resolution_dpi": 300,
+    "licence": "personal use for your own party; you may not share, resell or redistribute the files",
+    "audience": "kids birthday parties, any age",
+    "product_type": "Birthday Banner",
+    "pages": 14,
+    "contents": {
+     "pennant_flags": 27,
+     "letters": "HAPPY BIRTHDAY",
+     "age_numbers": "1-9",
+     "dino_flags": 3,
+     "blank_flags": 2
+    },
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "piece_size": "each flag approx. 6.6 x 4.8 in, two per page, with hole marks for string",
+    "section": "Kids Party"
+   },
+   "section": "Kids Party"
+  },
+  {
+   "slug": "dino-party-cupcake-toppers",
+   "kind": "toppers",
+   "title": "Dino Party Cupcake Toppers",
+   "badge_title": "Dino Cupcake Toppers",
+   "badge_sub": "Printable · 60 Toppers",
+   "price_eur": 2.29,
+   "cover_lines": [
+    "60 cupcake toppers",
+    "dinos, sayings and age numbers 1-9",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "3 pages, 20 round toppers each",
+    "1.9 in circles",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "bright, friendly cartoon dinosaurs in leaf green, teal, sunny yellow, tangerine orange and coral (kids birthday party)",
+    "collection": "Dino Party",
+    "resolution_dpi": 300,
+    "licence": "personal use for your own party; you may not share, resell or redistribute the files",
+    "audience": "kids birthday parties, any age",
+    "product_type": "Cupcake Toppers",
+    "pages": 3,
+    "contents": {
+     "cupcake_toppers": 60,
+     "age_numbers": "1-9 (twice)",
+     "sayings": "Happy Birthday, ROAR!, Dino-mite!, Party Animal"
+    },
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "piece_size": "round toppers approx. 1.9 in",
+    "section": "Kids Party"
+   },
+   "section": "Kids Party"
+  },
+  {
+   "slug": "dino-party-food-labels",
+   "kind": "food_labels",
+   "title": "Dino Party Food Labels",
+   "badge_title": "Dino Party Food Labels",
+   "badge_sub": "Tent Cards · Editable Blanks",
+   "price_eur": 2.49,
+   "cover_lines": [
+    "8 ready food labels + 4 editable",
+    "folded tent cards",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "Dino Eggs, Lava Punch, Fossil Bones and more",
+    "one page of blank cards you can type on",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "bright, friendly cartoon dinosaurs in leaf green, teal, sunny yellow, tangerine orange and coral (kids birthday party)",
+    "collection": "Dino Party",
+    "resolution_dpi": 300,
+    "licence": "personal use for your own party; you may not share, resell or redistribute the files",
+    "audience": "kids birthday parties, any age",
+    "product_type": "Food Labels",
+    "pages": 3,
+    "contents": {
+     "food_tent_cards": 12,
+     "prefilled": 8,
+     "editable_blank": 4
+    },
+    "labels": [
+     "Dino Eggs",
+     "Lava Punch",
+     "Fossil Bones",
+     "Volcano Bites",
+     "Swamp Juice",
+     "T-Rex Treats",
+     "Dino Chow",
+     "Prehistoric Pops"
+    ],
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "files": "PDF for US Letter, PDF for A4 (page 3 editable), ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "piece_size": "tent cards approx. 3.8 x 2.4 in when folded",
+    "how_to_edit": "Editable fields: open the PDF in the free Adobe Acrobat Reader (computer, tablet or phone), click the text and type your own details, then print or send to a print shop. The editable text uses a clean bold sans-serif font; the headline artwork is fixed.",
+    "section": "Kids Party"
+   },
+   "section": "Kids Party"
+  },
+  {
+   "slug": "dino-party-favor-tags",
+   "kind": "favor_tags",
+   "title": "Dino Party Favor Tags",
+   "badge_title": "Dino Party Favor Tags",
+   "badge_sub": "Printable · 18 Tags",
+   "price_eur": 1.99,
+   "cover_lines": [
+    "18 thank-you favor tags",
+    "for treat bags and gifts",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "Thanks for stomping by! · Roar-some thanks! · You're dino-mite!",
+    "2 pages, 9 tags each",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "bright, friendly cartoon dinosaurs in leaf green, teal, sunny yellow, tangerine orange and coral (kids birthday party)",
+    "collection": "Dino Party",
+    "resolution_dpi": 300,
+    "licence": "personal use for your own party; you may not share, resell or redistribute the files",
+    "audience": "kids birthday parties, any age",
+    "product_type": "Favor Tags",
+    "pages": 2,
+    "contents": {
+     "favor_tags": 18,
+     "sayings": 3
+    },
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "piece_size": "approx. 2.1 x 3.3 in each with a hole mark",
+    "section": "Kids Party"
+   },
+   "section": "Kids Party"
+  },
+  {
+   "slug": "dino-party-bingo",
+   "kind": "bingo",
+   "title": "Dino Picture Bingo Party Game",
+   "badge_title": "Dino Picture Bingo",
+   "badge_sub": "Party Game · 10 Players",
+   "price_eur": 2.99,
+   "cover_lines": [
+    "10 different picture bingo cards",
+    "16 calling cards",
+    "no reading needed"
+   ],
+   "inside_lines": [
+    "3x3 picture cards, great for little ones",
+    "5 pages of cards + 1 page of calling cards",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "bright, friendly cartoon dinosaurs in leaf green, teal, sunny yellow, tangerine orange and coral (kids birthday party)",
+    "collection": "Dino Party",
+    "resolution_dpi": 300,
+    "licence": "personal use for your own party; you may not share, resell or redistribute the files",
+    "audience": "kids birthday parties, any age",
+    "product_type": "Bingo Game",
+    "pages": 6,
+    "contents": {
+     "bingo_cards": 10,
+     "calling_cards": 16,
+     "grid": "3x3 pictures"
+    },
+    "players": "up to 10 (print more copies for more players)",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "section": "Kids Party"
+   },
+   "section": "Kids Party"
+  },
+  {
+   "slug": "dino-party-would-you-rather",
+   "kind": "would_you_rather",
+   "title": "Dino Would You Rather Party Game",
+   "badge_title": "Would You Rather",
+   "badge_sub": "Dino Edition · 24 Cards",
+   "price_eur": 1.99,
+   "cover_lines": [
+    "24 question cards",
+    "silly dino questions for kids",
+    "US Letter & A4"
+   ],
+   "inside_lines": [
+    "3 pages, 8 cards each",
+    "great for parties, car rides and classrooms",
+    "PDF + JPG"
+   ],
+   "facts": {
+    "theme": "bright, friendly cartoon dinosaurs in leaf green, teal, sunny yellow, tangerine orange and coral (kids birthday party)",
+    "collection": "Dino Party",
+    "resolution_dpi": 300,
+    "licence": "personal use for your own party; you may not share, resell or redistribute the files",
+    "audience": "kids birthday parties, any age",
+    "product_type": "Would You Rather Game",
+    "pages": 3,
+    "contents": {
+     "question_cards": 24
+    },
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4"
+    ],
+    "files": "PDF for US Letter, PDF for A4, ZIP with all pages as JPG (US Letter, 300 dpi)",
+    "piece_size": "cards approx. 3.8 x 2.3 in",
+    "section": "Kids Party"
+   },
+   "section": "Kids Party"
+  }
+ ],
+ "bundles": [
+  {
+   "slug": "dino-party-bundle",
+   "title": "Dino Party Bundle",
+   "badge_title": "Dino Party Bundle",
+   "badge_sub": "8 Printables · Editable Invitation",
+   "price_eur": 7.99,
+   "components": [
+    "dino-party-invitation",
+    "dino-party-welcome-sign",
+    "dino-party-banner",
+    "dino-party-cupcake-toppers",
+    "dino-party-food-labels",
+    "dino-party-favor-tags",
+    "dino-party-bingo",
+    "dino-party-would-you-rather"
+   ],
+   "cover_lines": [
+    "editable invitation + welcome sign",
+    "banner · toppers · food labels · tags · 2 games",
+    "save over 60%"
+   ],
+   "inside_lines": [
+    "everything for a dinosaur birthday party",
+    "invitation and sign editable in the free Adobe Acrobat Reader",
+    "US Letter & A4"
+   ],
+   "section": "Kids Party",
+   "facts": {
+    "theme": "bright, friendly cartoon dinosaurs in leaf green, teal, sunny yellow, tangerine orange and coral (kids birthday party)",
+    "collection": "Dino Party",
+    "product_type": "Party Bundle",
+    "section": "Kids Party",
+    "resolution_dpi": 300,
+    "licence": "personal use for your own party; you may not share, resell or redistribute the files",
+    "includes": [
+     "Editable 5x7 invitation (5x7, US Letter, A4)",
+     "Editable welcome sign (8x10, 16x20, US Letter)",
+     "Happy Birthday banner, 27 flags incl. age numbers 1-9",
+     "60 cupcake toppers",
+     "12 food tent cards (8 ready + 4 editable)",
+     "18 favor tags",
+     "Dino picture bingo for 10 players",
+     "24 Would You Rather cards"
+    ],
+    "editable_fields": "invitation: child's name and age, date, time, place, RSVP; sign: name and birthday line; 4 blank food labels",
+    "how_to_edit": "Editable fields: open the PDF in the free Adobe Acrobat Reader (computer, tablet or phone), click the text and type your own details, then print or send to a print shop. The editable text uses a clean bold sans-serif font; the headline artwork is fixed.",
+    "sizes": [
+     "US Letter 8.5x11 in",
+     "A4",
+     "5x7 in",
+     "8x10 in",
+     "16x20 in"
+    ],
+    "files": "5 files: ZIP with the editable invitation and welcome sign PDFs, Decorations PDF (US Letter), Games PDF (US Letter), Decorations PDF (A4), Games PDF (A4)",
+    "savings": "bundle price 7.99 EUR vs 21.02 EUR when bought separately"
+   }
+  }
+ ]
+}
