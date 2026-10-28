@@ -13,6 +13,12 @@ if (isParty) {
   const rank = function (x) { return /Scrapbooking Ephemera/i.test(x) ? 0 : /Collage Sheets/i.test(x) ? 1 : /Scrapbook/i.test(x) ? 2 : /Stickers|Labels|Tags/i.test(x) ? 3 : /Paper/i.test(x) ? 4 : 5; };
   candidates = flat.filter(function (n) { return /^Craft Supplies/i.test(n.path) && /collage|scrapbook|paper|sticker|label|tag|journal|ephemera/i.test(n.path); }).sort(function (a, b) { return rank(a.path) - rank(b.path); }).slice(0, 12);
 }
+// party products: fixed Etsy categories (the model picked favor bags / candy wrappers on 28.10.2026)
+const PARTY_TAX = { 'editable birthday invitation': 1294, 'editable welcome sign': 1334, 'birthday banner': 1339, 'cupcake toppers': 9122, 'food labels': 2102, 'favor tags': 1327, 'bingo game': 1350, 'would you rather game': 1350, 'party bundle': 1334 };
+if (isParty && PARTY_TAX[ptype.toLowerCase()]) {
+  const fixed = flat.filter(function (n) { return n.id === PARTY_TAX[ptype.toLowerCase()]; });
+  if (fixed.length) candidates = fixed;
+}
 if (!candidates.length) throw new Error('no Etsy category candidates');
 const TYPES = {
   'illusion pockets': { tags: 'illusion pockets, journal pockets, junk journal pocket', phrase: 'Printable Tuck Ins and Gift Tags' },
