@@ -4,7 +4,8 @@ const flat = [];
 (function walk(list, path) { (list || []).forEach(function (n) { const q = path.concat(n.name); if (!n.children || !n.children.length) flat.push({ id: n.id, path: q.join(' > ') }); walk(n.children, q); }); })(roots, []);
 const ptype = (p.facts && p.facts.product_type) || 'Ephemera Kit';
 const theme = (p.facts && p.facts.theme) || '';
-const isParty = (p.facts && p.facts.section === 'Kids Party') || /invitation|welcome sign|banner|cupcake|food label|favor tag|bingo|would you rather/i.test(ptype);
+const isWedding = (p.facts && p.facts.section === 'Wedding') || /^wedding /i.test(ptype);
+const isParty = !isWedding && ((p.facts && p.facts.section === 'Kids Party') || /invitation|welcome sign|banner|cupcake|food label|favor tag|bingo|would you rather/i.test(ptype));
 let candidates;
 if (isParty) {
   const rankP = function (x) { return /Party Supplies.*Invitation/i.test(x) && /invitation/i.test(ptype) ? 0 : /Party Games/i.test(x) && /bingo|would you rather|game/i.test(ptype) ? 0 : /Party Supplies/i.test(x) ? 1 : /Paper & Party/i.test(x) ? 2 : /Game/i.test(x) ? 3 : 5; };
@@ -14,6 +15,11 @@ if (isParty) {
   candidates = flat.filter(function (n) { return /^Craft Supplies/i.test(n.path) && /collage|scrapbook|paper|sticker|label|tag|journal|ephemera/i.test(n.path); }).sort(function (a, b) { return rank(a.path) - rank(b.path); }).slice(0, 12);
 }
 // party products: fixed Etsy categories (the model picked favor bags / candy wrappers on 28.10.2026)
+const WEDDING_TAX = { 'wedding place cards': 6056, 'wedding menu': 12612, 'wedding drinks menu': 12612, 'wedding table set': 6056 };
+if (isWedding && WEDDING_TAX[ptype.toLowerCase()]) {
+  const fixedW = flat.filter(function (n) { return n.id === WEDDING_TAX[ptype.toLowerCase()]; });
+  if (fixedW.length) candidates = fixedW;
+}
 const PARTY_TAX = { 'editable birthday invitation': 1294, 'editable welcome sign': 1334, 'birthday banner': 1339, 'cupcake toppers': 9122, 'food labels': 2102, 'favor tags': 1327, 'bingo game': 1350, 'would you rather game': 1350, 'party bundle': 1334 };
 if (isParty && PARTY_TAX[ptype.toLowerCase()]) {
   const fixed = flat.filter(function (n) { return n.id === PARTY_TAX[ptype.toLowerCase()]; });
@@ -40,6 +46,10 @@ const TYPES = {
   'favor tags': { tags: 'favor tags, thank you tags, treat bag tags, goodie bag tags', phrase: 'Printable Thank You Tags' },
   'bingo game': { tags: 'dinosaur bingo, picture bingo, kids bingo, party game, preschool game', phrase: 'Printable Party Game for Kids' },
   'would you rather game': { tags: 'would you rather, kids party game, conversation cards, dinosaur game', phrase: 'Printable Party Game for Kids' },
+  'wedding place cards': { tags: 'wedding place cards, place card template, editable place cards, tent place cards, wedding name cards, tischkarten hochzeit', phrase: 'Editable Place Card Template' },
+  'wedding menu': { tags: 'wedding menu, menu template, editable menu, dinner menu card, rehearsal dinner menu, menuekarte hochzeit', phrase: 'Editable Wedding Menu Template' },
+  'wedding drinks menu': { tags: 'drinks menu, wine list, bar menu wedding, signature cocktail sign, editable drinks menu, getraenkekarte', phrase: 'Editable Wine and Drinks Menu' },
+  'wedding table set': { tags: 'wedding table set, place cards and menu, wedding stationery, table decor wedding, editable template set', phrase: 'Place Cards, Menu and Drinks Menu' },
   'party bundle': { tags: 'dinosaur party, dino party bundle, party decorations, birthday printables', phrase: 'Editable Invitation and Decorations' }
 };
 const TYPE = TYPES[ptype.toLowerCase()] || (/bundle/i.test(ptype) ? TYPES['bundle'] : { tags: 'ephemera pack, junk journal supply', phrase: 'Printable Ephemera' });
@@ -47,7 +57,13 @@ const schema = { type: 'object', additionalProperties: false, required: ['title'
 const common_tags = 'tags: 16 distinct buyer search phrases, best first, each at most 20 characters including spaces (count them: longer tags are thrown away, not shortened), lowercase, letters, numbers, spaces, hyphens, apostrophes only. No near-duplicates (singular/plural or reordered words count as duplicates), no single motif words, no trademarks, never only a file format. ';
 const common_desc_tail = 'Then WHAT YOU GET (exact counts and approx. sizes from facts), FILES (exactly as in facts.files), PRINTING (print at 100 percent / actual size on matte paper or light cardstock), HOW IT WORKS (digital download right after purchase, nothing is shipped; if facts.how_to_edit or facts.how_it_works exists, explain it plainly in one or two sentences here), LICENCE (from facts), and finally the AI disclosure sentence exactly as given. If facts contain a note, include it plainly. Use only facts given; never invent counts, sizes, bonuses, reviews or sales. Never mention internal checks or tools other than the given AI disclosure. taxonomy_id: best id from candidates. seo_rationale: one sentence. English (US).';
 let instructions;
-if (isParty) {
+if (isWedding) {
+  instructions = 'You are the AXXIBOTS Etsy Shop Manager. Write the Etsy listing for ONE printable digital download of WEDDING TABLE STATIONERY (the buyer, usually a bride or wedding planner, prints it at home or at a print shop). Product type: ' + ptype + '. Design name: ' + (p.facts && p.facts.design || p.collection || '') + '. Look: ' + theme + '. Every title phrase and every tag must describe THIS product and its facts only. Never mention junk journals, scrapbooking or kids parties. The files contain an English AND a German version and both a blank version to write by hand and an editable PDF (free Adobe Acrobat Reader; never Canva, never Corjl, never Templett). ' +
+    'title: 110-140 characters, start with the design look plus the product type (e.g. \"Navy Stripe Wedding Place Cards\", \"Olive Wedding Menu Template\"), then 2-3 comma-separated phrases in Title Case that couples actually type, e.g. \"' + TYPE.phrase + '\", \"Printable Tent Cards\", \"Handwritten or Editable\", \"English and German\". No ALL CAPS, no trademarks, no emojis. ' +
+    common_tags + 'Cover: product type phrases (' + TYPE.tags + '), style phrases buyers search for this look (e.g. navy wedding, olive wedding, art deco wedding, toile wedding, minimalist wedding, vintage wedding), use cases (rehearsal dinner, dinner party, bridal shower, engagement party) and 1-2 German phrases for German buyers (umlauts written as ae/oe/ue). ' +
+    'styles: exactly 2 Etsy style words, each 1-2 words, letters and spaces only, e.g. Elegant, Minimalist, Vintage, Art Deco, Preppy, French Country, Mediterranean, Romantic. ' +
+    'description: plain text, no markdown, with a blank line between every paragraph and section; section headers (PERFECT FOR:, WHAT YOU GET:, FILES:, PRINTING:, HOW IT WORKS:, LICENCE:) each start on their own line and list items start with \"- \" on their own lines. First paragraph, one or two sentences: a natural sentence that never copies the title, saying what it is, for which occasion and what is included with real counts and sizes. Second short paragraph: the look of the design. Then PERFECT FOR: weddings, rehearsal dinners, bridal showers, engagement and dinner parties where it fits. ' + common_desc_tail;
+} else if (isParty) {
   instructions = 'You are the AXXIBOTS Etsy Shop Manager. Write the Etsy listing for ONE printable digital download for a KIDS BIRTHDAY PARTY (the buyer, usually a parent, prints it). Product type: ' + ptype + '. Theme: ' + theme + '. Collection: ' + (p.collection || '') + '. Every title phrase and every tag must describe THIS product and its facts only; never name a piece it does not contain. Never mention junk journals or scrapbooking. If facts.editable_fields exist, the product is EDITABLE in the free Adobe Acrobat Reader: say editable (never Canva, never Corjl, never "instant edit online"). ' +
     'title: 110-140 characters, start with the theme word plus the product type (e.g. "Dinosaur Birthday Invitation", "Dino Party Cupcake Toppers"), then 2-3 comma-separated phrases in Title Case that parents actually type, e.g. "' + TYPE.phrase + '", "Dino Party Decorations", "Boy Birthday Party", "Any Age". Use "Dinosaur" at least once because parents search it. No ALL CAPS, no trademarks (never Jurassic Park, Jurassic World, Land Before Time, Blippi, Bluey, Disney), no emojis. ' +
     common_tags + 'Cover: product type phrases (' + TYPE.tags + '), theme + party intent (dinosaur party, dino birthday, dinosaur birthday, roar party, three rex party), age and audience phrases (boy birthday, toddler birthday, kids party), and printable phrases (party printables, printable decor). ' +
