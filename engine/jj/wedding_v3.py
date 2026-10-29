@@ -290,3 +290,87 @@ if __name__ == "__main__":
     os.makedirs(out, exist_ok=True)
     board(assets, os.path.join(out, "Wedding_Styles_v3.jpg"))
     print("ok")
+
+
+# ---------- print-friendly table numbers (owner 29.10.2026: no velvet/gold that home printers cannot do) ----------
+
+FLAT = {"emerald": (30, 82, 58), "burgundy": (122, 28, 40), "navy": (32, 44, 78), "sage": (132, 150, 122), "blush": (214, 170, 160), "black": (28, 28, 28)}
+
+
+def table_number_print(shape, color, number, word="TABLE", mode="block", w=1500, h=2100):
+    """mode 'block': flat matte colour, text and frame knocked out to paper white.
+    mode 'light': paper colour background (prints nothing), frame + text in the ink colour.
+    mode 'foil': black only, for toner foil (laser print + foil + laminator) -> real gold shine."""
+    ink = FLAT["black"] if mode == "foil" else FLAT[color]
+    card = Image.new("RGBA", (w, h), (255, 255, 255, 0))
+    sm = shape_mask(shape, w, h)
+    tm = Image.new("L", (w, h), 0)
+    d = ImageDraw.Draw(tm)
+    cy = int(h * (0.34 if shape == "arch" else 0.30))
+    d.text((w // 2, cy), " ".join(word), font=font("CormorantGaramond[wght].ttf", 130, b"SemiBold"), fill=255, anchor="mm")
+    d.text((w // 2, int(h * 0.60)), str(number), font=font("CormorantGaramond-Italic[wght].ttf", 1120, b"Medium"), fill=255, anchor="mm")
+    frame = outline(shape, w, h, 46, 6)
+    if mode == "block":
+        base = Image.new("RGBA", (w, h), ink + (255,))
+        base.putalpha(sm)
+        card.alpha_composite(base)
+        paper_white = Image.new("RGBA", (w, h), (255, 255, 255, 255))
+        paint(card, ImageChops.lighter(tm, frame), paper_white)
+    else:
+        bg = Image.new("RGBA", (w, h), (255, 255, 255, 255))
+        bg.putalpha(sm)
+        card.alpha_composite(bg)
+        col = Image.new("RGBA", (w, h), ink + (255,))
+        paint(card, ImageChops.lighter(tm, frame), col)
+        # thin cut line so the shape can be cut out
+        paint(card, outline(shape, w, h, 0, 2), Image.new("RGBA", (w, h), (170, 170, 170, 255)))
+    return card, sm
+
+
+def board_print(out_path):
+    W, Hh = 3000, 1350
+    rows = []
+    specs = [
+        ("block", "1 · Farbfläche, Schrift papierweiß", "matte Farbe, nichts Goldenes zu drucken  ·  ideal im Copyshop",
+         [("arch", "emerald", 1), ("oval", "burgundy", 4), ("rect", "navy", 3), ("arch", "sage", 7)]),
+        ("light", "2 · Hell, farbige Ziffer", "Papier bleibt creme oder weiß  ·  wenig Tinte  ·  ideal für Tintenstrahldrucker",
+         [("arch", "emerald", 1), ("oval", "burgundy", 4), ("rect", "navy", 3), ("arch", "blush", 7)]),
+        ("foil", "3 · Folien-Vorlage für echtes Gold", "links die schwarze Vorlage, rechts nach dem Folieren: Laser drucken, Goldfolie auflegen, Laminator  ·  echter Glanz",
+         [("arch", "black", 1), ("oval", "black", 4), ("rect", "black", 3), ("arch", "black", 7)]),
+    ]
+    B = Image.new("RGB", (W, (Hh + 170) * len(specs)), (250, 248, 244))
+    dB = ImageDraw.Draw(B)
+    for r, (mode, title, sub, items) in enumerate(specs):
+        bg = linen(W, Hh, seed=50 + r, tone=(238, 234, 226))
+        for i, (sh, col, n) in enumerate(items):
+            word = "TISCH" if i == 3 else "TABLE"
+            card, m = table_number_print(sh, col, n, word, mode)
+            if mode == "light" and i == 0:  # show it on cream paper
+                cream = Image.new("RGBA", card.size, (246, 240, 226, 255))
+                cream.putalpha(m)
+                c2 = Image.new("RGBA", card.size, (0, 0, 0, 0))
+                c2.alpha_composite(cream)
+                over = card.copy()
+                px = np.asarray(over).copy()
+                white = (px[..., 0] > 250) & (px[..., 1] > 250) & (px[..., 2] > 250)
+                px[white, 3] = 0
+                c2.alpha_composite(Image.fromarray(px))
+                card = c2
+            if mode == "foil" and i > 0:  # result after toner foiling: black parts become shiny gold
+                px = np.asarray(card).copy()
+                dark = (px[..., 3] > 0) & (px[..., 0] < 120)
+                gm = Image.fromarray((dark * 255).astype(np.uint8))
+                base = card.copy()
+                bpx = np.asarray(base).copy()
+                bpx[dark, 0:3] = 255
+                base = Image.fromarray(bpx)
+                paint(base, gm, gold(card.width, card.height, 11))
+                card = base
+            st = stand(card, m, 0.36)
+            s = shadow_drop(st, off=(24, 18), blur=22, alpha=80)
+            bg.alpha_composite(s, (110 + i * 730 - 60, 90 - 60))
+        y = r * (Hh + 170)
+        B.paste(bg.convert("RGB"), (0, y))
+        dB.text((W // 2, y + Hh + 62), title, font=font("CormorantGaramond[wght].ttf", 76, b"SemiBold"), fill=(52, 46, 42), anchor="mm")
+        dB.text((W // 2, y + Hh + 128), sub, font=font("CormorantGaramond-Italic[wght].ttf", 46, b"Medium"), fill=(110, 100, 92), anchor="mm")
+    B.save(out_path, quality=86)
